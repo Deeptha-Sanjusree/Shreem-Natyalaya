@@ -21,19 +21,19 @@ interface FAQ {
   imports: [RouterLink, CommonModule],
   //templateUrl: './home.component.html',
   template:`<!-- Full Viewport Hero Section with Auto Background Carousel -->
-<section class="relative h-screen flex items-center justify-center overflow-hidden">
-  <!-- Background Carousel Images -->
-  <div class="absolute inset-0 z-0">
-  @for (image of heroImages; track image; let i = $index) {
-    <div 
-      class="absolute inset-0 bg-cover transition-opacity duration-3000 ease-in-out
-             bg-[center_20%]"
-      [class.opacity-100]="currentSlide() === i"
-      [class.opacity-0]="currentSlide() !== i"
-      [style.background-image]="'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(' + image + ')'"
-    ></div>
-  }
-</div>
+  <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background Carousel Images -->
+    <div class="absolute inset-0 z-0">
+    @for (image of heroImages; track image; let i = $index) {
+      <div 
+        class="absolute inset-0 bg-cover transition-opacity duration-3000 ease-in-out
+              bg-[center_20%]"
+        [class.opacity-100]="currentSlide() === i"
+        [class.opacity-0]="currentSlide() !== i"
+        [style.background-image]="'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(' + image + ')'"
+      ></div>
+    }
+  </div>
 
 
   <!-- Hero Content -->
