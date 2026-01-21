@@ -130,7 +130,7 @@ export class CoursesComponent implements OnInit {
       description: 'Classical dance form emphasizing grace, rhythm, and storytelling through movement. Learn the ancient art of expression through dance.',
       icon: 'dance',
       color: 'ocean',
-      route: '/courses/bharathanatyam'
+      route: '/courses/bharatanatyam'
     },
     {
       id: 'veena',
