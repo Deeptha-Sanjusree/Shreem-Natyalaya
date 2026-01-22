@@ -104,10 +104,8 @@ import { Meta, Title } from '@angular/platform-browser';
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           <!-- My Guru -->
           <div class="bg-gradient-to-br from-ocean-600 to-ocean-700 text-white rounded-xl p-6 border-2 border-ocean-800">
-            <div class="aspect-square bg-ocean-800/30 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-              <svg class="w-20 h-20 text-ocean-200" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-              </svg>
+            <div class="aspect-square bg-ocean-800/30 rounded-lg mb-4 overflow-hidden">
+              <img src="/assets/images/foundersguru.jpg" alt="Late B. Kanchana M.music" class="w-full h-full object-cover object-top"/>
             </div>
             <div class="text-center mb-2">
               <span class="inline-block px-3 py-1 bg-yellow-500 text-ocean-900 text-xs font-bold rounded-full mb-3">MY GURU</span>
@@ -180,9 +178,9 @@ import { Meta, Title } from '@angular/platform-browser';
           <!-- Guru 1 -->
           <div class="bg-gradient-to-br from-cream-50 to-yellow-50 rounded-xl p-6 border-2 border-yellow-200">
             <div class="aspect-square bg-gray-200 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-              <svg class="w-20 h-20 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-              </svg>
+             <div class="aspect-square bg-ocean-800/30 rounded-lg mb-4 overflow-hidden">
+              <img src="/assets/images/foundersguru.jpg" alt="Late B. Kanchana M.music" class="w-full h-full object-cover object-top"/>
+            </div>
               <!-- Photo placeholder - Add image here -->
             </div>
             <h3 class="text-xl font-serif font-bold text-ocean-900 mb-2 text-center">
@@ -339,20 +337,20 @@ import { Meta, Title } from '@angular/platform-browser';
           <div class="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto mb-6"></div>
         </div>
         <ul class="space-y-4 text-cream-100 max-w-3xl mx-auto">
-          <li class="flex items-start">
-            <span class="text-yellow-400 mr-3 mt-1 text-xl">✦</span>
+          <li class="flex items-center">
+            <span class="text-yellow-400 mr-3 text-xl">✦</span>
             <span>Embodies the Guru Parampara tradition</span>
           </li>
-          <li class="flex items-start">
-            <span class="text-yellow-400 mr-3 mt-1 text-xl">✦</span>
+          <li class="flex items-center">
+            <span class="text-yellow-400 mr-3 text-xl">✦</span>
             <span>Blends traditional teachings with modern pedagogy</span>
           </li>
-          <li class="flex items-start">
-            <span class="text-yellow-400 mr-3 mt-1 text-xl">✦</span>
+          <li class="flex items-center">
+            <span class="text-yellow-400 mr-3 text-xl">✦</span>
             <span>Teaches, mentors, and inspires through Shreem Natyalaya</span>
           </li>
-          <li class="flex items-start">
-            <span class="text-yellow-400 mr-3 mt-1 text-xl">✦</span>
+          <li class="flex items-center">
+            <span class="text-yellow-400 mr-3 text-xl">✦</span>
             <span>Preserves classical arts and devotional music for future generations</span>
           </li>
         </ul>
