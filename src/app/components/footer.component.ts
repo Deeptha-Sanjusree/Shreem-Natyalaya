@@ -23,42 +23,42 @@ import { RouterLink } from '@angular/router';
         <h3 class="text-xl font-serif font-semibold mb-4 text-yellow-400">Quick Links</h3>
         <ul class="space-y-2">
           <li>
-            <a routerLink="/" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm">
+            <a routerLink="/" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm" (click)="scrollToTop()">
               Home
             </a>
           </li>
           <li>
-            <a routerLink="/about-guru" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm">
+            <a routerLink="/about-guru" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm" (click)="scrollToTop()">
               About Guru
             </a>
           </li>
           <li>
-            <a routerLink="/guru-parampara" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm">
+            <a routerLink="/guru-parampara" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm" (click)="scrollToTop()">
               Guru Parampara
             </a>
           </li>
           <li>
-            <a routerLink="/courses" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm">
+            <a routerLink="/courses" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm" (click)="scrollToTop()">
               Courses
             </a>
           </li>
           <li>
-            <a routerLink="/upcoming-events" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm">
+            <a routerLink="/upcoming-events" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm" (click)="scrollToTop()">
               Upcoming Events
             </a>
           </li>
           <li>
-            <a routerLink="/branches" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm">
+            <a routerLink="/branches" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm" (click)="scrollToTop()">
               Our Branches
             </a>
           </li>
           <li>
-            <a routerLink="/collaborate" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm">
+            <a routerLink="/collaborate" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm" (click)="scrollToTop()">
               Collaborate with us
             </a>
           </li>
           <li>
-            <a routerLink="/contact" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm">
+            <a routerLink="/contact" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm" (click)="scrollToTop()">
               Contact
             </a>
           </li>
@@ -74,6 +74,7 @@ import { RouterLink } from '@angular/router';
         <a 
           routerLink="/contact" 
           class="inline-block mt-2 px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white rounded transition-colors duration-200 text-sm font-medium"
+          (click)="scrollToTop()"
         >
           Contact Us
         </a>
@@ -95,4 +96,8 @@ import { RouterLink } from '@angular/router';
 })
 export class FooterComponent {
   protected readonly currentYear = new Date().getFullYear();
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

@@ -26,8 +26,7 @@ interface FAQ {
     <div class="absolute inset-0 z-0">
     @for (image of heroImages; track image; let i = $index) {
       <div 
-        class="absolute inset-0 bg-cover transition-opacity duration-3000 ease-in-out
-              bg-[center_20%]"
+        class="absolute inset-0 bg-cover bg-center md:bg-[center_20%] transition-opacity duration-3000 ease-in-out"
         [class.opacity-100]="currentSlide() === i"
         [class.opacity-0]="currentSlide() !== i"
         [style.background-image]="'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(' + image + ')'"

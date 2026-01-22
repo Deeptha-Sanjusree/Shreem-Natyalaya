@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center h-20 gap-10">
       <!-- Logo -->
-      <a routerLink="/" class="flex items-center space-x-3 shrink-0" (click)="closeMenu()">
+      <a routerLink="/" class="flex items-center space-x-3 shrink-0" (click)="navigateAndScroll()">
         <div class="text-2xl font-serif font-bold text-ocean-800 whitespace-nowrap">
           Shreem Natyalaya
         </div>
@@ -24,6 +24,7 @@ import { CommonModule } from '@angular/common';
           routerLinkActive="text-ocean-700 font-semibold"
           [routerLinkActiveOptions]="{exact: true}"
           class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
+          (click)="scrollToTop()"
         >
           Home
         </a>
@@ -31,6 +32,7 @@ import { CommonModule } from '@angular/common';
           routerLink="/about-guru" 
           routerLinkActive="text-ocean-700 font-semibold"
           class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
+          (click)="scrollToTop()"
         >
           About Guru
         </a>
@@ -38,6 +40,7 @@ import { CommonModule } from '@angular/common';
           routerLink="/guru-parampara" 
           routerLinkActive="text-ocean-700 font-semibold"
           class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
+          (click)="scrollToTop()"
         >
           Guru Parampara
         </a>
@@ -45,6 +48,7 @@ import { CommonModule } from '@angular/common';
           routerLink="/courses" 
           routerLinkActive="text-ocean-700 font-semibold"
           class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
+          (click)="scrollToTop()"
         >
           Courses
         </a>
@@ -52,6 +56,7 @@ import { CommonModule } from '@angular/common';
           routerLink="/upcoming-events" 
           routerLinkActive="text-ocean-700 font-semibold"
           class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
+          (click)="scrollToTop()"
         >
           Upcoming Events
         </a>
@@ -59,6 +64,7 @@ import { CommonModule } from '@angular/common';
           routerLink="/branches" 
           routerLinkActive="text-ocean-700 font-semibold"
           class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
+          (click)="scrollToTop()"
         >
           Our Branches
         </a>
@@ -66,6 +72,7 @@ import { CommonModule } from '@angular/common';
           routerLink="/collaborate" 
           routerLinkActive="text-ocean-700 font-semibold"
           class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
+          (click)="scrollToTop()"
         >
           Collaborate with us
         </a>
@@ -73,6 +80,7 @@ import { CommonModule } from '@angular/common';
           routerLink="/contact" 
           routerLinkActive="text-ocean-700 font-semibold"
           class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
+          (click)="scrollToTop()"
         >
           Contact
         </a>
@@ -105,7 +113,7 @@ import { CommonModule } from '@angular/common';
           routerLink="/" 
           routerLinkActive="bg-ocean-50 text-ocean-700"
           [routerLinkActiveOptions]="{exact: true}"
-          (click)="closeMenu()"
+          (click)="navigateAndScroll()"
           class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-ocean-700 hover:bg-gray-50 transition-colors duration-200"
         >
           Home
@@ -113,7 +121,7 @@ import { CommonModule } from '@angular/common';
         <a 
           routerLink="/about-guru" 
           routerLinkActive="bg-ocean-50 text-ocean-700"
-          (click)="closeMenu()"
+          (click)="navigateAndScroll()"
           class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-ocean-700 hover:bg-gray-50 transition-colors duration-200"
         >
           About Guru
@@ -121,7 +129,7 @@ import { CommonModule } from '@angular/common';
         <a 
           routerLink="/guru-parampara" 
           routerLinkActive="bg-ocean-50 text-ocean-700"
-          (click)="closeMenu()"
+          (click)="navigateAndScroll()"
           class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-ocean-700 hover:bg-gray-50 transition-colors duration-200"
         >
           Guru Parampara
@@ -129,7 +137,7 @@ import { CommonModule } from '@angular/common';
         <a 
           routerLink="/courses" 
           routerLinkActive="bg-ocean-50 text-ocean-700"
-          (click)="closeMenu()"
+          (click)="navigateAndScroll()"
           class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-ocean-700 hover:bg-gray-50 transition-colors duration-200"
         >
           Courses
@@ -137,7 +145,7 @@ import { CommonModule } from '@angular/common';
         <a 
           routerLink="/upcoming-events" 
           routerLinkActive="bg-ocean-50 text-ocean-700"
-          (click)="closeMenu()"
+          (click)="navigateAndScroll()"
           class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-ocean-700 hover:bg-gray-50 transition-colors duration-200"
         >
           Upcoming Events
@@ -145,7 +153,7 @@ import { CommonModule } from '@angular/common';
         <a 
           routerLink="/branches" 
           routerLinkActive="bg-ocean-50 text-ocean-700"
-          (click)="closeMenu()"
+          (click)="navigateAndScroll()"
           class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-ocean-700 hover:bg-gray-50 transition-colors duration-200"
         >
           Our Branches
@@ -153,7 +161,7 @@ import { CommonModule } from '@angular/common';
         <a 
           routerLink="/collaborate" 
           routerLinkActive="bg-ocean-50 text-ocean-700"
-          (click)="closeMenu()"
+          (click)="navigateAndScroll()"
           class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-ocean-700 hover:bg-gray-50 transition-colors duration-200"
         >
           Collaborate with us
@@ -161,7 +169,7 @@ import { CommonModule } from '@angular/common';
         <a 
           routerLink="/contact" 
           routerLinkActive="bg-ocean-50 text-ocean-700"
-          (click)="closeMenu()"
+          (click)="navigateAndScroll()"
           class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-ocean-700 hover:bg-gray-50 transition-colors duration-200"
         >
           Contact
@@ -182,5 +190,14 @@ export class NavbarComponent {
 
   closeMenu(): void {
     this.isMenuOpen.set(false);
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  navigateAndScroll(): void {
+    this.closeMenu();
+    this.scrollToTop();
   }
 }

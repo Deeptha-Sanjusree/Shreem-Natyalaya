@@ -25,9 +25,11 @@ import { Meta, Title } from '@angular/platform-browser';
       
       <!-- Introduction -->
       <div class="mb-16">
-        <div class="max-w-4xl mx-auto bg-gradient-to-br from-cream-50 to-ocean-50 rounded-xl p-8 border-2 border-ocean-200">
-          <h3 class="text-2xl font-serif font-bold text-ocean-900 mb-6 text-center">Training & Expertise</h3>
-          <ul class="space-y-3 text-gray-700">
+        <div class="bg-gradient-to-br from-cream-50 to-ocean-50 border-2 border-ocean-200 rounded-xl p-8 md:p-12 lg:p-16">
+          <h2 class="text-2xl md:text-3xl font-serif font-bold text-ocean-900 mb-8 text-center">
+            Training & Expertise
+          </h2>
+          <ul class="space-y-4 text-gray-700 max-w-6xl mx-auto">
             <li class="flex items-start">
               <span class="text-ocean-600 mr-3 mt-1">•</span>
               <div>
