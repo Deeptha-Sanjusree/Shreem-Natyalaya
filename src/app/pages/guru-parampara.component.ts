@@ -105,7 +105,7 @@ import { Meta, Title } from '@angular/platform-browser';
           <!-- My Guru -->
           <div class="bg-gradient-to-br from-ocean-600 to-ocean-700 text-white rounded-xl p-6 border-2 border-ocean-800">
             <div class="aspect-square bg-ocean-800/30 rounded-lg mb-4 overflow-hidden">
-              <img src="/assets/images/foundersguru.jpg" alt="Late B. Kanchana M.music" class="w-full h-full object-cover object-top"/>
+              <img src="/assets/images/kanchana.png" alt="Late B. Kanchana M.music" class="w-full h-full object-cover object-top"/>
             </div>
             <div class="text-center mb-2">
               <span class="inline-block px-3 py-1 bg-yellow-500 text-ocean-900 text-xs font-bold rounded-full mb-3">MY GURU</span>
@@ -179,7 +179,7 @@ import { Meta, Title } from '@angular/platform-browser';
           <div class="bg-gradient-to-br from-cream-50 to-yellow-50 rounded-xl p-6 border-2 border-yellow-200">
             <div class="aspect-square bg-gray-200 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
              <div class="aspect-square bg-ocean-800/30 rounded-lg mb-4 overflow-hidden">
-              <img src="/assets/images/foundersguru.jpg" alt="Late B. Kanchana M.music" class="w-full h-full object-cover object-top"/>
+              <img src="/assets/images/kanchana.png" alt="Late B. Kanchana M.music" class="w-full h-full object-cover object-top"/>
             </div>
               <!-- Photo placeholder - Add image here -->
             </div>
@@ -194,13 +194,11 @@ import { Meta, Title } from '@angular/platform-browser';
           <!-- Guru 2 -->
           <div class="bg-gradient-to-br from-cream-50 to-ocean-50 rounded-xl p-6 border-2 border-ocean-200">
             <div class="aspect-square bg-gray-200 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-              <svg class="w-20 h-20 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-              </svg>
+              <img src="/assets/images/veenai.jpeg" alt="Late Smt. Ethiraja Valli" class="w-full h-full object-cover object-top"/>
               <!-- Photo placeholder - Add image here -->
             </div>
             <h3 class="text-xl font-serif font-bold text-ocean-900 mb-2 text-center">
-              Ethiraja Valli
+              Late Smt. Ethiraja Valli
             </h3>
             <p class="text-sm text-gray-600 text-center">
               Professor, Music College - "Veena Vani", Kamakas & Alapana

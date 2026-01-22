@@ -8,56 +8,56 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink],
   template: `
   <!-- Exclusive Notice Banner -->
-<div class="bg-yellow-50 border-l-4 border-yellow-500 py-3">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center">
-      <svg class="w-5 h-5 text-yellow-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
-      </svg>
-      <p class="text-sm font-medium text-yellow-800">
-        <span class="font-bold">For Institutions Only:</span> This page is exclusively for schools, play schools, and colleges interested in partnership opportunities.
-      </p>
-    </div>
-  </div>
-</div>
-
-<!-- Hero Section -->
-<section class="relative bg-gradient-to-br from-ocean-900 via-ocean-800 to-ocean-900 text-white py-16 md:py-24">
-  <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4wNSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9nPjwvc3ZnPg==')] opacity-10"></div>
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="text-center">
-      <div class="inline-flex items-center bg-yellow-500/20 rounded-full px-4 py-2 mb-6">
-        <svg class="w-5 h-5 text-yellow-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+  <div class="bg-yellow-50 border-l-4 border-yellow-500 py-3">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center">
+        <svg class="w-5 h-5 text-yellow-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
         </svg>
-        <span class="text-sm font-semibold text-yellow-100">Institutional Partnership Program</span>
+        <p class="text-sm font-medium text-yellow-800">
+          <span class="font-bold">For Institutions Only:</span> This page is exclusively for schools, play schools, and colleges interested in partnership opportunities.
+        </p>
       </div>
-      <h1 class="text-3xl md:text-5xl font-serif font-bold mb-4">
-        Collaborate with Shreem Natyalaya
-      </h1>
-      <p class="text-xl md:text-2xl text-ocean-100 font-light mb-2">
-        Bringing Classical Arts to Your Institution
-      </p>
-      <p class="text-base md:text-lg text-ocean-200 max-w-3xl mx-auto leading-relaxed">
-        We partner with schools, play schools, and colleges to provide classical dance, music, and slokam programs for your students.
-      </p>
     </div>
-  </div>
-</section>
+    </div>
 
-<!-- Target Institutions Section -->
-<section class="py-12 md:py-16 bg-gradient-to-br from-cream-50 to-ocean-50">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-10">
-      <h2 class="text-2xl md:text-3xl font-serif font-bold text-ocean-900 mb-3">
-        Who Can Partner With Us?
-      </h2>
-      <p class="text-gray-600">Partnership opportunities for educational institutions, community spaces, and residential complexes</p>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-ocean-900 via-ocean-800 to-ocean-900 text-white py-16 md:py-24">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4wNSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9nPjwvc3ZnPg==')] opacity-10"></div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center">
+        <div class="inline-flex items-center bg-yellow-500/20 rounded-full px-4 py-2 mb-6">
+          <svg class="w-5 h-5 text-yellow-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+          </svg>
+          <span class="text-sm font-semibold text-yellow-100">Institutional Partnership Program</span>
+        </div>
+        <h1 class="text-3xl md:text-5xl font-serif font-bold mb-4">
+          Collaborate with Shreem Natyalaya
+        </h1>
+        <p class="text-xl md:text-2xl text-ocean-100 font-light mb-2">
+          Bringing Classical Arts to Your Institution
+        </p>
+        <p class="text-base md:text-lg text-ocean-200 max-w-3xl mx-auto leading-relaxed">
+          We partner with schools, play schools, and colleges to provide classical dance, music, and slokam programs for your students.
+        </p>
+      </div>
     </div>
+  </section>
+
+  <!-- Target Institutions Section -->
+  <section class="py-12 md:py-16 bg-gradient-to-br from-cream-50 to-ocean-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-ocean-900 mb-3">
+          Who Can Partner With Us?
+        </h2>
+        <p class="text-gray-600">Partnership opportunities for educational institutions, community spaces, and residential complexes</p>
+      </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Schools -->
-      <div class="bg-white rounded-xl p-6 border-2 border-ocean-100 hover:border-ocean-300 transition-all duration-300">
+      <div class="bg-white rounded-xl p-6 border-2 border-ocean-100 transition-all duration-300">
         <div class="w-14 h-14 bg-ocean-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
           <svg class="w-7 h-7 text-ocean-700" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
@@ -72,7 +72,7 @@ import { RouterLink } from '@angular/router';
       </div>
 
       <!-- Play Schools -->
-      <div class="bg-white rounded-xl p-6 border-2 border-yellow-100 hover:border-yellow-300 transition-all duration-300">
+      <div class="bg-white rounded-xl p-6 border-2 border-yellow-100 transition-all duration-300">
         <div class="w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
           <svg class="w-7 h-7 text-yellow-700" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
@@ -87,7 +87,7 @@ import { RouterLink } from '@angular/router';
       </div>
 
       <!-- Apartments -->
-      <div class="bg-white rounded-xl p-6 border-2 border-ocean-100 hover:border-ocean-300 transition-all duration-300">
+      <div class="bg-white rounded-xl p-6 border-2 border-ocean-100 transition-all duration-300">
         <div class="w-14 h-14 bg-ocean-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
           <svg class="w-7 h-7 text-ocean-700" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
@@ -102,7 +102,7 @@ import { RouterLink } from '@angular/router';
       </div>
 
       <!-- Community Halls -->
-      <div class="bg-white rounded-xl p-6 border-2 border-yellow-100 hover:border-yellow-300 transition-all duration-300">
+      <div class="bg-white rounded-xl p-6 border-2 border-yellow-100 transition-all duration-300">
         <div class="w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
           <svg class="w-7 h-7 text-yellow-700" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd" />
@@ -117,7 +117,7 @@ import { RouterLink } from '@angular/router';
       </div>
 
       <!-- Cultural Centers -->
-      <div class="bg-white rounded-xl p-6 border-2 border-ocean-100 hover:border-ocean-300 transition-all duration-300">
+      <div class="bg-white rounded-xl p-6 border-2 border-ocean-100 transition-all duration-300">
         <div class="w-14 h-14 bg-ocean-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
           <svg class="w-7 h-7 text-ocean-700" fill="currentColor" viewBox="0 0 20 20">
             <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
@@ -132,7 +132,7 @@ import { RouterLink } from '@angular/router';
       </div>
 
       <!-- Activity Centers -->
-      <div class="bg-white rounded-xl p-6 border-2 border-yellow-100 hover:border-yellow-300 transition-all duration-300">
+      <div class="bg-white rounded-xl p-6 border-2 border-yellow-100 transition-all duration-300">
         <div class="w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
           <svg class="w-7 h-7 text-yellow-700" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
@@ -389,6 +389,8 @@ import { RouterLink } from '@angular/router';
         </div>
         <p class="text-ocean-100 text-sm">
           Send your partnership inquiry to discuss collaboration details
+          <br>
+          <p class="text-yellow-300 font-semibold text-lg">sanjusree2626@gmail.com
         </p>
       </div>
 

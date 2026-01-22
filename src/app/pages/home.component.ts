@@ -469,7 +469,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     // Auto-play carousel - change every 3 seconds
     this.carouselInterval = setInterval(() => {
       this.currentSlide.update(slide => (slide + 1) % this.heroImages.length);
-    }, 2000);
+    }, 3000);
   }
 
   ngOnDestroy(): void {
