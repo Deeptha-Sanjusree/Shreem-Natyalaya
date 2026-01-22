@@ -31,6 +31,16 @@ interface CourseDetail {
   selector: 'app-course-detail',
   standalone: true,
   imports: [CommonModule, RouterLink],
+  styles: [`
+    @keyframes bounce-subtle {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-2px); }
+    }
+    .emoji-bullet {
+      display: inline-block;
+      animation: bounce-subtle 2s ease-in-out infinite;
+    }
+  `],
   template: `@if (course) {
   <!-- Hero Section -->
   <section 
@@ -237,7 +247,17 @@ interface CourseDetail {
                   <ul class="space-y-2">
                     @for (item of level.practical; track item) {
                       <li class="flex items-start text-sm">
-                        <span class="flex-shrink-0 w-1.5 h-1.5 bg-yellow-600 rounded-full mt-1.5 mr-2"></span>
+                        @if (course.id === 'veena') {
+                          <img src="/assets/images/veenaicon.webp" class="flex-shrink-0 w-4 h-4 mt-0.5 mr-2" alt="veenaicon"/>
+                        } @else if (course.id === 'bharatanatyam') {
+                          <img src="/assets/images/bharathanatyamicon.webp" class="flex-shrink-0 w-5 h-5 mt-0.5 mr-2" alt="bharathanatyamicon"/>
+                        } @else if (course.id === 'slokam') {
+                          <img src="/assets/images/swasthikicon.webp" class="flex-shrink-0 w-4 h-4 mt-0.5 mr-2" alt="slokamicon"/>
+                        } @else if (course.id === 'keyboard') {
+                          <span class="flex-shrink-0 w-4 h-4 mt-0.5 mr-2">🎹</span>
+                        } @else {
+                          <span class="flex-shrink-0 w-1.5 h-1.5 bg-yellow-600 rounded-full mt-1.5 mr-2"></span>
+                        }
                         <span class="text-gray-700 leading-relaxed">{{ item }}</span>
                       </li>
                     }

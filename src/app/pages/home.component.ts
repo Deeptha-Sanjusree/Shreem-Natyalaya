@@ -72,10 +72,10 @@ interface FAQ {
       <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-6">
         Nurturing Classical Arts with Authenticity
       </h2>
-      <p class="text-lg text-gray-700 leading-relaxed mb-6">
-        At Shreem Natyalaya, we are dedicated to preserving and passing on the rich traditions 
-        of classical Indian arts. Our teaching follows the authentic guru-shishya parampara, 
-        ensuring that each student receives personalized attention and deep cultural understanding.
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">   
+        At Shreem Natyalaya, we preserve and celebrate the timeless beauty of classical Indian arts through traditional guru-shishya parampara. 
+        Every student receives personalized guidance, deep cultural insights, and a nurturing environment to grow both as an artist and as an individual.
+        We believe that classical arts are more than techniques—they are a journey into India's rich spiritual and cultural heritage, cultivating discipline, devotion, and a lifelong connection to our traditions.
       </p>
       <p class="text-lg text-gray-700 leading-relaxed">
         Through disciplined practice and devotion to the art form, we help students develop 
@@ -100,56 +100,144 @@ interface FAQ {
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <!-- Bharatanatyam -->
-      <div class="bg-white rounded-lg p-8 shadow-md hover:shadow-xl transition-shadow duration-300">
-        <div class="text-center">
+      <div class="bg-white rounded-lg p-8 shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+        <div class="text-center mb-4">
           <div class="w-20 h-20 flex items-center justify-center mx-auto mb-4 overflow-hidden">
             <img src="/assets/images/natrajar.jpeg" class="w-full h-full object-contain" alt="Bharatanatyam"/>
           </div>
           <h3 class="text-xl font-serif font-semibold text-ocean-900 mb-3">Bharatanatyam</h3>
-          <p class="text-gray-600 mb-4">Classical dance form emphasizing grace and storytelling</p>
-          <a routerLink="/courses" class="text-ocean-700 hover:text-ocean-800 font-semibold">
+          <p class="text-sm text-gray-600 mb-4">Experience the elegance of this ancient dance form that brings together rhythm, expression, and storytelling.</p>
+        </div>
+        <ul class="text-left space-y-2 mb-4 flex-grow">
+          <li class="flex items-start text-sm text-gray-700">
+            <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Structured training in adavus, jathis, and abhinaya</span>
+          </li>
+          <li class="flex items-start text-sm text-gray-700">
+            <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Develop grace, stamina, and discipline</span>
+          </li>
+          <li class="flex items-start text-sm text-gray-700">
+            <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Deep understanding of this sacred art</span>
+          </li>
+        </ul>
+        <div class="text-center">
+          <a routerLink="/courses" class="text-ocean-700 hover:text-ocean-800 font-semibold text-sm">
             Learn More →
           </a>
         </div>
       </div>
 
       <!-- Veena -->
-      <div class="bg-white rounded-lg p-8 shadow-md hover:shadow-xl transition-shadow duration-300">
-        <div class="text-center">
+      <div class="bg-white rounded-lg p-8 shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+        <div class="text-center mb-4">
           <div class="w-20 h-20 flex items-center justify-center mx-auto mb-4 overflow-hidden">
             <img src="/assets/images/veenai.jpeg" class="w-full h-full object-contain" alt="Veena"/>
           </div>
           <h3 class="text-xl font-serif font-semibold text-ocean-900 mb-3">Veena</h3>
-          <p class="text-gray-600 mb-4">Ancient string instrument with melodious sound</p>
-          <a routerLink="/courses" class="text-ocean-700 hover:text-ocean-800 font-semibold">
+          <p class="text-sm text-gray-600 mb-4">Learn the queen of Indian string instruments, known for its soul-stirring melodies and meditative resonance.</p>
+        </div>
+        <ul class="text-left space-y-2 mb-4 flex-grow">
+          <li class="flex items-start text-sm text-gray-700">
+            <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Basic techniques to advanced ragas</span>
+          </li>
+          <li class="flex items-start text-sm text-gray-700">
+            <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Explore the depth of Carnatic music</span>
+          </li>
+          <li class="flex items-start text-sm text-gray-700">
+            <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Personalized attention for each student</span>
+          </li>
+        </ul>
+        <div class="text-center">
+          <a routerLink="/courses" class="text-ocean-700 hover:text-ocean-800 font-semibold text-sm">
             Learn More →
           </a>
         </div>
       </div>
 
       <!-- Slokam -->
-      <div class="bg-white rounded-lg p-8 shadow-md hover:shadow-xl transition-shadow duration-300">
-        <div class="text-center">
+      <div class="bg-white rounded-lg p-8 shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+        <div class="text-center mb-4">
           <div class="w-20 h-20 flex items-center justify-center mx-auto mb-4 overflow-hidden">
             <img src="/assets/images/slokam.png" class="w-full h-full object-contain" alt="Slokam"/>
           </div>
           <h3 class="text-xl font-serif font-semibold text-ocean-900 mb-3">Slokam</h3>
-          <p class="text-gray-600 mb-4">Sacred verses teaching pronunciation and meaning</p>
-          <a routerLink="/courses" class="text-ocean-700 hover:text-ocean-800 font-semibold">
+          <p class="text-sm text-gray-600 mb-4">Master the pronunciation, rhythm, and meaning of sacred Sanskrit verses. You will be learn both sanskrit and tamil works.</p>
+        </div>
+        <ul class="text-left space-y-2 mb-4 flex-grow">
+          <li class="flex items-start text-sm text-gray-700">
+            <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Strong foundation in devotional recitation</span>
+          </li>
+          <li class="flex items-start text-sm text-gray-700">
+            <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Enhance cultural knowledge</span>
+          </li>
+          <li class="flex items-start text-sm text-gray-700">
+            <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Deepen spiritual connection</span>
+          </li>
+        </ul>
+        <div class="text-center">
+          <a routerLink="/courses" class="text-ocean-700 hover:text-ocean-800 font-semibold text-sm">
             Learn More →
           </a>
         </div>
       </div>
 
       <!-- Keyboard -->
-      <div class="bg-white rounded-lg p-8 shadow-md hover:shadow-xl transition-shadow duration-300">
-        <div class="text-center">
+      <div class="bg-white rounded-lg p-8 shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+        <div class="text-center mb-4">
           <div class="w-20 h-20 flex items-center justify-center mx-auto mb-4 text-5xl">
              🎹
           </div>
           <h3 class="text-xl font-serif font-semibold text-ocean-900 mb-3">Keyboard</h3>
-          <p class="text-gray-600 mb-4">Musical foundation in melody and harmony</p>
-          <a routerLink="/courses" class="text-ocean-700 hover:text-ocean-800 font-semibold">
+          <p class="text-sm text-gray-600 mb-4">Build your musical foundation with harmonies on the keyboard. A structured approach to classical music learning.</p>
+        </div>
+        <ul class="text-left space-y-2 mb-4 flex-grow">
+          <li class="flex items-start text-sm text-gray-700">
+            <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Perfect for beginners</span>
+          </li>
+          <li class="flex items-start text-sm text-gray-700">
+            <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Explore swaras, ragas, and compositions</span>
+          </li>
+          <li class="flex items-start text-sm text-gray-700">
+            <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Structured and enjoyable learning</span>
+          </li>
+        </ul>
+        <div class="text-center">
+          <a routerLink="/courses" class="text-ocean-700 hover:text-ocean-800 font-semibold text-sm">
             Learn More →
           </a>
         </div>
