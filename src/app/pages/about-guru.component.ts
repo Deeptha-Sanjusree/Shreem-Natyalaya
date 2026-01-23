@@ -42,8 +42,8 @@ import { TranslatePipe } from '../pipes/translate.pipe';
           
           <!-- Name badge -->
           <div class="absolute -bottom-6 -right-6 bg-ocean-700 text-white p-6 rounded-xl shadow-2xl">
-            <p class="text-sm font-semibold mb-1">{{'home.aboutGuru.founderTitle | translate'}}</p>
-            <p class="text-xl font-bold">{{'home.aboutGuru.founderName | translate}}</p>
+            <p class="text-sm font-semibold mb-1">{{'home.aboutGuru.founderTitle' | translate }}</p>
+            <p class="text-xl font-bold">{{'home.aboutGuru.founderName' | translate }}</p>
           </div>
         </div>
       </div>

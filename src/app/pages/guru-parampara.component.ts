@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { TranslatePipe } from '../pipes/translate.pipe';
 
 @Component({
   selector: 'app-guru-parampara',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   template: `<!-- Page Header -->
   <section class="bg-gradient-to-br from-ocean-500 via-cream-200 to-yellow-200 py-16 md:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
         <h1 class="text-4xl md:text-5xl font-serif font-bold text-ocean-900 mb-4">
-          Guru Parampara
+          {{'home.guruParampara.pageTitle' | translate }}
         </h1>
         <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-          Deeptha Sanjusree carries forward a rich lineage of traditional Indian arts, trained under renowned gurus in Bharatanatyam, Veena, Keyboard, and Sanskrit/Tamil Slokas
+          {{'home.guruParampara.pageSubTitle' | translate }}
         </p>
       </div>
     </div>
@@ -27,34 +28,34 @@ import { Meta, Title } from '@angular/platform-browser';
       <div class="mb-16">
         <div class="bg-gradient-to-br from-cream-50 to-ocean-50 border-2 border-ocean-200 rounded-xl p-8 md:p-12 lg:p-16">
           <h2 class="text-2xl md:text-3xl font-serif font-bold text-ocean-900 mb-8 text-center">
-            Training & Expertise
+            {{'home.guruParampara.training' | translate }}
           </h2>
           <ul class="space-y-4 text-gray-700 max-w-6xl mx-auto">
             <li class="flex items-start">
               <span class="text-ocean-600 mr-3 mt-1">•</span>
               <div>
-                <div><strong>Bharatanatyam:</strong> Trained under "Natya Visharadha" and "Nattuvanga Visharadha" Late B. Kanchana, M.music</div>
-                <div class="ml-4 mt-1 text-sm text-gray-600">→ Advanced Nattuvangam training under "Acharya" H.N. Nandhi Suresh (Founder & Director of Sri Sai Nruthyalaya) - West Mambalam</div>
+                <div><strong>{{'home.guruParampara.traningBTitle' | translate }}</strong>{{'home.guruParampara.trainingBTitleDesc' | translate }}</div>
+                <div class="ml-4 mt-1 text-sm text-gray-600">{{'home.guruParampara.advanceTraining' | translate }}</div>
               </div>
             </li>
             <li class="flex items-start">
               <span class="text-ocean-600 mr-3 mt-1">•</span>
               <div>
-                <div><strong>Veena:</strong> Basics training under Late B. Kanchana</div>
-                <div class="ml-4 mt-1 text-sm text-gray-600">→ Advanced training from "Veena Vani" Late Ethiraajavalli (Professor, Music College)</div>
-                <div class="ml-4 mt-1 text-sm text-gray-600">→ "Kalaimamani" Karaikudi Sivasubramanyam - Founder of Brihaddhwani Music School, Chennai RA Puram</div>
+                <div><strong>{{'home.guruParampara.traningVTitle' | translate }}</strong>{{'home.guruParampara.trainingVTitleDesc' | translate }}</div>
+                <div class="ml-4 mt-1 text-sm text-gray-600">{{'home.guruParampara.vAdvance1' | translate }}</div>
+                <div class="ml-4 mt-1 text-sm text-gray-600">{{'home.guruParampara.vAdvance2' | translate }}</div>
               </div>
             </li>
             <li class="flex items-start">
               <span class="text-ocean-600 mr-3 mt-1">•</span>
-              <span><strong>Keyboard:</strong> Melody playing in devotional and Indian film music</span>
+              <span><strong>{{'home.guruParampara.traningKTitle' | translate }}</strong>{{'home.guruParampara.trainingKTitleDesc' | translate }}</span>
             </li>
             <li class="flex items-start">
               <span class="text-ocean-600 mr-3 mt-1">•</span>
               <div>
-                <div><strong>Sanskrit & Tamil Slokas:</strong> Mastered sacred compositions with correct pronunciation and rhythm</div>
-                <div class="ml-4 mt-1 text-sm text-gray-600">→ Sanskrit slokas from Brihaddhwani Institute</div>
-                <div class="ml-4 mt-1 text-sm text-gray-600">→ Tamil slokas from "Kalaimamani" Desa Mangayarkarasi - Founder of Aathma Gnana Maiyam</div>
+                <div><strong>{{'home.guruParampara.traningSTitle' | translate }}</strong>{{'home.guruParampara.trainingSTitleDesc' | translate }}</div>
+                <div class="ml-4 mt-1 text-sm text-gray-600">{{'home.guruParampara.sAdvance1' | translate }}</div>
+                <div class="ml-4 mt-1 text-sm text-gray-600">{{'home.guruParampara.sAdvance2' | translate }}</div>
               </div>
             </li>
           </ul>
@@ -65,40 +66,40 @@ import { Meta, Title } from '@angular/platform-browser';
       <div class="mb-20">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-3">
-            Bharatanatyam Training
+            {{'home.guruParampara.bharathanatyamTrainingTitle' | translate }}
           </h2>
           <div class="w-24 h-1 bg-gradient-to-r from-ocean-600 to-yellow-500 mx-auto"></div>
         </div>
 
         <div class="max-w-4xl mx-auto mb-12">
           <div class="bg-cream-50 rounded-lg p-6 mb-6">
-            <h3 class="text-xl font-semibold text-ocean-900 mb-4">Training Journey</h3>
+            <h3 class="text-xl font-semibold text-ocean-900 mb-4">{{'home.guruParampara.trainingJourneyTitle' | translate }}</h3>
             <ul class="space-y-3 text-gray-700">
               <li class="flex items-start">
                 <span class="text-yellow-600 mr-3 mt-1 font-bold">→</span>
-                <span>Began learning Bharatanatyam in childhood under <strong>"Natya Visharadha" and "Nattuvanga Visharadha" Late B. Kanchana M.music</strong> (Government Music School) and Founder & Director of Sri Raghavendra Natyalaya</span>
+                <span>{{'home.guruParampara.trainingJourneyBPoint1' | translate }}<strong>{{'home.guruParampara.trainingJourneyBPoint1Bold1' | translate }}</strong>{{'home.guruParampara.trainingJourneyBPoint1.1' | translate }}</span>
               </li>
               <li class="flex items-start">
                 <span class="text-yellow-600 mr-3 mt-1 font-bold">→</span>
-                <span>Completed Arangetram under her guidance</span>
+                <span>{{'home.guruParampara.traningJourneyBPoint2' | translate }}</span>
+              </li>
+              <li class="flex items-start">
+              <span class="text-yellow-600 mr-3 mt-1 font-bold">→</span>
+                <span>{{'home.guruParampara.traningJourneyBPoint3' | translate }}</span>
+              </li>
+              <li class="flex items-start">
+              <span class="text-yellow-600 mr-3 mt-1 font-bold">→</span>
+                <span>{{'home.guruParampara.traningJourneyBPoint4' | translate }}</span>
               </li>
               <li class="flex items-start">
                 <span class="text-yellow-600 mr-3 mt-1 font-bold">→</span>
-                <span>Her aunt mentored her in Bharatanatyam basics and artistic development</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-yellow-600 mr-3 mt-1 font-bold">→</span>
-                <span>Started teaching at Sri Raghavendra Natyalaya (2014)</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-yellow-600 mr-3 mt-1 font-bold">→</span>
-                <span>Progressed to Director-level role (2018-2020)</span>
+                <span>{{'home.guruParampara.traningJourneyBPoint5' | translate }}</span>
               </li>
             </ul>
           </div>
           <div class="bg-ocean-50 rounded-lg p-6">
-            <h3 class="text-xl font-semibold text-ocean-900 mb-3">Guru Lineage</h3>
-            <p class="text-gray-700">Late B. Kanchana's guru was <strong>"Kalaimamani" Madurai R. Muralidharan</strong>, a celebrated Bharatanatyam artist from Madurai.</p>
+            <h3 class="text-xl font-semibold text-ocean-900 mb-3">{{'home.guruParampara.guruLineage' | translate }}</h3>
+            <p class="text-gray-700">{{'home.guruParampara.guruLineageDesc' | translate }}<strong>{{'home.guruParampara.guruLineageDescBold' | translate }}</strong>{{'home.guruParampara.guruLineageDesc1' | translate }}</p>
           </div>
         </div>
 
@@ -110,13 +111,13 @@ import { Meta, Title } from '@angular/platform-browser';
               <img src="/assets/images/kanchana.png" alt="Late B. Kanchana M.music" class="w-full h-full object-cover object-top"/>
             </div>
             <div class="text-center mb-2">
-              <span class="inline-block px-3 py-1 bg-yellow-500 text-ocean-900 text-xs font-bold rounded-full mb-3">MY GURU</span>
+              <span class="inline-block px-3 py-1 bg-yellow-500 text-ocean-900 text-xs font-bold rounded-full mb-3">{{'home.guruParampara.myGuru' | translate }}</span>
             </div>
             <h3 class="text-xl font-serif font-bold mb-2 text-center">
-              Late B. Kanchana M.
+              {{'home.guruParampara.guruName' | translate}}
             </h3>
             <p class="text-sm text-ocean-100 text-center">
-              Bharatanatyam Teacher<br/>Government Music School
+              {{'home.guruParampara.guruDesc1' | translate}}<br/>{{'home.guruParampara.place' | translate}}
             </p>
           </div>
 
@@ -126,13 +127,13 @@ import { Meta, Title } from '@angular/platform-browser';
               <img src="/assets/images/muralidharan.jpeg" alt="Kalaimamani Madurai R. Muralidharan" class="w-full h-full object-cover">
             </div>
             <div class="text-center mb-2">
-              <span class="inline-block px-3 py-1 bg-ocean-600 text-white text-xs font-bold rounded-full mb-3">GURU'S GURU</span>
+              <span class="inline-block px-3 py-1 bg-ocean-600 text-white text-xs font-bold rounded-full mb-3">{{'home.guruParampara.guruGuru' | translate}}</span>
             </div>
             <h3 class="text-xl font-serif font-bold text-ocean-900 mb-2 text-center">
-              "Kalaimamani" Madurai R. Muralidharan
+              {{'home.guruParampara.guruGuruName' | translate}}
             </h3>
             <p class="text-sm text-gray-600 text-center">
-              Celebrated Bharatanatyam Artist
+              {{'home.guruParampara.guruGuruDesc' | translate}}
             </p>
           </div>
         </div>
@@ -142,34 +143,34 @@ import { Meta, Title } from '@angular/platform-browser';
       <div class="mb-20">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-3">
-            Veena Training
+            {{'home.guruParampara.veenaTrainingTitle' | translate }}
           </h2>
           <div class="w-24 h-1 bg-gradient-to-r from-ocean-600 to-yellow-500 mx-auto"></div>
         </div>
 
         <div class="max-w-4xl mx-auto mb-12">
           <div class="bg-cream-50 rounded-lg p-6">
-            <h3 class="text-xl font-semibold text-ocean-900 mb-4">Training Journey</h3>
+            <h3 class="text-xl font-semibold text-ocean-900 mb-4">{{'home.guruParampara.trainingJourneyTitle' | translate }}</h3>
             <ul class="space-y-3 text-gray-700">
               <li class="flex items-start">
                 <span class="text-yellow-600 mr-3 mt-1 font-bold">→</span>
-                <span><strong>Foundational Training:</strong> Learned basics under Smt. Late Kanchana (her aunt)</span>
+                <span><strong>{{'home.guruParampara.foundationTraining' | translate }}</strong>{{'home.guruParampara.foundationalTrainingDesc' | translate }}</span>
               </li>
               <li class="flex items-start">
                 <span class="text-yellow-600 mr-3 mt-1 font-bold">→</span>
-                <span><strong>Advanced Training:</strong> "Veena Vani" under Late Ethiraja Valli (Professor, Music College)</span>
+                <span><strong>{{'home.guruParampara.advancedTraining' | translate }}</strong>{{'home.guruParampara.advancedTrainingDesc' | translate }}</span>
               </li>
               <li class="flex items-start">
                 <span class="text-yellow-600 mr-3 mt-1 font-bold">→</span>
-                <span><strong>Techniques Mastered:</strong> Kamakas, Alapana, and advanced Veena lessons</span>
+                <span><strong>{{'home.guruParampara.techniquesMastered' | translate }}</strong>{{'home.guruParampara.techniquesMasteredDesc' | translate }}</span>
               </li>
               <li class="flex items-start">
                 <span class="text-yellow-600 mr-3 mt-1 font-bold">→</span>
-                <span><strong>Refined Artistry:</strong> Under "Kalaimamani" Karaikudi Siva Subramanyam (Veena Maestro, Brihaddwani Institute)</span>
+                <span><strong>{{'home.guruParampara.refinedArtistry' | translate }}</strong>{{'home.guruParampara.refinedArtistryDesc' | translate }}</span>
               </li>
               <li class="flex items-start">
                 <span class="text-yellow-600 mr-3 mt-1 font-bold">→</span>
-                <span><strong>Additional Learning:</strong> Sanskrit slokas alongside advanced Veena techniques</span>
+                <span><strong>{{'home.guruParampara.additionalLearning' | translate }}</strong>{{'home.guruParampara.additionalLearningDesc' | translate }}</span>
               </li>
             </ul>
           </div>
@@ -186,10 +187,10 @@ import { Meta, Title } from '@angular/platform-browser';
               <!-- Photo placeholder - Add image here -->
             </div>
             <h3 class="text-xl font-serif font-bold text-ocean-900 mb-2 text-center">
-              Smt. Late Kanchana
+              {{'home.guruParampara.guruName' | translate}}
             </h3>
             <p class="text-sm text-gray-600 text-center">
-              Foundational Veena Training (Her Aunt)
+              {{'home.guruParampara.veenaGuru' | translate }}
             </p>
           </div>
 
@@ -200,10 +201,10 @@ import { Meta, Title } from '@angular/platform-browser';
               <!-- Photo placeholder - Add image here -->
             </div>
             <h3 class="text-xl font-serif font-bold text-ocean-900 mb-2 text-center">
-              Late Smt. Ethiraja Valli
+              {{'home.guruParampara.veenaGuru' | translate }}
             </h3>
             <p class="text-sm text-gray-600 text-center">
-              Professor, Music College - "Veena Vani", Kamakas & Alapana
+              {{'home.guruParampara.veenaGru2Prof' | translate }}
             </p>
           </div>
 
@@ -216,10 +217,10 @@ import { Meta, Title } from '@angular/platform-browser';
               <!-- Photo placeholder - Add image here -->
             </div>
             <h3 class="text-xl font-serif font-bold text-ocean-900 mb-2 text-center">
-              "Kalaimamani" Karaikudi Siva Subramanyam
+              {{'home.guruParampara.veenaGuru3' | translate }}
             </h3>
             <p class="text-sm text-gray-600 text-center">
-              Veena Maestro, Founder of Brihaddwani Institute
+               {{'home.guruParampara.veenaGuru3Prof' | translate }}
             </p>
           </div>
         </div>
@@ -229,30 +230,30 @@ import { Meta, Title } from '@angular/platform-browser';
       <div class="mb-20">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-3">
-            Sanskrit & Tamil Slokas
+            {{'home.guruParampara.slokamTrainingTitle' | translate }}
           </h2>
           <div class="w-24 h-1 bg-gradient-to-r from-ocean-600 to-yellow-500 mx-auto"></div>
         </div>
 
         <div class="max-w-4xl mx-auto mb-12">
           <div class="bg-cream-50 rounded-lg p-6">
-            <h3 class="text-xl font-semibold text-ocean-900 mb-4">Training Details</h3>
+            <h3 class="text-xl font-semibold text-ocean-900 mb-4">{{'home.guruParampara.trainingJourneyTitle' | translate }}</h3>
             <ul class="space-y-3 text-gray-700">
               <li class="flex items-start">
                 <span class="text-yellow-600 mr-3 mt-1 font-bold">→</span>
-                <span><strong>Guru:</strong> "Kalaimamani" Desa Mangayarkarasi</span>
+                <span><strong>{{'home.guruParampara.guru' | translate }}</strong>{{'home.guruParampara.mangai' | translate }}</span>
               </li>
               <li class="flex items-start">
                 <span class="text-yellow-600 mr-3 mt-1 font-bold">→</span>
-                <span><strong>Compositions Mastered:</strong> Thiruppavai, Thiruvempavai, Thirupalli Ezhuchi, Thiruppugazh, Kandhar Alankaram, Kandhar Anuboothi</span>
+                <span><strong>{{'home.guruParampara.mastered' | translate }}</strong>{{'home.guruParampara.masteredDesc' | translate }}</span>
               </li>
               <li class="flex items-start">
                 <span class="text-yellow-600 mr-3 mt-1 font-bold">→</span>
-                <span><strong>Learning Approach:</strong> Correct pronunciation, rhythm, and meaning</span>
+                <span><strong>{{'home.guruParampara.learningApproach' | translate }}</strong>{{'home.guruParampara.learningApproachDesc' | translate }}</span>
               </li>
               <li class="flex items-start">
                 <span class="text-yellow-600 mr-3 mt-1 font-bold">→</span>
-                <span><strong>Focus:</strong> Musicality and devotion in sacred works</span>
+                <span><strong>{{'home.guruParampara.focus' | translate }}</strong>{{'home.guruParampara.focusDesc' | translate }}</span>
               </li>
             </ul>
           </div>
@@ -268,14 +269,8 @@ import { Meta, Title } from '@angular/platform-browser';
               <!-- Photo placeholder - Add image here -->
             </div>
             <h3 class="text-xl font-serif font-bold text-ocean-900 mb-2 text-center">
-              "Kalaimamani" Desa Mangayarkarasi
+              {{'home.guruParampara.mangai' | translate }}
             </h3>
-            <p class="text-sm text-gray-600 text-center mb-3">
-              Tamil Slokas Master
-            </p>
-            <div class="text-xs text-gray-600 text-center">
-              <p>Thiruppugazh • Kandhar Alankaram • Kandhar Anuboothi</p>
-            </div>
           </div>
         </div>
       </div>
@@ -284,26 +279,26 @@ import { Meta, Title } from '@angular/platform-browser';
       <div class="mb-20">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-3">
-            Keyboard Training
+            {{'home.guruParampara.keyboardTrainingTitle' | translate }}
           </h2>
           <div class="w-24 h-1 bg-gradient-to-r from-ocean-600 to-yellow-500 mx-auto"></div>
         </div>
 
         <div class="max-w-4xl mx-auto mb-12">
           <div class="bg-cream-50 rounded-lg p-6">
-            <h3 class="text-xl font-semibold text-ocean-900 mb-4">Training Details</h3>
+            <h3 class="text-xl font-semibold text-ocean-900 mb-4">{{'home.guruParampara.trainingJourneyTitle' | translate }}</h3>
             <ul class="space-y-3 text-gray-700">
               <li class="flex items-start">
                 <span class="text-yellow-600 mr-3 mt-1 font-bold">→</span>
-                <span><strong>Guru:</strong> "Isai Selvam" B. Mahendran (her father)</span>
+                <span><strong>{{'home.guruParampara.guru' | translate }}</strong>{{'home.guruParampara.keyboardGuru' | translate }}</span>
               </li>
               <li class="flex items-start">
                 <span class="text-yellow-600 mr-3 mt-1 font-bold">→</span>
-                <span><strong>Technique:</strong> Right-hand melody playing</span>
+                <span><strong>{{'home.guruParampara.techniquesMastered' | translate }}</strong>{{'home.guruParampara.rightHandPlay' | translate }}</span>
               </li>
               <li class="flex items-start">
                 <span class="text-yellow-600 mr-3 mt-1 font-bold">→</span>
-                <span><strong>Repertoire:</strong> Devotional and Indian film music</span>
+                <span><strong>{{'home.guruParampara.repertoire' | translate }}</strong>{{'home.guruParampara.repertoireDesc' | translate }}</span>
               </li>
             </ul>
           </div>
@@ -319,11 +314,8 @@ import { Meta, Title } from '@angular/platform-browser';
               <!-- Photo placeholder - Add image here -->
             </div>
             <h3 class="text-xl font-serif font-bold text-ocean-900 mb-2 text-center">
-              "Isai Selvam" B. Mahendran
+              {{'home.guruParampara.keyboardGuru1' | translate }}
             </h3>
-            <p class="text-sm text-gray-600 text-center">
-              Keyboard - Devotional & Indian Film Music (Her Father)
-            </p>
           </div>
         </div>
       </div>
@@ -332,48 +324,30 @@ import { Meta, Title } from '@angular/platform-browser';
       <div class="bg-gradient-to-br from-ocean-900 to-ocean-800 rounded-2xl p-8 md:p-12 text-white">
         <div class="text-center mb-8">
           <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">
-            Legacy and Continuation
+            {{'home.guruParampara.legacy' | translate }}
           </h2>
           <div class="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto mb-6"></div>
         </div>
         <ul class="space-y-4 text-cream-100 max-w-3xl mx-auto">
           <li class="flex items-center">
             <span class="text-yellow-400 mr-3 text-xl">✦</span>
-            <span>Embodies the Guru Parampara tradition</span>
+            <span>{{'home.guruParampara.legacyPoint1' | translate }}</span>
           </li>
           <li class="flex items-center">
             <span class="text-yellow-400 mr-3 text-xl">✦</span>
-            <span>Blends traditional teachings with modern pedagogy</span>
+            <span>{{'home.guruParampara.legacyPoint2' | translate }}</span>
           </li>
           <li class="flex items-center">
             <span class="text-yellow-400 mr-3 text-xl">✦</span>
-            <span>Teaches, mentors, and inspires through Shreem Natyalaya</span>
+            <span>{{'home.guruParampara.legacyPoint3' | translate }}</span>
           </li>
           <li class="flex items-center">
             <span class="text-yellow-400 mr-3 text-xl">✦</span>
-            <span>Preserves classical arts and devotional music for future generations</span>
+            <span>{{'home.guruParampara.legacyPoint4' | translate }}</span>
           </li>
         </ul>
       </div>
 
-    </div>
-  </section>
-
-  <!-- Call to Action -->
-  <section class="py-16 md:py-20 bg-ocean-900 text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">
-        Become Part of This Sacred Tradition
-      </h2>
-      <p class="text-lg text-cream-100 mb-8">
-        Join us in preserving and celebrating the rich heritage of classical Indian arts
-      </p>
-      <a 
-        routerLink="/contact" 
-        class="inline-block px-8 py-4 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-      >
-        Start Your Journey
-      </a>
     </div>
   </section>
   `
