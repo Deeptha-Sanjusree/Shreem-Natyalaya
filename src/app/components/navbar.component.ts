@@ -1,11 +1,13 @@
 import { Component, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { TranslationService, Language } from '../services/translation.service';
+import { TranslatePipe } from '../pipes/translate.pipe';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterLinkActive],
+  imports: [CommonModule, RouterLink, RouterLinkActive, TranslatePipe],
   template:`
   <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,7 +15,7 @@ import { CommonModule } from '@angular/common';
       <!-- Logo -->
       <a routerLink="/" class="flex items-center space-x-3 shrink-0" (click)="navigateAndScroll()">
         <div class="text-2xl font-serif font-bold text-ocean-800 whitespace-nowrap">
-          Shreem Natyalaya
+          {{ 'nav.instituteName' | translate }}
         </div>
       </a>
 
@@ -26,7 +28,7 @@ import { CommonModule } from '@angular/common';
           class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
           (click)="scrollToTop()"
         >
-          Home
+          {{ 'nav.home' | translate }}
         </a>
         <a 
           routerLink="/about-guru" 
@@ -34,7 +36,7 @@ import { CommonModule } from '@angular/common';
           class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
           (click)="scrollToTop()"
         >
-          About Guru
+          {{ 'nav.aboutGuru' | translate }}
         </a>
         <a 
           routerLink="/guru-parampara" 
@@ -42,7 +44,7 @@ import { CommonModule } from '@angular/common';
           class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
           (click)="scrollToTop()"
         >
-          Guru Parampara
+          {{ 'nav.guruParampara' | translate }}
         </a>
         <a 
           routerLink="/courses" 
@@ -50,7 +52,7 @@ import { CommonModule } from '@angular/common';
           class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
           (click)="scrollToTop()"
         >
-          Courses
+          {{ 'nav.courses' | translate }}
         </a>
         <a 
           routerLink="/upcoming-events" 
@@ -58,7 +60,7 @@ import { CommonModule } from '@angular/common';
           class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
           (click)="scrollToTop()"
         >
-          Upcoming Events
+          {{ 'nav.upcomingEvents' | translate }}
         </a>
         <a 
           routerLink="/branches" 
@@ -66,7 +68,7 @@ import { CommonModule } from '@angular/common';
           class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
           (click)="scrollToTop()"
         >
-          Our Branches
+          {{ 'nav.branches' | translate }}
         </a>
         <a 
           routerLink="/collaborate" 
@@ -74,7 +76,7 @@ import { CommonModule } from '@angular/common';
           class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
           (click)="scrollToTop()"
         >
-          Collaborate with us
+          {{ 'nav.collaborate' | translate }}
         </a>
         <a 
           routerLink="/contact" 
@@ -82,8 +84,50 @@ import { CommonModule } from '@angular/common';
           class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
           (click)="scrollToTop()"
         >
-          Contact
+          {{ 'nav.contact' | translate }}
         </a>
+      </div>
+
+      <!-- Language Switcher -->
+      <div class="hidden md:flex items-center ml-auto relative">
+        <button
+          (click)="toggleLangMenu()"
+          class="flex items-center space-x-2 px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100 transition-colors duration-200"
+          aria-label="Change language"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+          </svg>
+          <span class="font-medium">{{ currentLang() === 'en' ? 'EN' : 'த' }}</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        
+        @if (isLangMenuOpen()) {
+          <div class="absolute right-0 top-full mt-2 w-36 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
+            <div class="py-1">
+              <button
+                (click)="switchLanguage('en')"
+                class="w-full text-left px-4 py-2 text-sm hover:bg-gray-100 transition-colors duration-200"
+                [class.bg-ocean-50]="currentLang() === 'en'"
+                [class.text-ocean-700]="currentLang() === 'en'"
+                [class.font-semibold]="currentLang() === 'en'"
+              >
+                English
+              </button>
+              <button
+                (click)="switchLanguage('ta')"
+                class="w-full text-left px-4 py-2 text-sm hover:bg-gray-100 transition-colors duration-200"
+                [class.bg-ocean-50]="currentLang() === 'ta'"
+                [class.text-ocean-700]="currentLang() === 'ta'"
+                [class.font-semibold]="currentLang() === 'ta'"
+              >
+                தமிழ் (Tamil)
+              </button>
+            </div>
+          </div>
+        }
       </div>
 
       <!-- Mobile menu button -->
@@ -174,6 +218,31 @@ import { CommonModule } from '@angular/common';
         >
           Contact
         </a>
+        
+        <!-- Language Switcher (Mobile) -->
+        <div class="border-t border-gray-200 pt-2 mt-2">
+          <div class="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+            Language / மொழி
+          </div>
+          <button
+            (click)="switchLanguage('en')"
+            class="w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+            [class.bg-ocean-50]="currentLang() === 'en'"
+            [class.text-ocean-700]="currentLang() === 'en'"
+            [class.text-gray-700]="currentLang() !== 'en'"
+          >
+            English
+          </button>
+          <button
+            (click)="switchLanguage('ta')"
+            class="w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+            [class.bg-ocean-50]="currentLang() === 'ta'"
+            [class.text-ocean-700]="currentLang() === 'ta'"
+            [class.text-gray-700]="currentLang() !== 'ta'"
+          >
+            தமிழ் (Tamil)
+          </button>
+        </div>
       </div>
     </div>
   }
@@ -183,13 +252,31 @@ import { CommonModule } from '@angular/common';
 })
 export class NavbarComponent {
   protected readonly isMenuOpen = signal(false);
+  protected readonly isLangMenuOpen = signal(false);
+
+  constructor(protected translationService: TranslationService) {}
+
+  get currentLang() {
+    return this.translationService.currentLang$;
+  }
 
   toggleMenu(): void {
     this.isMenuOpen.update(value => !value);
+    this.isLangMenuOpen.set(false);
   }
 
   closeMenu(): void {
     this.isMenuOpen.set(false);
+  }
+
+  toggleLangMenu(): void {
+    this.isLangMenuOpen.update(value => !value);
+  }
+
+  switchLanguage(lang: Language): void {
+    this.translationService.switchLanguage(lang);
+    this.isLangMenuOpen.set(false);
+    this.closeMenu();
   }
 
   scrollToTop(): void {

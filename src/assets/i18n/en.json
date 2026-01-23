@@ -1,0 +1,185 @@
+{
+  "nav": {
+    "instituteName": "Shreem Natyalaya",
+    "home": "Home",
+    "aboutGuru": "About Guru",
+    "guruParampara": "Guru Parampara",
+    "courses": "Courses",
+    "upcomingEvents": "Upcoming Events",
+    "branches": "Our Branches",
+    "collaborate": "Collaborate with us",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Welcome to Shreem Natyalaya",
+      "subtitle": "Preserving Classical Arts Through Authentic Teaching",
+      "description": "Experience the beauty of Bharatanatyam, Veena, Slokam, and Keyboard under expert guidance. Join us in celebrating India's rich cultural heritage.",
+      "cta": "Explore Courses"
+    },
+    "about": {
+      "title": "Nurturing Classical Arts with Authenticity",
+      "description1": "At Shreem Natyalaya, we preserve and celebrate the timeless beauty of classical Indian arts through traditional guru-shishya parampara. Every student receives personalized guidance, deep cultural insights, and a nurturing environment to grow both as an artist and as an individual.",
+      "description2": "We believe that classical arts are more than techniques—they are a journey into India's rich spiritual and cultural heritage, cultivating discipline, devotion, and a lifelong connection to our traditions.",
+      "description3": "Through disciplined practice and devotion to the art form, we help students develop not just technical skills, but also a profound connection to the spiritual and cultural heritage of India."
+    },
+    "courses": {
+      "title": "Our Classical Arts Programs",
+      "subtitle": "Explore the traditional art forms we teach with dedication",
+      "bharatanatyam": {
+        "title": "Bharatanatyam",
+        "description": "Experience the elegance of this ancient dance form that brings together rhythm, expression, and storytelling.",
+        "point1": "Structured training in adavus, jathis, and abhinaya",
+        "point2": "Develop grace, stamina, and discipline",
+        "point3": "Deep understanding of this sacred art",
+        "learnmore": "Learn More"
+      },
+      "veena": {
+        "title": "Veena",
+        "description": "Learn the queen of Indian string instruments, known for its soul-stirring melodies and meditative resonance.",
+        "points": [
+          "Basic techniques to advanced ragas",
+          "Explore the depth of Carnatic music",
+          "Personalized attention for each student"
+        ]
+      },
+      "slokam": {
+        "title": "Slokam",
+        "description": "Master the pronunciation, rhythm, and meaning of sacred Sanskrit verses. You will be learn both sanskrit and tamil works.",
+        "points": [
+          "Strong foundation in devotional recitation",
+          "Enhance cultural knowledge",
+          "Deepen spiritual connection"
+        ]
+      },
+      "keyboard": {
+        "title": "Keyboard",
+        "description": "Build your musical foundation with harmonies on the keyboard. A structured approach to classical music learning.",
+        "points": [
+          "Perfect for beginners",
+          "Explore swaras, ragas, and compositions",
+          "Structured and enjoyable learning"
+        ]
+      },
+      "learnMore": "Learn More"
+    },
+    "stats": {
+      "students": "Students Trained",
+      "years": "Years of Excellence",
+      "courses": "Courses Offered",
+      "performances": "Performances"
+    },
+    "whyChoose": {
+      "title": "Why Choose Shreem Natyalaya?",
+      "authentic": {
+        "title": "Authentic Training",
+        "description": "Learn from experienced gurus following traditional teaching methods"
+      },
+      "personalized": {
+        "title": "Personalized Attention",
+        "description": "Small batch sizes ensuring individual focus and progress tracking"
+      },
+      "flexible": {
+        "title": "Flexible Timings",
+        "description": "Weekend and weekday batches available to suit your schedule"
+      },
+      "performance": {
+        "title": "Performance Opportunities",
+        "description": "Regular stage performances and annual day celebrations"
+      }
+    },
+    "cta": {
+      "title": "Ready to Begin Your Journey?",
+      "description": "Join Shreem Natyalaya and immerse yourself in the world of classical arts",
+      "button": "Enroll Now"
+    }
+  },
+  "courses": {
+    "title": "Our Courses",
+    "subtitle": "Discover Traditional Indian Classical Arts",
+    "description": "Choose from our range of classical art forms taught with dedication and authenticity"
+  },
+  "courseDetail": {
+    "eligibility": "Eligibility & Class details",
+    "duration": "Duration",
+    "ageGroup": "Age Group",
+    "classFormat": "Class Format",
+    "whatYouLearn": "What You'll Learn",
+    "benefits": "Benefits",
+    "syllabus": "Course Syllabus",
+    "theory": "Theory",
+    "practical": "Practical",
+    "evaluation": "Evaluation & Certification",
+    "studentBenefits": "Student Benefits",
+    "keyboardNote": "Note: If the student is interested to learn Western we will hire a mentor for that.",
+    "enrollNow": "Enroll Now"
+  },
+  "guruParampara": {
+    "title": "Guru Parampara",
+    "subtitle": "Our Lineage of Knowledge",
+    "founder": {
+      "title": "Our Founder & Guru",
+      "name": "Smt. Kanchana Srinivasan",
+      "description": "With over 15 years of teaching experience, Smt. Kanchana Srinivasan is a dedicated practitioner and teacher of Bharatanatyam and Veena. Her passion for preserving classical arts and nurturing young talent has made Shreem Natyalaya a trusted name in classical arts education."
+    },
+    "training": {
+      "title": "Training & Expertise",
+      "bharatanatyam": "Trained in Bharatanatyam under renowned gurus",
+      "veena": "Accomplished Veena artist with deep knowledge of Carnatic music",
+      "slokam": "Expert in teaching Sanskrit slokas and devotional recitation",
+      "keyboard": "Skilled in teaching keyboard with focus on Indian classical music"
+    },
+    "philosophy": {
+      "title": "Teaching Philosophy",
+      "description": "At Shreem Natyalaya, we believe in the traditional Guru-Shishya Parampara, where knowledge is passed down with dedication, discipline, and devotion. Our approach combines rigorous training with individual attention, ensuring each student develops both technical excellence and artistic expression."
+    }
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Moments from Our Journey",
+    "performances": "Performances",
+    "classes": "Classes",
+    "events": "Events"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in Touch",
+    "description": "Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "course": "Course Interested In",
+      "selectCourse": "Select a course",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending..."
+    },
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Class Hours"
+    },
+    "location": "Our Location",
+    "areas": "We serve students from Vandalur, Urapakkam, Guduvancheri, Kattankulathur, Maraimalai Nagar, SP Kovil, Chengalpet and surrounding areas."
+  },
+  "footer": {
+    "title": "Shreem Natyalaya",
+    "tagline": "Where tradition meets disciplined artistry. Nurturing classical arts with authenticity and dedication.",
+    "quickLinks": "Quick Links",
+    "getInTouch": "Get in Touch",
+    "admissionsText": "For admissions and inquiries, please visit our contact page.",
+    "contactUs": "Contact Us",
+    "rights": "All rights reserved.",
+    "designedBy": "(Design and developed by Deeptha Sanjusree M)"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "success": "Success!",
+    "close": "Close",
+    "submit": "Submit",
+    "cancel": "Cancel"
+  }
+}

@@ -2,6 +2,7 @@ import { Component, OnInit, signal, OnDestroy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '../pipes/translate.pipe';
 
 interface Testimonial {
   name: string;
@@ -18,7 +19,7 @@ interface FAQ {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, CommonModule],
+  imports: [RouterLink, CommonModule, TranslatePipe],
   //templateUrl: './home.component.html',
   template:`<!-- Full Viewport Hero Section with Auto Background Carousel -->
   <section class="relative h-screen flex items-center justify-center overflow-hidden">
@@ -39,20 +40,19 @@ interface FAQ {
   <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <div class="animate-fade-in-up">
       <h1 class="text-5xl md:text-6xl lg:text-7xl text-white/50 font-serif font-bold text-white mb-6 drop-shadow-2xl">
-        Shreem Natyalaya
+        {{ 'home.hero.title' | translate }}
       </h1>
       <p class="text-2xl md:text-3xl text-white/60 mb-8 font-serif italic drop-shadow-lg">
-        Where tradition meets disciplined artistry
+        {{ 'home.hero.subtitle' | translate }}
       </p>
       <p class="text-lg md:text-xl text-white/70 max-w-3xl mx-auto mb-12 leading-relaxed drop-shadow-md">
-        Experience the richness of classical Indian arts through authentic teaching,
-        rooted in tradition and guided by dedication to excellence.
+        {{ 'home.hero.description' | translate }}
       </p>
       <a 
         routerLink="/contact" 
         class="inline-block px-10 py-4 bg-ocean-800 hover:bg-ocean-500 text-white text-lg font-semibold rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-200 transform hover:scale-105 hover:-translate-y-1"
       >
-        Enroll Now
+        {{ 'home.cta.button' | translate }}
       </a>
     </div>
   </div>
@@ -70,17 +70,14 @@ interface FAQ {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-6">
-        Nurturing Classical Arts with Authenticity
+        {{'home.about.title' | translate }}
       </h2>
       <p class="text-lg text-gray-700 leading-relaxed mb-6">   
-        At Shreem Natyalaya, we preserve and celebrate the timeless beauty of classical Indian arts through traditional guru-shishya parampara. 
-        Every student receives personalized guidance, deep cultural insights, and a nurturing environment to grow both as an artist and as an individual.
-        We believe that classical arts are more than techniques—they are a journey into India's rich spiritual and cultural heritage, cultivating discipline, devotion, and a lifelong connection to our traditions.
+        {{'home.about.description1' | translate }}
+        {{'home.about.description2' | translate }}
       </p>
       <p class="text-lg text-gray-700 leading-relaxed">
-        Through disciplined practice and devotion to the art form, we help students develop 
-        not just technical skills, but also a profound connection to the spiritual and 
-        cultural heritage of India.
+        {{'home.about.description3' | translate }}
       </p>
     </div>
   </div>
@@ -91,10 +88,10 @@ interface FAQ {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-4">
-        Our Classical Arts Programs
+        {{'courses.title' | translate }}
       </h2>
       <p class="text-lg text-gray-600">
-        Explore the traditional art forms we teach with dedication
+        {{'courses.subtitle' | translate}}
       </p>
     </div>
 
@@ -105,32 +102,32 @@ interface FAQ {
           <div class="w-20 h-20 flex items-center justify-center mx-auto mb-4 overflow-hidden">
             <img src="/assets/images/natrajar.jpeg" class="w-full h-full object-contain" alt="Bharatanatyam"/>
           </div>
-          <h3 class="text-xl font-serif font-semibold text-ocean-900 mb-3">Bharatanatyam</h3>
-          <p class="text-sm text-gray-600 mb-4">Experience the elegance of this ancient dance form that brings together rhythm, expression, and storytelling.</p>
+          <h3 class="text-xl font-serif font-semibold text-ocean-900 mb-3">{{'home.courses.bharatanatyam.title' | translate}}</h3>
+          <p class="text-sm text-gray-600 mb-4">{{'home.courses.bharatanatyam.description' | translate}}</p>
         </div>
         <ul class="text-left space-y-2 mb-4 flex-grow">
           <li class="flex items-start text-sm text-gray-700">
             <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
-            <span>Structured training in adavus, jathis, and abhinaya</span>
+            <span>{{'home.courses.bharatanatyam.point1' | translate}}</span>
           </li>
           <li class="flex items-start text-sm text-gray-700">
             <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
-            <span>Develop grace, stamina, and discipline</span>
+            <span>{{'home.courses.bharatanatyam.point2' | translate}}</span>
           </li>
           <li class="flex items-start text-sm text-gray-700">
             <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
-            <span>Deep understanding of this sacred art</span>
+            <span>{{'home.courses.bharatanatyam.point3' | translate}}</span>
           </li>
         </ul>
         <div class="text-center">
           <a routerLink="/courses" class="text-ocean-700 hover:text-ocean-800 font-semibold text-sm">
-            Learn More →
+             {{ 'home.courses.bharatanatyam.learnmore' | translate }}
           </a>
         </div>
       </div>
