@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { TranslatePipe } from '../pipes/translate.pipe';
 
 @Component({
   selector: 'app-about-guru',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   template:`<!-- Page Header -->
 <section class="bg-gradient-to-br from-ocean-500 via-cream-200 to-yellow-200 py-16 md:py-24">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center">
       <h1 class="text-4xl md:text-5xl font-serif font-bold text-ocean-900 mb-4">
-        About the Guru
+        {{ 'home.aboutGuru.pageTitle' | translate }}
       </h1>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-        A personal journey of passion, dedication, and commitment to classical arts
+       {{ 'home.aboutGuru.pageSubtitle' | translate }}
       </p>
     </div>
   </div>
@@ -41,8 +42,8 @@ import { Meta, Title } from '@angular/platform-browser';
           
           <!-- Name badge -->
           <div class="absolute -bottom-6 -right-6 bg-ocean-700 text-white p-6 rounded-xl shadow-2xl">
-            <p class="text-sm font-semibold mb-1">Founder & Director</p>
-            <p class="text-xl font-bold">Ms. Deeptha Sanjusree M</p>
+            <p class="text-sm font-semibold mb-1">{{'home.aboutGuru.founderTitle | translate'}}</p>
+            <p class="text-xl font-bold">{{'home.aboutGuru.founderName | translate}}</p>
           </div>
         </div>
       </div>
@@ -52,31 +53,26 @@ import { Meta, Title } from '@angular/platform-browser';
         <div class="space-y-6">
           <div>
             <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-4">
-              Namaskar,
+              {{'home.aboutGuru.greeting' | translate}}
             </h2>
             <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-4">
-              I'm Deeptha Sanjusree M
+              {{'home.aboutGuru.introduction' | translate}}
             </h2>
             <div class="w-20 h-1 bg-gradient-to-r from-ocean-600 to-yellow-500 mb-6"></div>
           </div>
 
           <div class="space-y-4 text-gray-700 leading-relaxed">
             <p class="text-lg">
-              I am the <span class="font-semibold text-ocean-900">Founder of Shreem Natyalaya</span>, 
-              a classical dance and music academy dedicated to preserving and sharing the beauty of 
-              traditional Indian arts.
+              {{'home.aboutGuru.intro1' | translate}} <span class="font-semibold text-ocean-900">{{'home.aboutGuru.intro1Bold' | translate}}</span>, 
+              {{'home.aboutGuru.intro1Rest' | translate }}
             </p>
 
             <p class="text-lg">
-              My journey in classical arts has been deeply rooted in tradition, discipline, and devotion. 
-              Through years of dedicated practice and teaching, I have developed a strong foundation in music and movement, guided by the Guru–Shishya Parampara. 
-              This journey has shaped my understanding of rhythm, expression, and spiritual connection, which I passionately pass on to every student I teach.
+             {{'home.aboutGuru.intro2' | translate }}
             </p>
 
             <p class="text-lg">
-              As a <span class="font-semibold text-ocean-900">young founder</span>, I run this institution 
-              with energy, commitment, and a deep sense of responsibility. Every student who walks through 
-              our doors becomes part of my artistic family.
+            {{'home.aboutGuru.intro3' | translate}}<span class="font-semibold text-ocean-900">{{'home.aboutGuru.intro3Bold' | translate }}</span>{{'home.aboutGuru.intro3Rest' | translate}}
             </p>
           </div>
 
@@ -84,7 +80,7 @@ import { Meta, Title } from '@angular/platform-browser';
           <div class="grid grid-cols-2 gap-4 pt-6">
             <div class="bg-cream-50 p-4 rounded-lg border-l-4 border-yellow-600">
               <p class="text-2xl font-bold text-ocean-900">10+</p>
-              <p class="text-sm text-gray-600">Years Teaching Arts</p>
+              <p class="text-sm text-gray-600">{{'home.aboutGuru.yearsTeaching' | translate }}</p>
             </div>
           </div>
         </div>
@@ -98,10 +94,10 @@ import { Meta, Title } from '@angular/platform-browser';
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-4">
-        My Learning Journey
+        {{'home.aboutGuru.learningJourneyTitle' | translate}}
       </h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto mt-4">
-        How family tradition shaped my artistic foundation
+       {{'home.aboutGuru.learningJourneySubtitle' | translate }}
       </p>
       <div class="w-20 h-1 bg-gradient-to-r from-ocean-600 to-yellow-500 mx-auto mt-6"></div>
     </div>
@@ -111,25 +107,25 @@ import { Meta, Title } from '@angular/platform-browser';
       <!-- Training Background -->
       <div class="mb-10">
         <h3 class="text-xl font-semibold text-ocean-900 mb-6 pb-3 border-b-2 border-ocean-200">
-          My Training Background
+          {{'home.aboutGuru.trainingTitle' | translate}}
         </h3>
         <ul class="space-y-4">
           <li class="flex items-start">
             <span class="flex-shrink-0 w-2 h-2 bg-ocean-600 rounded-full mt-2 mr-4"></span>
             <span class="text-gray-700 leading-relaxed">
-              I learned <span class="font-semibold text-ocean-900">Bharatanatyam and Veena</span> from my <span class="font-semibold text-ocean-900">Athai (Aunt)</span>, who instilled in me not just technique, but a deep reverence for these art forms
+            {{'home.aboutGuru.training1' | translate}}<span class="font-semibold text-ocean-900">{{'home.aboutGuru.training1Bold' | translate }}</span>{{'home.aboutGuru.training1From' | translate }}<span class="font-semibold text-ocean-900">{{'home.aboutGuru.training1FromBold' | translate}}</span>{{'home.aboutGuru.training1Rest' | translate}}
             </span>
           </li>
           <li class="flex items-start">
             <span class="flex-shrink-0 w-2 h-2 bg-ocean-600 rounded-full mt-2 mr-4"></span>
             <span class="text-gray-700 leading-relaxed">
-              I learned <span class="font-semibold text-ocean-900">Keyboard</span> from my <span class="font-semibold text-ocean-900">father</span>, whose musical wisdom shaped my understanding of melody and rhythm
+              {{'home.aboutGuru.training2' | translate}} <span class="font-semibold text-ocean-900">{{'home.aboutGuru.training2Bold' | translate}}</span>{{'home.aboutGuru.training2From' | translate}}<span class="font-semibold text-ocean-900">{{'home.aboutGuru.training2FromBold' | translate }}</span>{{'home.aboutGuru.training2Rest' | translate }}
             </span>
           </li>
           <li class="flex items-start">
             <span class="flex-shrink-0 w-2 h-2 bg-ocean-600 rounded-full mt-2 mr-4"></span>
             <span class="text-gray-700 leading-relaxed">
-              My artistic foundation was built within my family—where tradition was lived, not just taught
+             {{'home.aboutGuru.training3' | translate }}
             </span>
           </li>
         </ul>
@@ -138,25 +134,25 @@ import { Meta, Title } from '@angular/platform-browser';
       <!-- My Approach as Founder -->
       <div class="mb-10">
         <h3 class="text-xl font-semibold text-ocean-900 mb-6 pb-3 border-b-2 border-yellow-200">
-          My Approach as Founder
+          {{'home.aboutGuru.approachTitle' | translate}}
         </h3>
         <ul class="space-y-4">
           <li class="flex items-start">
             <span class="flex-shrink-0 w-2 h-2 bg-yellow-600 rounded-full mt-2 mr-4"></span>
             <span class="text-gray-700 leading-relaxed">
-              I am actively involved in every aspect—from teaching daily classes to planning the curriculum
+             {{'home.aboutGuru.approach1' | translate}}
             </span>
           </li>
           <li class="flex items-start">
             <span class="flex-shrink-0 w-2 h-2 bg-yellow-600 rounded-full mt-2 mr-4"></span>
             <span class="text-gray-700 leading-relaxed">
-              I run Shreem Natyalaya with strong enthusiasm, continuous effort, and unwavering dedication
+              {{'home.aboutGuru.approach2' | translate}}
             </span>
           </li>
           <li class="flex items-start">
             <span class="flex-shrink-0 w-2 h-2 bg-yellow-600 rounded-full mt-2 mr-4"></span>
             <span class="text-gray-700 leading-relaxed">
-              I bring the same discipline and systematic thinking from my IT career into my teaching methodology
+             {{'home.aboutGuru.approach3' | translate}}
             </span>
           </li>
         </ul>
@@ -165,31 +161,31 @@ import { Meta, Title } from '@angular/platform-browser';
       <!-- My Teaching Philosophy -->
       <div>
         <h3 class="text-xl font-semibold text-ocean-900 mb-6 pb-3 border-b-2 border-ocean-200">
-          My Teaching Philosophy
+          {{'home.aboutGuru.philosophyTitle' | translate }}
         </h3>
         <ul class="space-y-4">
           <li class="flex items-start">
             <span class="flex-shrink-0 w-2 h-2 bg-ocean-600 rounded-full mt-2 mr-4"></span>
             <span class="text-gray-700 leading-relaxed">
-              I focus on <span class="font-semibold text-ocean-900">each and every student individually</span>, understanding their unique learning pace and style
+            {{'home.aboutGuru.philosophy1' | translate}}<span class="font-semibold text-ocean-900">{{'home.aboutGuru.philosophy1Bold' | translate}}</span>{{'home.aboutGuru.philosophy1Rest' | translate }}
             </span>
           </li>
           <li class="flex items-start">
             <span class="flex-shrink-0 w-2 h-2 bg-ocean-600 rounded-full mt-2 mr-4"></span>
             <span class="text-gray-700 leading-relaxed">
-              I believe that every student's growth, discipline, and confidence matters equally
+              {{'home.aboutGuru.philosophy2' | translate }}
             </span>
           </li>
           <li class="flex items-start">
             <span class="flex-shrink-0 w-2 h-2 bg-ocean-600 rounded-full mt-2 mr-4"></span>
             <span class="text-gray-700 leading-relaxed">
-              I am personally invested in my students' artistic journey—celebrating their progress and guiding them through challenges
+              {{'home.aboutGuru.philosophy3' | translate }}
             </span>
           </li>
           <li class="flex items-start">
             <span class="flex-shrink-0 w-2 h-2 bg-ocean-600 rounded-full mt-2 mr-4"></span>
             <span class="text-gray-700 leading-relaxed">
-              I create a nurturing environment where tradition meets personalized care and encouragement
+              {{'home.aboutGuru.philosophy4' | translate }}
             </span>
           </li>
         </ul>
@@ -204,10 +200,10 @@ import { Meta, Title } from '@angular/platform-browser';
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-4">
-        My Milestones & Credentials
+        {{'home.aboutGuru.milestonesTitle' | translate }}
       </h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-        A journey marked by dedication, discipline, and artistic excellence
+       {{'home.aboutGuru.milestonesSubtitle' | translate}}
       </p>
       <div class="w-20 h-1 bg-gradient-to-r from-ocean-600 to-yellow-500 mx-auto mt-6"></div>
     </div>
@@ -215,7 +211,7 @@ import { Meta, Title } from '@angular/platform-browser';
     <!-- Classical Dance Milestones -->
     <div class="mb-16">
       <h3 class="text-2xl font-serif font-semibold text-ocean-900 mb-8 text-center">
-        Classical Dance Milestones
+        {{'home.aboutGuru.danceMilestonesTitle' | translate }}
       </h3>
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -231,12 +227,11 @@ import { Meta, Title } from '@angular/platform-browser';
           </div>
           <div class="p-6">
             <div class="flex items-center justify-between mb-3">
-              <h4 class="text-xl font-semibold text-ocean-900">Salangai Pooja</h4>
+              <h4 class="text-xl font-semibold text-ocean-900">{{'home.aboutGuru.salangaiTitle' | translate }}</h4>
               <span class="text-sm font-semibold text-yellow-700 bg-yellow-100 px-3 py-1 rounded-full">2006</span>
             </div>
             <p class="text-gray-600 leading-relaxed">
-              A sacred ceremony marking the beginning of my formal Bharatanatyam training, 
-              where I received my first ghungroos (ankle bells) with blessings from my Athai.
+              {{'home.aboutGuru.salangaiDesc' | translate }}
             </p>
           </div>
         </div>
@@ -256,14 +251,12 @@ import { Meta, Title } from '@angular/platform-browser';
                 <svg class="w-6 h-6 mr-2 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
-                Arangetram
+                {{'home.aboutGuru.arangetramTitle' | translate }}
               </h4>
               <span class="text-sm font-semibold text-yellow-300 bg-yellow-900/30 px-3 py-1 rounded-full">2011</span>
             </div>
             <p class="text-white/90 leading-relaxed">
-              My debut solo performance—a defining moment in my Bharatanatyam journey. 
-              This prestigious milestone represents years of dedicated training and marks 
-              my transition from student to performing artist.
+              {{'home.aboutGuru.arangetramDesc' | translate }}
             </p>
           </div>
         </div>
@@ -274,7 +267,7 @@ import { Meta, Title } from '@angular/platform-browser';
     <!-- Awards & Recognition -->
     <div class="mb-16">
       <h3 class="text-2xl font-serif font-semibold text-ocean-900 mb-8 text-center">
-        Awards & Recognition
+        {{'home.aboutGuru.awardsTitle' | translate}}
       </h3>
       
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -285,9 +278,9 @@ import { Meta, Title } from '@angular/platform-browser';
               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
             </svg>
           </div>
-          <h2 class="text-center font-semibold text-ocean-900 mb-2">"Arut Kala Aadal Arasi"</h2>
+          <h2 class="text-center font-semibold text-ocean-900 mb-2">{{'home.aboutGuru.award1Title' | translate }}</h2>
           <p class="text-center text-sm text-gray-600 mb-2">2011</p>
-          <p class="text-center text-xs text-gray-500">Honored for Graceful Stage Performance and Young Choreographic Excellence</p>
+          <p class="text-center text-xs text-gray-500">{{'home.aboutGuru.award1Desc' | translate }}</p>
         </div>
 
         <!-- Award 2 -->
@@ -297,10 +290,10 @@ import { Meta, Title } from '@angular/platform-browser';
               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
             </svg>
           </div>
-          <h2 class="text-center font-semibold text-ocean-900 mb-2">"Bharatha Kala Sree"</h2>
-          <p class="text-center font-semibold text-ocean-900 mb-2">Young achiever award for performing continously for 2 hours</p>
+          <h2 class="text-center font-semibold text-ocean-900 mb-2">{{'home.aboutGuru.award2Title' | translate }}</h2>
+          <p class="text-center font-semibold text-ocean-900 mb-2">{{'home.aboutGuru.award2Subtitle' | translate }}</p>
           <p class="text-center text-sm text-gray-600 mb-2">2012</p>
-          <p class="text-center text-xs text-gray-500">Title & Awards received in the hands of "Kalaimamani" Valaiyapatti</p>
+          <p class="text-center text-xs text-gray-500">{{'home.aboutGuru.award2Desc' | translate }}</p>
         </div>
 
         <!-- Award 3 -->
@@ -310,9 +303,9 @@ import { Meta, Title } from '@angular/platform-browser';
               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
             </svg>
           </div>
-          <h4 class="text-center font-semibold text-ocean-900 mb-2">"Isai Selvi"</h4>
+          <h4 class="text-center font-semibold text-ocean-900 mb-2">{{'home.aboutGuru.award3Title' | translate }}</h4>
           <p class="text-center text-sm text-gray-600 mb-2">2014</p>
-          <p class="text-center text-xs text-gray-500">Regional Arts Council</p>
+          <p class="text-center text-xs text-gray-500">{{'home.aboutGuru.award3Desc' | translate}}</p>
         </div>
 
         <!-- Award 4 -->
@@ -322,9 +315,9 @@ import { Meta, Title } from '@angular/platform-browser';
               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
             </svg>
           </div>
-          <h4 class="text-center font-semibold text-ocean-900 mb-2">"Valar Kalai Bharatha Sree"</h4>
+          <h4 class="text-center font-semibold text-ocean-900 mb-2">{{'home.aboutGuru.award4Title' | translate }}</h4>
           <p class="text-center text-sm text-gray-600 mb-2">2023</p>
-          <p class="text-center text-xs text-gray-500">District Cultural Forum</p>
+          <p class="text-center text-xs text-gray-500">{{'home.aboutGuru.award4Desc' | translate }}</p>
         </div>
 
       </div>
@@ -333,7 +326,7 @@ import { Meta, Title } from '@angular/platform-browser';
     <!-- District levels -->
     <div class="mb-16">
       <h3 class="text-2xl font-serif font-semibold text-ocean-900 mb-8 text-center">
-        District & State level Achievements
+        {{'home.aboutGuru.districtTitle' | translate }}
       </h3>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -343,20 +336,20 @@ import { Meta, Title } from '@angular/platform-browser';
         <div class="w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto">
           <img src="/assets/images/srmlogo.webp"/>
         </div>
-        <h4 class="text-center font-semibold text-ocean-900 mb-2">Butterflies Event, SRM University</h4>
+        <h4 class="text-center font-semibold text-ocean-900 mb-2">{{'home.aboutGuru.district1Title' | translate}}</h4>
         <p class="text-center text-sm text-gray-600 mb-2">2010</p>
-        <p class="text-center text-xs text-gray-500">Secured Second Place at the District Level</p>
+        <p class="text-center text-xs text-gray-500">{{'home.aboutGuru.district1Desc' | translate }}</p>
       </div>
 
       <div class="bg-white border-2 border-ocean-200 rounded-lg p-6 transition-all duration-300">
         <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4 mx-auto">
            <img src="/assets/images/tamilnadulogo.webp"/>
         </div>
-        <h4 class="text-center font-semibold text-ocean-900 mb-2">District-Level Bharatanatyam Competition</h4>
+        <h4 class="text-center font-semibold text-ocean-900 mb-2">{{'home.aboutGuru.district2Title' | translate}}</h4>
         <ul class="text-center text-xs text-gray-600 space-y-1">
-          <li>2011–2012: Secured First Place</li>
-          <li>2012–2013: Secured Third Place</li>
-          <li>2013–2014: Secured Second Place</li>
+          <li>{{'home.aboutGuru.district2Item1' | translate }}</li>
+          <li>{{'home.aboutGuru.district2Item1' | translate }}</li>
+          <li>{{'home.aboutGuru.district2Item3' | translate }}</li>
         </ul>
       </div>
       
@@ -364,9 +357,9 @@ import { Meta, Title } from '@angular/platform-browser';
         <div class="aspect-[4/3] bg-gradient-to-br from-ocean-50 to-yellow-50 rounded-md overflow-hidden mb-4">
           <img src="/assets/images/veena-award.jpg" alt="School-Level District Veena Competition" class="w-full h-full object-cover" />
         </div>
-        <h4 class="text-center font-semibold text-ocean-900 mb-2">Tamil Nadu State level Veena Competition (School-level)</h4>
-        <p class="text-center text-sm text-gray-600 mb-1">Secured First Prize</p>
-        <p class="text-center text-xs text-gray-500">Received first prize from "Veena" E. Gayathri ma'am</p>
+        <h4 class="text-center font-semibold text-ocean-900 mb-2">{{'home.aboutGuru.district3Title' | translate }}</h4>
+        <p class="text-center text-sm text-gray-600 mb-1">{{'home.aboutGuru.district3Prize' | translate }}</p>
+        <p class="text-center text-xs text-gray-500">{{'home.aboutGuru.district3Desc' | translate }}</p>
       </div>
     </div>
 
@@ -378,7 +371,7 @@ import { Meta, Title } from '@angular/platform-browser';
     <!-- Academic Credentials -->
     <div>
       <h3 class="text-2xl font-serif font-semibold text-ocean-900 mb-8 text-center">
-        Academic Credentials
+        {{'home.abputGuru.academicTitle' | translate }}
       </h3>
       
       <div class="max-w-3xl mx-auto">
@@ -406,7 +399,7 @@ import { Meta, Title } from '@angular/platform-browser';
               </div>
               <div class="flex-1">
                 <h4 class="font-semibold text-ocean-900 text-lg mb-1">Diploma in music</h4>
-                <p class="text-gray-600">Classical Music Training</p>
+                <p class="text-gray-600">{{'home.aboutGuru.academic2Desc' | translate }}</p>
               </div>
             </li>
 
@@ -436,10 +429,10 @@ import { Meta, Title } from '@angular/platform-browser';
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-4">
-        My Journey to Shreem Natyalaya
+        {{'home.aboutGuru.journeyTitle' | translate }}
       </h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-        The milestones that led me to establish this academy
+        {{'home.aboutGuru.journeySubtitle' | translate }}
       </p>
       <div class="w-20 h-1 bg-gradient-to-r from-ocean-600 to-yellow-500 mx-auto mt-6"></div>
     </div>
@@ -457,11 +450,10 @@ import { Meta, Title } from '@angular/platform-browser';
           <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
             <div class="md:text-right mb-4 md:mb-0">
               <div class="bg-cream-50 rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow duration-300 inline-block md:block">
-                <h3 class="text-xl font-semibold text-ocean-900 mb-2">My Early Learning Years</h3>
-                <p class="text-sm text-gray-600 mb-3">2002 onwards</p>
+                <h3 class="text-xl font-semibold text-ocean-900 mb-2">{{'home.aboutGuru.myEarlyLearning' | translate }}</h3>
+                <p class="text-sm text-gray-600 mb-3">{{'home.aboutGuru.earlyOnwards' | translate }}</p>
                 <p class="text-gray-700">
-                  I began learning classical dance and music from my family. My Athai taught me Bharatanatyam 
-                  and Veena, while my father guided me in Keyboard. I started learning at Sri Raghavendra Natyalaya - Perungalathur from 2002 onwards. These early years built my artistic foundation.
+                 {{'home.aboutGuru.myEarlyDesc' | translate }}
                 </p>
               </div>
             </div>
@@ -488,10 +480,10 @@ import { Meta, Title } from '@angular/platform-browser';
             <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-yellow-600 rounded-full border-4 border-white shadow-lg z-10"></div>
             <div class="mb-4 md:mb-0 ml-8 md:ml-0">
               <div class="bg-cream-50 rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow duration-300">
-                <h3 class="text-xl font-semibold text-ocean-900 mb-2">I Worked as Assistant Director</h3>
+                <h3 class="text-xl font-semibold text-ocean-900 mb-2">{{'home.aboutGuru.assistantDirector' | translate }}</h3>
                 <p class="text-sm text-gray-600 mb-3">2014-2018</p>
                 <p class="text-gray-700">
-                  I worked as a part-time Assistant Director of Sri Raghavendra Natyalaya, where I performed numerous temple cultural events with my students. This experience strengthened my passion for sharing classical arts and teaching.
+                  {{'home.aboutGuru.asststantDirectorDesc' | translate }}
                 </p>
               </div>
             </div>
@@ -504,10 +496,10 @@ import { Meta, Title } from '@angular/platform-browser';
           <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
             <div class="md:text-right mb-4 md:mb-0">
               <div class="bg-cream-50 rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow duration-300 inline-block md:block">
-                <h3 class="text-xl font-semibold text-ocean-900 mb-2">I Became Director of Sri Raghavendra Natyalaya</h3>
+                <h3 class="text-xl font-semibold text-ocean-900 mb-2">{{'home.aboutGuru.director' | translate }}</h3>
                 <p class="text-sm text-gray-600 mb-3">2018-2020</p>
                 <p class="text-gray-700">
-                  I became the Director of Sri Raghavendra Natyalaya, leading the academy and organizing cultural events. This role deepened my commitment to preserving and teaching classical arts.During this time, I learned choreography and arranged temple events with orchestra, deepening my understanding of classical arts.
+                  {{'home.aboutGuru.directorDescription' | translate }}
                 </p>
               </div>
             </div>
@@ -534,10 +526,10 @@ import { Meta, Title } from '@angular/platform-browser';
             <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-yellow-600 rounded-full border-4 border-white shadow-lg z-10"></div>
             <div class="mb-4 md:mb-0 ml-8 md:ml-0">
               <div class="bg-cream-50 rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow duration-300">
-                <h3 class="text-xl font-semibold text-ocean-900 mb-2">I Pursued Advanced Training</h3>
-                <p class="text-sm text-gray-600 mb-3">Mid-Career Phase</p>
+                <h3 class="text-xl font-semibold text-ocean-900 mb-2">{{'home.aboutGuru.advancedTraining' | translate }}</h3>
+                <p class="text-sm text-gray-600 mb-3">{{'home.aboutGuru.phase' | translate }}</p>
                 <p class="text-gray-700">
-                  I pursued advanced training from "Acharya" H.N.Nandhini Suresh for Nattuvangam. 
+                  {{'home.aboutGuru.advancedTrainingDesc' | translate }}
                 </p>
               </div>
             </div>
@@ -550,10 +542,10 @@ import { Meta, Title } from '@angular/platform-browser';
           <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
             <div class="md:text-right mb-4 md:mb-0">
               <div class="bg-gradient-to-br from-ocean-600 to-ocean-700 text-white rounded-lg p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300 inline-block md:block">
-                <h3 class="text-xl font-semibold mb-2">I Founded Shreem Natyalaya</h3>
-                <p class="text-sm text-ocean-100 mb-3">2025 - Present</p>
+                <h3 class="text-xl font-semibold mb-2">{{'home.aboutGuru.founded' | translate }}</h3>
+                <p class="text-sm text-ocean-100 mb-3">{{'home.aboutGuru.foundedPhase' | translate }}</p>
                 <p class="text-white/90">
-                  I founded Shreem Natyalaya in 2025 with the vision of providing authentic classical arts education. Today, I personally teach and mentor every student with dedication, discipline, and care, ensuring strong foundations in tradition and artistry.
+                  {{'home.aboutGuru.foundedDesc' | translate }}
                 </p>
               </div>
             </div>
@@ -581,10 +573,10 @@ import { Meta, Title } from '@angular/platform-browser';
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-4">
-        My Learning Journey
+       {{'home.aboutGuru.learningJourney' | translate}}
       </h2>
       <p class="text-lg text-gray-600">
-        How family tradition shaped my artistic foundation
+       {{'home.aboutGuru.learningSubtitle' | translate}}
       </p>
       <div class="w-24 h-1 bg-gradient-to-r from-ocean-600 to-yellow-500 mx-auto mt-4"></div>
     </div>
@@ -592,61 +584,61 @@ import { Meta, Title } from '@angular/platform-browser';
     <div class="grid md:grid-cols-3 gap-8">
       <!-- Training Background -->
       <div class="bg-gradient-to-br from-ocean-50 to-cream-50 rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300">
-        <h3 class="text-xl font-serif font-bold text-ocean-900 mb-4">My Training Background</h3>
+        <h3 class="text-xl font-serif font-bold text-ocean-900 mb-4">{{'home.aboutGuru.trainingBackground' | translate}}</h3>
         <ul class="space-y-3 text-gray-700">
           <li class="flex items-start">
             <span class="text-ocean-600 mr-2">•</span>
-            <span>I learned <strong>Bharatanatyam and Veena</strong> from my <strong>Athai (Aunt)</strong>, who instilled in me not just technique, but a deep reverence for these art forms</span>
+            <span>{{'home.aboutGuru.journeyPoint1' | translate }} <strong>{{'home.aboutGuru.journeyPoint1Bold1' | translate}}</strong> {{'home.aboutGuru.journeyPoint1Rest' | translate}}<strong>{{'home.aboutGuru.journeyPoint1Bold3' | translate}}</strong>{{'home.aboutGuru.journeyPoint1Bold4' | translate }}</span>
           </li>
           <li class="flex items-start">
             <span class="text-ocean-600 mr-2">•</span>
-            <span>I learned <strong>Keyboard</strong> from my <strong>father</strong>, whose musical wisdom shaped my understanding of melody and rhythm</span>
+            <span>{{'home.aboutGuru.journeyPoint2' | translate }}<strong>{{'home.aboutGuru.journeyPoint2Bold1' | translate }}</strong>{{'home.aboutGuru.journeyPoint2Bold2' | translate}}<strong>{{'home.aboutGuru.journeyPoint2Bold3' | translate }}</strong>{{'home.aboutGuru.journeyPoint1Bold4' | translate}}</span>
           </li>
           <li class="flex items-start">
             <span class="text-ocean-600 mr-2">•</span>
-            <span>My artistic foundation was built within my family where tradition was lived, not just taught</span>
+            <span>{{'home.aboutGuru.journeyPoint3' | translate }}</span>
           </li>
         </ul>
       </div>
 
       <!-- Approach as Founder -->
       <div class="bg-gradient-to-br from-yellow-50 to-cream-50 rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300">
-        <h3 class="text-xl font-serif font-bold text-ocean-900 mb-4">My Approach as Founder</h3>
+        <h3 class="text-xl font-serif font-bold text-ocean-900 mb-4">{{'home.aboutGuru.approach' | translate }}</h3>
         <ul class="space-y-3 text-gray-700">
           <li class="flex items-start">
             <span class="text-yellow-600 mr-2">•</span>
-            <span>I am actively involved in every aspect from teaching daily classes to planning the curriculum</span>
+            <span>{{'home.aboutGuru.approachPoint1' | translate }}</span>
           </li>
           <li class="flex items-start">
             <span class="text-yellow-600 mr-2">•</span>
-            <span>I run Shreem Natyalaya with strong enthusiasm, continuous effort, and unwavering dedication</span>
+            <span>{{'home.aboutGuru.approachPoint2' | translate }}</span>
           </li>
           <li class="flex items-start">
             <span class="text-yellow-600 mr-2">•</span>
-            <span>I bring the same discipline and systematic thinking simple teaching methodology</span>
+            <span>{{'home.aboutGuru.approachPoint3' | translate }}</span>
           </li>
         </ul>
       </div>
 
       <!-- Teaching Philosophy -->
       <div class="bg-gradient-to-br from-cream-50 to-ocean-50 rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300">
-        <h3 class="text-xl font-serif font-bold text-ocean-900 mb-4">My Teaching Philosophy</h3>
+        <h3 class="text-xl font-serif font-bold text-ocean-900 mb-4">{{'home.aboutGuru.teaching' | translate }}</h3>
         <ul class="space-y-3 text-gray-700">
           <li class="flex items-start">
             <span class="text-ocean-600 mr-2">•</span>
-            <span>I focus on <strong>each and every student individually</strong>, understanding their unique learning pace and style</span>
+            <span>{{'home.aboutGuru.teachingPoint1' | translate }}<strong>{{'home.aboutGuru.teachingPoint1Bold1' | translate }}</strong>{{'home.aboutGuru.teachingPoint1Bold2' | translate }}</span>
           </li>
           <li class="flex items-start">
             <span class="text-ocean-600 mr-2">•</span>
-            <span>I believe that every student's growth, discipline, and confidence matters equally</span>
+            <span>{{'home.aboutGuru.teachingPoint2' | translate }}</span>
           </li>
           <li class="flex items-start">
             <span class="text-ocean-600 mr-2">•</span>
-            <span>I am personally invested in my students' artistic journey—celebrating their progress and guiding them through challenges</span>
+            <span>{{'home.aboutGuru.teachingPoint3' | translate }}</span>
           </li>
           <li class="flex items-start">
             <span class="text-ocean-600 mr-2">•</span>
-            <span>I create a nurturing environment where tradition meets personalized care and encouragement</span>
+            <span>{{'home.aboutGuru.teachingPoint4' | translate }}</span>
           </li>
         </ul>
       </div>
@@ -660,40 +652,23 @@ import { Meta, Title } from '@angular/platform-browser';
     <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
       <div class="text-center mb-8">
         <h2 class="text-2xl md:text-3xl font-serif font-bold text-ocean-900 mb-4">
-          My Commitment to You
+          {{'home.aboutGuru.commitment' | translate }}
         </h2>
         <div class="w-16 h-1 bg-gradient-to-r from-ocean-600 to-yellow-500 mx-auto"></div>
       </div>
       
       <div class="space-y-4 text-gray-700 leading-relaxed text-center max-w-3xl mx-auto">
         <p class="text-lg">
-          When you entrust your child to Shreem Natyalaya, you're not just enrolling them in classes—
-          you're welcoming them into a space where I personally ensure their growth, confidence, and 
-          love for classical arts.
+          {{'home.aboutGuru.commitmentPoint1' | translate }}
         </p>
         <p class="text-lg">
-          I am here not just as a teacher, but as a mentor who genuinely cares about each student's 
-          journey. I bring the same passion my family instilled in me, and I promise to nurture that 
-          same passion in your children.
+          {{'home.aboutGuru.commitmentPoint2' | translate }}
         </p>
         <p class="text-lg font-semibold text-ocean-900">
-          Let's preserve this beautiful tradition together.
+          {{'home.aboutGuru.commitmentPoint3' | translate }}
         </p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- Call to Action -->
-<section class="py-16 md:py-20 bg-ocean-900 text-white">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">
-      Join Me at Shreem Natyalaya
-    </h2>
-    <p class="text-lg text-cream-100 mb-8 leading-relaxed">
-      I invite you to experience authentic classical arts education in a nurturing, 
-      dedicated environment where every student truly matters.
-    </p>
   </div>
 </section>
 `

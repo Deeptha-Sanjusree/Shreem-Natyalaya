@@ -52,7 +52,7 @@ interface FAQ {
         routerLink="/contact" 
         class="inline-block px-10 py-4 bg-ocean-800 hover:bg-ocean-500 text-white text-lg font-semibold rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-200 transform hover:scale-105 hover:-translate-y-1"
       >
-        {{ 'home.cta.button' | translate }}
+        {{ 'home.hero.cta' | translate }}
       </a>
     </div>
   </div>
@@ -138,32 +138,32 @@ interface FAQ {
           <div class="w-20 h-20 flex items-center justify-center mx-auto mb-4 overflow-hidden">
             <img src="/assets/images/veenai.jpeg" class="w-full h-full object-contain" alt="Veena"/>
           </div>
-          <h3 class="text-xl font-serif font-semibold text-ocean-900 mb-3">Veena</h3>
-          <p class="text-sm text-gray-600 mb-4">Learn the queen of Indian string instruments, known for its soul-stirring melodies and meditative resonance.</p>
+          <h3 class="text-xl font-serif font-semibold text-ocean-900 mb-3">{{'home.courses.veena.title' | translate}}</h3>
+          <p class="text-sm text-gray-600 mb-4">{{'home.courses.veena.description' | translate}}</p>
         </div>
         <ul class="text-left space-y-2 mb-4 flex-grow">
           <li class="flex items-start text-sm text-gray-700">
             <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
-            <span>Basic techniques to advanced ragas</span>
+            <span>{{'home.courses.veena.point1' | translate}}</span>
           </li>
           <li class="flex items-start text-sm text-gray-700">
             <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
-            <span>Explore the depth of Carnatic music</span>
+            <span>{{'home.courses.veena.point2' | translate}}</span>
           </li>
           <li class="flex items-start text-sm text-gray-700">
             <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
-            <span>Personalized attention for each student</span>
+            <span>{{'home.courses.veena.point3' | translate}}</span>
           </li>
         </ul>
         <div class="text-center">
           <a routerLink="/courses" class="text-ocean-700 hover:text-ocean-800 font-semibold text-sm">
-            Learn More →
+            {{'home.courses.veena.learnmore' | translate}}
           </a>
         </div>
       </div>
@@ -174,32 +174,32 @@ interface FAQ {
           <div class="w-20 h-20 flex items-center justify-center mx-auto mb-4 overflow-hidden">
             <img src="/assets/images/slokam.png" class="w-full h-full object-contain" alt="Slokam"/>
           </div>
-          <h3 class="text-xl font-serif font-semibold text-ocean-900 mb-3">Slokam</h3>
-          <p class="text-sm text-gray-600 mb-4">Master the pronunciation, rhythm, and meaning of sacred Sanskrit verses. You will be learn both sanskrit and tamil works.</p>
+          <h3 class="text-xl font-serif font-semibold text-ocean-900 mb-3">{{'home.courses.slokam.title' | translate}}</h3>
+          <p class="text-sm text-gray-600 mb-4">{{'home.courses.slokam.description' | translate}}</p>
         </div>
         <ul class="text-left space-y-2 mb-4 flex-grow">
           <li class="flex items-start text-sm text-gray-700">
             <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
-            <span>Strong foundation in devotional recitation</span>
+            <span>{{'home.courses.slokam.point1' | translate}}</span>
           </li>
           <li class="flex items-start text-sm text-gray-700">
             <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
-            <span>Enhance cultural knowledge</span>
+            <span>{{'home.courses.slokam.point2' | translate}}</span>
           </li>
           <li class="flex items-start text-sm text-gray-700">
             <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
-            <span>Deepen spiritual connection</span>
+            <span>{{'home.courses.slokam.point3' | translate}}</span>
           </li>
         </ul>
         <div class="text-center">
           <a routerLink="/courses" class="text-ocean-700 hover:text-ocean-800 font-semibold text-sm">
-            Learn More →
+            {{'home.courses.slokam.learnmore' | translate}}
           </a>
         </div>
       </div>
@@ -210,32 +210,32 @@ interface FAQ {
           <div class="w-20 h-20 flex items-center justify-center mx-auto mb-4 text-5xl">
              🎹
           </div>
-          <h3 class="text-xl font-serif font-semibold text-ocean-900 mb-3">Keyboard</h3>
-          <p class="text-sm text-gray-600 mb-4">Build your musical foundation with harmonies on the keyboard. A structured approach to classical music learning.</p>
+          <h3 class="text-xl font-serif font-semibold text-ocean-900 mb-3">{{'home.courses.keyboard.title' | translate}}</h3>
+          <p class="text-sm text-gray-600 mb-4">{{'home.courses.keyboard.description' | translate}}</p>
         </div>
         <ul class="text-left space-y-2 mb-4 flex-grow">
           <li class="flex items-start text-sm text-gray-700">
             <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
-            <span>Perfect for beginners</span>
+            <span>{{'home.courses.keyboard.point1' | translate}}</span>
           </li>
           <li class="flex items-start text-sm text-gray-700">
             <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
-            <span>Explore swaras, ragas, and compositions</span>
+            <span>{{'home.courses.keyboard.point2' | translate}}</span>
           </li>
           <li class="flex items-start text-sm text-gray-700">
             <svg class="w-4 h-4 text-ocean-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
-            <span>Structured and enjoyable learning</span>
+            <span>{{'home.courses.keyboard.point3' | translate}}</span>
           </li>
         </ul>
         <div class="text-center">
           <a routerLink="/courses" class="text-ocean-700 hover:text-ocean-800 font-semibold text-sm">
-            Learn More →
+            {{'home.courses.keyboard.learnmore' | translate}}
           </a>
         </div>
       </div>
@@ -265,12 +265,12 @@ interface FAQ {
 <section class="py-16 md:py-24 bg-white">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
-      <p class="text-sm uppercase tracking-wider text-ocean-600 mb-2">What Parents Say</p>
+      <p class="text-sm uppercase tracking-wider text-ocean-600 mb-2">{{'home.testimonials.subtitle' | translate}}</p>
       <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-4">
-        Parents' Reviews
+        {{'home.testimonials.title' | translate}}
       </h2>
       <p class="text-lg text-gray-600">
-        Hear from families who have experienced our dedication to classical arts
+        {{'home.testimonials.description' | translate}}
       </p>
     </div>
 
@@ -346,10 +346,10 @@ interface FAQ {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-4">
-        Our Gallery
+        {{'home.gallery.title' | translate}}
       </h2>
       <p class="text-lg text-gray-600">
-        Moments from our classes, performances, and events
+        {{'home.gallery.description' | translate}}
       </p>
     </div>
 
@@ -403,10 +403,10 @@ interface FAQ {
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-4">
-        Frequently Asked Questions
+        {{'home.faq.title' | translate}}
       </h2>
       <p class="text-lg text-gray-600">
-        Find answers to common questions about our programs
+        {{'home.faq.description' | translate}}
       </p>
     </div>
 
@@ -444,24 +444,23 @@ interface FAQ {
 <section class="py-16 md:py-24 bg-ocean-900 text-white">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">
-      Begin Your Classical Arts Journey
+      {{'home.cta.title' | translate}}
     </h2>
     <p class="text-lg text-cream-100 mb-10 leading-relaxed">
-      Join us in preserving and celebrating the rich heritage of Indian classical arts. 
-      Experience authentic teaching in a nurturing environment.
+      {{'home.cta.description' | translate}}
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a 
         routerLink="/contact" 
         class="inline-block px-8 py-4 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
       >
-        Enroll Now
+        {{'home.cta.enrollButton' | translate}}
       </a>
       <a 
         routerLink="/courses" 
         class="inline-block px-8 py-4 bg-transparent border-2 border-white hover:bg-white hover:text-ocean-900 text-white font-semibold rounded-lg transition-all duration-300"
       >
-        View Courses
+        {{'home.cta.coursesButton' | translate}}
       </a>
     </div>
   </div>
