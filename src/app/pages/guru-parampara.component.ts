@@ -24,44 +24,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
   <section class="py-16 md:py-24 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Introduction -->
-      <div class="mb-16">
-        <div class="bg-gradient-to-br from-cream-50 to-ocean-50 border-2 border-ocean-200 rounded-xl p-8 md:p-12 lg:p-16">
-          <h2 class="text-2xl md:text-3xl font-serif font-bold text-ocean-900 mb-8 text-center">
-            {{'home.guruParampara.training' | translate }}
-          </h2>
-          <ul class="space-y-4 text-gray-700 max-w-6xl mx-auto">
-            <li class="flex items-start">
-              <span class="text-ocean-600 mr-3 mt-1">•</span>
-              <div>
-                <div><strong>{{'home.guruParampara.traningBTitle' | translate }}</strong>{{'home.guruParampara.trainingBTitleDesc' | translate }}</div>
-                <div class="ml-4 mt-1 text-sm text-gray-600">{{'home.guruParampara.advanceTraining' | translate }}</div>
-              </div>
-            </li>
-            <li class="flex items-start">
-              <span class="text-ocean-600 mr-3 mt-1">•</span>
-              <div>
-                <div><strong>{{'home.guruParampara.traningVTitle' | translate }}</strong>{{'home.guruParampara.trainingVTitleDesc' | translate }}</div>
-                <div class="ml-4 mt-1 text-sm text-gray-600">{{'home.guruParampara.vAdvance1' | translate }}</div>
-                <div class="ml-4 mt-1 text-sm text-gray-600">{{'home.guruParampara.vAdvance2' | translate }}</div>
-              </div>
-            </li>
-            <li class="flex items-start">
-              <span class="text-ocean-600 mr-3 mt-1">•</span>
-              <span><strong>{{'home.guruParampara.traningKTitle' | translate }}</strong>{{'home.guruParampara.trainingKTitleDesc' | translate }}</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-ocean-600 mr-3 mt-1">•</span>
-              <div>
-                <div><strong>{{'home.guruParampara.traningSTitle' | translate }}</strong>{{'home.guruParampara.trainingSTitleDesc' | translate }}</div>
-                <div class="ml-4 mt-1 text-sm text-gray-600">{{'home.guruParampara.sAdvance1' | translate }}</div>
-                <div class="ml-4 mt-1 text-sm text-gray-600">{{'home.guruParampara.sAdvance2' | translate }}</div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-
+    
       <!-- Bharatanatyam Training -->
       <div class="mb-20">
         <div class="text-center mb-12">

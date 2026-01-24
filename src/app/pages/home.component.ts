@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '../pipes/translate.pipe';
+import { TranslationService } from '../services/translation.service';
 
 interface Testimonial {
   name: string;
@@ -102,7 +103,7 @@ interface FAQ {
           <div class="w-20 h-20 flex items-center justify-center mx-auto mb-4 overflow-hidden">
             <img src="/assets/images/natrajar.jpeg" class="w-full h-full object-contain" alt="Bharatanatyam"/>
           </div>
-
+ <h3 class="text-xl font-serif font-semibold text-ocean-900 mb-3">{{'home.courses.bharatanatyam.title' | translate}}</h3>
           <p class="text-sm text-gray-600 mb-4">{{'home.courses.bharatanatyam.description' | translate}}</p>
         </div>
         <ul class="text-left space-y-2 mb-4 flex-grow">
@@ -346,10 +347,10 @@ interface FAQ {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-4">
-        {{'home.ourCourses.gallery.title' | translate}}
+        {{'home.gallery.title' | translate}}
       </h2>
       <p class="text-lg text-gray-600">
-        {{'home.ourCourses.gallery.description' | translate}}
+        {{'home.gallery.description' | translate}}
       </p>
     </div>
 
@@ -497,37 +498,12 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   ];
 
-  faqs: FAQ[] = [
-    {
-      question: 'What age groups do you accept for different courses?',
-      answer: 'We accept students from age 5 onwards for Slokam, age 6+ for Bharatanatyam and Keyboard, and age 8+ for Veena. However, we evaluate each student individually to ensure they are ready for the discipline required.',
-      isOpen: false
-    },
-    {
-      question: 'Do you offer online classes?',
-      answer: 'Yes, we offer both in-person and online classes. While we prefer in-person instruction for the best learning experience, our online classes maintain the same quality and personal attention through one-on-one or small group sessions.',
-      isOpen: false
-    },
-    {
-      question: 'How long does it take to complete a course?',
-      answer: 'Classical arts require years of dedicated practice. Bharatanatyam typically takes 5-7 years for complete training, Veena 4-6 years, Slokam 2-3 years, and Keyboard 2-3 years for foundational skills. However, learning is a continuous journey.',
-      isOpen: false
-    },
-    {
-      question: 'Do students need to purchase their own instruments?',
-      answer: 'For Veena and Keyboard, students will eventually need their own instruments for home practice. We can guide you on purchasing quality instruments. For Bharatanatyam, students need appropriate practice attire and eventually performance costumes.',
-      isOpen: false
-    },
-    {
-      question: 'Are there performance opportunities?',
-      answer: 'Yes! We organize annual performances, participate in cultural festivals, and arrange arangetrams (debut performances) for advanced students. These opportunities help students gain confidence and showcase their skills.',
-      isOpen: false
-    }
-  ];
+  faqs: FAQ[] = [];
 
   constructor(
     private title: Title,
-    private meta: Meta
+    private meta: Meta,
+    private translationService: TranslationService
   ) {}
 
   // Hero carousel background images
@@ -549,10 +525,31 @@ export class HomeComponent implements OnInit, OnDestroy {
       content: 'Premier classical Indian arts academy offering Bharatanatyam, Veena, Slokam, and Keyboard. Authentic guru-shishya tradition with expert instruction.' 
     });
     
+    // Load FAQ data from translations
+    this.loadFAQData();
+    
+    // Subscribe to translation changes
+    this.translationService.translationsLoaded$.subscribe((loaded) => {
+      if (loaded) {
+        this.loadFAQData();
+      }
+    });
+    
     // Auto-play carousel - change every 3 seconds
     this.carouselInterval = setInterval(() => {
       this.currentSlide.update(slide => (slide + 1) % this.heroImages.length);
     }, 3000);
+  }
+
+  private loadFAQData(): void {
+    const faqData = this.translationService.get('home.faq.questions');
+    if (faqData && Array.isArray(faqData)) {
+      this.faqs = faqData.map((faq: any) => ({
+        question: faq.question,
+        answer: faq.answer,
+        isOpen: false
+      }));
+    }
   }
 
   ngOnDestroy(): void {

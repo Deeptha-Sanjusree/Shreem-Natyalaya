@@ -31,26 +31,26 @@
     "greeting": "Namaskar,",
     "introduction": "I'm Deeptha Sanjusree M",
     "intro1": "I am the",
-    "intro1Bold": "Founder of Shreem Natyalaya",
-    "intro1Rest": ", a classical dance and music academy dedicated to preserving and sharing the beauty of traditional Indian arts.",
+    "intro1Bold": "Founder of Shreem Natyalaya,",
+    "intro1Rest": "a classical dance and music academy dedicated to preserving and sharing the beauty of traditional Indian arts.",
     "intro2": "My journey in classical arts has been deeply rooted in tradition, discipline, and devotion. Through years of dedicated practice and teaching, I have developed a strong foundation in music and movement, guided by the Guru–Shishya Parampara. This journey has shaped my understanding of rhythm, expression, and spiritual connection, which I passionately pass on to every student I teach.",
-    "intro3": "As a",
-    "intro3Bold": "young founder",
-    "intro3Rest": ", I run this institution with energy, commitment, and a deep sense of responsibility. Every student who walks through our doors becomes part of my artistic family.",
+    "intro3": "As a ",
+    "intro3Bold": "young founder,",
+    "intro3Rest": "I run this institution with energy, commitment, and a deep sense of responsibility. Every student who walks through our doors becomes part of my artistic family.",
     "yearsTeaching": "Years Teaching Arts",
     "learningJourneyTitle": "My Learning Journey",
     "learningJourneySubtitle": "How family tradition shaped my artistic foundation",
     "trainingTitle": "My Training Background",
-    "training1": "I learned",
-    "training1Bold": "Bharatanatyam and Veena",
-    "training1From": "from my",
-    "training1FromBold": "Athai (Aunt)",
-    "training1Rest": ", who instilled in me not just technique, but a deep reverence for these art forms",
-    "training2": "I learned",
-    "training2Bold": "Keyboard",
-    "training2From": "from my",
-    "training2FromBold": "father",
-    "training2Rest": ", whose musical wisdom shaped my understanding of melody and rhythm",
+    "training1": "I learned ",
+    "training1Bold": "Bharatanatyam and Veena ",
+    "training1From": "from my ",
+    "training1FromBold": "Athai (Aunt), ",
+    "training1Rest": "who instilled in me not just technique, but a deep reverence for these art forms",
+    "training2": "I learned ",
+    "training2Bold": "Keyboard ",
+    "training2From": "from my ",
+    "training2FromBold": "father, ",
+    "training2Rest": "whose musical wisdom shaped my understanding of melody and rhythm",
     "training3": "My artistic foundation was built within my family—where tradition was lived, not just taught",
     "approachTitle": "My Approach as Founder",
     "approach1": "I am actively involved in every aspect—from teaching daily classes to planning the curriculum",
@@ -122,12 +122,12 @@
     "learningSubtitle" : "How family tradition shaped my artistic foundation",
     "trainingBackground":"My Training Background",
     "journeyPoint1": "I learned",
-    "journeyPoint1Bold1":"Bharatanatyam and Veena",
+    "journeyPoint1Bold1":"Bharatanatyam and Veena ",
     "journeyPoint1Bold2": "from my",
     "journeyPoint1Bold3": "Athai (Aunt)",
     "journeyPoint1Bold4": ", who instilled in me not just technique, but a deep reverence for these art forms",
-    "journeyPoint2": "I learned",
-    "journeyPoint2Bold1": "Keyboard",
+    "journeyPoint2": "I learned ",
+    "journeyPoint2Bold1": "Keyboard ",
     "journeyPoint2Bold2": "from my ",
     "journeyPoint2Bold3": "father",
     "journeyPoint3": "My artistic foundation was built within my family where tradition was lived, not just taught",
@@ -137,8 +137,8 @@
     "approachPoint3": "I bring the same discipline and systematic thinking simple teaching methodology",
     "teaching": "My Teaching Philosophy",
     "teachingPoint1": "I focus on",
-    "teachingPoint1Bold1": "each and every student individually",
-    "teachingPoint1Bold2": ", understanding their unique learning pace and style",
+    "teachingPoint1Bold1": "each and every student individually, ",
+    "teachingPoint1Bold2": "understanding their unique learning pace and style",
     "teachingPoint2": "I believe that every student's growth, discipline, and confidence matters equally",
     "teachingPoint3": "I am personally invested in my students' artistic journey—celebrating their progress and guiding them through challenges",
     "teachingPoint4": "I create a nurturing environment where tradition meets personalized care and encouragement",
@@ -176,14 +176,14 @@
         "trainingJourneyBPoint1.1": "(Government Music School) and Founder & Director of Sri Raghavendra Natyalaya",
         "traningJourneyBPoint2": "Completed Arangetram under her guidance",
         "traningJourneyBPoint3":"Her aunt mentored her in Bharatanatyam basics and artistic development",
-        "traningJourneyBPoint4": "Started teaching at Sri Raghavendra Natyalaya (2014)",
+        "traningJourneyBPoint4": "Started teaching at Sri Raghavendra Natyalaya (2002)",
         "traningJourneyBPoint5": "Progressed to Director-level role (2018-2020)",
         "guruLineage": "Guru Lineage",
         "guruLineageDesc":"Late B. Kanchana's guru was ",
         "guruLineageDescBold": "\"Kalaimamani\" Madurai R. Muralidharan",
         "guruLineageDesc1": ", a celebrated Bharatanatyam artist from Madurai.",
         "foundationTraining": "Foundational Training:",
-        "foundationalTrainingDesc": "Learned basics under Smt. Late Kanchana (her aunt)",
+        "foundationalTrainingDesc": "Learned basics under Smt. Late Kanchana",
         "advancedTraining": "Advanced Training:",
         "advancedTrainingDesc": "\"Veena Vani\" under Late Ethiraja Valli (Professor, Music College)",
         "techniquesMastered": "Techniques Mastered:",
@@ -200,7 +200,7 @@
         "learningApproachDesc": "Correct pronunciation, rhythm, and meaning",
         "focus": "Focus: ",
         "focusDesc": "Devotion in sacred tamil works",
-        "keyboardGuru": "\"Isai Selvam\" B. Mahendran (my dad)",
+        "keyboardGuru": "\"Isai Selvam\" B. Mahendran (Her dad)",
         "keyboardGuru1": "\"Isai Selvam\" B. Mahendran",
         "rightHandPlay": "Right-hand melody playing",
         "repertoire": "Repertoire:",
@@ -313,7 +313,8 @@
             "Javali",
             "Tillana",
             "Advanced Abhinaya and improvisation",
-            "Solo performance practice"
+            "Solo performance practice",
+            "Salangai Pooja"
           ]
         },
         {
@@ -329,7 +330,7 @@
           ],
           "practical": [
             "Full Margam repertoire",
-            "Salangai Pooja",
+            "Arangetram",
             "Stage rehearsals",
             "Confidence and expression mastery"
           ]
@@ -573,7 +574,7 @@
             "Simple notes and scales"
           ],
           "practical": [
-            "Basic exercises and warm-ups",
+            "Basic exercises",
             "Simple Carnatic swaras",
             "Short devotional songs"
           ]
@@ -718,7 +719,29 @@
     },
     "faq": {
       "title": "Frequently Asked Questions",
-      "description": "Find answers to common questions about our programs"
+      "description": "Find answers to common questions about our programs",
+      "questions": [
+        {
+          "question": "What age groups do you accept for different courses?",
+          "answer": "We accept students from age 5 onwards for Slokam, age 6+ for Bharatanatyam and Keyboard, and age 8+ for Veena. However, we evaluate each student individually to ensure they are ready for the discipline required."
+        },
+        {
+          "question": "Do you offer online classes?",
+          "answer": "Yes, we offer both in-person and online classes. While we prefer in-person instruction for the best learning experience, our online classes maintain the same quality and personal attention through one-on-one or small group sessions."
+        },
+        {
+          "question": "How long does it take to complete a course?",
+          "answer": "Classical arts require years of dedicated practice. Bharatanatyam typically takes 5-7 years for complete training, Veena 4-6 years, Slokam 2-3 years, and Keyboard 2-3 years for foundational skills. However, learning is a continuous journey."
+        },
+        {
+          "question": "Do students need to purchase their own instruments?",
+          "answer": "For Veena and Keyboard, students will eventually need their own instruments for home practice. We can guide you on purchasing quality instruments. For Bharatanatyam, students need appropriate practice attire and eventually performance costumes."
+        },
+        {
+          "question": "Are there performance opportunities?",
+          "answer": "Yes! We organize annual performances, participate in cultural festivals, and arrange arangetrams (debut performances) for advanced students. These opportunities help students gain confidence and showcase their skills."
+        }
+      ]
     },
     "whyChoose": {
       "title": "Why Choose Shreem Natyalaya?",
@@ -858,8 +881,8 @@
         "contact": "+91 9940489578"
       },
       {
-        "name": "Shreem Natyalaya - Kattur",
-        "location": "Kattur, Karanai Puthucheri",
+        "name": "Shreem Natyalaya - Kaattur",
+        "location": "Kaattur, Karanai Puthucheri",
         "address": "Kids park International pre school, Kattur",
         "timings": [
           { "day": "Wednesday & Thursday", "time": "6:30 PM - 7:30 PM", "course": "Bharatanatyam" }
@@ -871,7 +894,7 @@
         "location": "Guduvancheri, Chennai",
         "address": "First cry intelloits play school, Guduvancheri, 603202",
         "timings": [
-          { "day": "Wednesday & Thursday", "time": "5:00 PM - 6:00 PM", "course": "Bharathanatyam" }
+          { "day": "Wednesday & Thursday", "time": "5:30 PM - 6:30 PM", "course": "Bharathanatyam" }
         ],
         "contact": "+91 9940489578"
       }
@@ -891,7 +914,7 @@
         "Vandalur",
         "Kattankulathur",
         "Maraimalai Nagar",
-        "SP Kovil"
+        "Singaperumal Kovil"
       ]
     },
     "importantInfo": {

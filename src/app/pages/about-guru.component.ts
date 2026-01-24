@@ -63,7 +63,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
 
           <div class="space-y-4 text-gray-700 leading-relaxed">
             <p class="text-lg">
-              {{'home.aboutGuru.intro1' | translate}} <span class="font-semibold text-ocean-900">{{'home.aboutGuru.intro1Bold' | translate}}</span>, 
+              {{'home.aboutGuru.intro1' | translate}} <span class="font-semibold text-ocean-900">{{'home.aboutGuru.intro1Bold' | translate}}</span>
               {{'home.aboutGuru.intro1Rest' | translate }}
             </p>
 
@@ -85,112 +85,6 @@ import { TranslatePipe } from '../pipes/translate.pipe';
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- My Learning Journey -->
-<section class="py-16 md:py-24 bg-cream-50">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-4">
-        {{'home.aboutGuru.learningJourneyTitle' | translate}}
-      </h2>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto mt-4">
-       {{'home.aboutGuru.learningJourneySubtitle' | translate }}
-      </p>
-      <div class="w-20 h-1 bg-gradient-to-r from-ocean-600 to-yellow-500 mx-auto mt-6"></div>
-    </div>
-
-    <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-      
-      <!-- Training Background -->
-      <div class="mb-10">
-        <h3 class="text-xl font-semibold text-ocean-900 mb-6 pb-3 border-b-2 border-ocean-200">
-          {{'home.aboutGuru.trainingTitle' | translate}}
-        </h3>
-        <ul class="space-y-4">
-          <li class="flex items-start">
-            <span class="flex-shrink-0 w-2 h-2 bg-ocean-600 rounded-full mt-2 mr-4"></span>
-            <span class="text-gray-700 leading-relaxed">
-            {{'home.aboutGuru.training1' | translate}}<span class="font-semibold text-ocean-900">{{'home.aboutGuru.training1Bold' | translate }}</span>{{'home.aboutGuru.training1From' | translate }}<span class="font-semibold text-ocean-900">{{'home.aboutGuru.training1FromBold' | translate}}</span>{{'home.aboutGuru.training1Rest' | translate}}
-            </span>
-          </li>
-          <li class="flex items-start">
-            <span class="flex-shrink-0 w-2 h-2 bg-ocean-600 rounded-full mt-2 mr-4"></span>
-            <span class="text-gray-700 leading-relaxed">
-              {{'home.aboutGuru.training2' | translate}} <span class="font-semibold text-ocean-900">{{'home.aboutGuru.training2Bold' | translate}}</span>{{'home.aboutGuru.training2From' | translate}}<span class="font-semibold text-ocean-900">{{'home.aboutGuru.training2FromBold' | translate }}</span>{{'home.aboutGuru.training2Rest' | translate }}
-            </span>
-          </li>
-          <li class="flex items-start">
-            <span class="flex-shrink-0 w-2 h-2 bg-ocean-600 rounded-full mt-2 mr-4"></span>
-            <span class="text-gray-700 leading-relaxed">
-             {{'home.aboutGuru.training3' | translate }}
-            </span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- My Approach as Founder -->
-      <div class="mb-10">
-        <h3 class="text-xl font-semibold text-ocean-900 mb-6 pb-3 border-b-2 border-yellow-200">
-          {{'home.aboutGuru.approachTitle' | translate}}
-        </h3>
-        <ul class="space-y-4">
-          <li class="flex items-start">
-            <span class="flex-shrink-0 w-2 h-2 bg-yellow-600 rounded-full mt-2 mr-4"></span>
-            <span class="text-gray-700 leading-relaxed">
-             {{'home.aboutGuru.approach1' | translate}}
-            </span>
-          </li>
-          <li class="flex items-start">
-            <span class="flex-shrink-0 w-2 h-2 bg-yellow-600 rounded-full mt-2 mr-4"></span>
-            <span class="text-gray-700 leading-relaxed">
-              {{'home.aboutGuru.approach2' | translate}}
-            </span>
-          </li>
-          <li class="flex items-start">
-            <span class="flex-shrink-0 w-2 h-2 bg-yellow-600 rounded-full mt-2 mr-4"></span>
-            <span class="text-gray-700 leading-relaxed">
-             {{'home.aboutGuru.approach3' | translate}}
-            </span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- My Teaching Philosophy -->
-      <div>
-        <h3 class="text-xl font-semibold text-ocean-900 mb-6 pb-3 border-b-2 border-ocean-200">
-          {{'home.aboutGuru.philosophyTitle' | translate }}
-        </h3>
-        <ul class="space-y-4">
-          <li class="flex items-start">
-            <span class="flex-shrink-0 w-2 h-2 bg-ocean-600 rounded-full mt-2 mr-4"></span>
-            <span class="text-gray-700 leading-relaxed">
-            {{'home.aboutGuru.philosophy1' | translate}}<span class="font-semibold text-ocean-900">{{'home.aboutGuru.philosophy1Bold' | translate}}</span>{{'home.aboutGuru.philosophy1Rest' | translate }}
-            </span>
-          </li>
-          <li class="flex items-start">
-            <span class="flex-shrink-0 w-2 h-2 bg-ocean-600 rounded-full mt-2 mr-4"></span>
-            <span class="text-gray-700 leading-relaxed">
-              {{'home.aboutGuru.philosophy2' | translate }}
-            </span>
-          </li>
-          <li class="flex items-start">
-            <span class="flex-shrink-0 w-2 h-2 bg-ocean-600 rounded-full mt-2 mr-4"></span>
-            <span class="text-gray-700 leading-relaxed">
-              {{'home.aboutGuru.philosophy3' | translate }}
-            </span>
-          </li>
-          <li class="flex items-start">
-            <span class="flex-shrink-0 w-2 h-2 bg-ocean-600 rounded-full mt-2 mr-4"></span>
-            <span class="text-gray-700 leading-relaxed">
-              {{'home.aboutGuru.philosophy4' | translate }}
-            </span>
-          </li>
-        </ul>
-      </div>
-
     </div>
   </div>
 </section>
@@ -371,7 +265,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
     <!-- Academic Credentials -->
     <div>
       <h3 class="text-2xl font-serif font-semibold text-ocean-900 mb-8 text-center">
-        {{'home.abputGuru.academicTitle' | translate }}
+        {{'home.aboutGuru.academicTitle' | translate }}
       </h3>
       
       <div class="max-w-3xl mx-auto">

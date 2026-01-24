@@ -335,7 +335,7 @@ interface CourseDetail {
               </div>
               <div class="bg-white bg-opacity-10 rounded-lg p-4">
                 <p class="font-semibold">{{ 'courseDetail.accuracy' | translate }}</p>
-                <p class="text-sm text-white/80 mt-1">T{{ 'courseDetail.tempo' | translate }}</p>
+                <p class="text-sm text-white/80 mt-1">{{ 'courseDetail.tempo' | translate }}</p>
               </div>
               <div class="bg-white bg-opacity-10 rounded-lg p-4">
                 <p class="font-semibold">{{ 'courseDetail.song' | translate }}</p>
