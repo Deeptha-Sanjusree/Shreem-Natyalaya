@@ -102,7 +102,7 @@ interface FAQ {
           <div class="w-20 h-20 flex items-center justify-center mx-auto mb-4 overflow-hidden">
             <img src="/assets/images/natrajar.jpeg" class="w-full h-full object-contain" alt="Bharatanatyam"/>
           </div>
-          <h3 class="text-xl font-serif font-semibold text-ocean-900 mb-3">{{'home.courses.bharatanatyam.title' | translate}}</h3>
+
           <p class="text-sm text-gray-600 mb-4">{{'home.courses.bharatanatyam.description' | translate}}</p>
         </div>
         <ul class="text-left space-y-2 mb-4 flex-grow">
@@ -346,10 +346,10 @@ interface FAQ {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-4">
-        {{'home.gallery.title' | translate}}
+        {{'home.ourCourses.gallery.title' | translate}}
       </h2>
       <p class="text-lg text-gray-600">
-        {{'home.gallery.description' | translate}}
+        {{'home.ourCourses.gallery.description' | translate}}
       </p>
     </div>
 

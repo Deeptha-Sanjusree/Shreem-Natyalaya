@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Title, Meta } from '@angular/platform-browser';
+import { TranslatePipe } from '../pipes/translate.pipe';
 
 interface Event {
   title: string;
@@ -16,16 +17,16 @@ interface Event {
 @Component({
   selector: 'app-upcoming-events',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   template: `<!-- Hero Section -->
 <section class="relative bg-gradient-to-br from-ocean-900 via-ocean-800 to-ocean-900 text-white py-16 md:py-20">
   <div class="absolute inset-0 bg-black/20"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4">
-      Upcoming Events
+      {{ 'upcomingEvents.title' | translate }}
     </h1>
     <p class="text-lg md:text-xl text-cream-100">
-      Stay updated with our latest events and activities
+      {{ 'upcomingEvents.subtitle' | translate }}
     </p>
   </div>
 </section>

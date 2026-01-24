@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
+import { TranslatePipe } from '../pipes/translate.pipe';
+import { TranslationService } from '../services/translation.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-collaborate',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, TranslatePipe, CommonModule],
   template: `
   <!-- Exclusive Notice Banner -->
   <div class="bg-yellow-50 border-l-4 border-yellow-500 py-3">
@@ -15,7 +18,7 @@ import { RouterLink } from '@angular/router';
           <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
         </svg>
         <p class="text-sm font-medium text-yellow-800">
-          <span class="font-bold">For Institutions Only:</span> This page is exclusively for schools, play schools, and colleges interested in partnership opportunities.
+          <span class="font-bold">{{ 'collaborate.exclusiveNotice' | translate }}</span> {{ 'collaborate.exclusiveText' | translate }}
         </p>
       </div>
     </div>
@@ -30,16 +33,16 @@ import { RouterLink } from '@angular/router';
           <svg class="w-5 h-5 text-yellow-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
           </svg>
-          <span class="text-sm font-semibold text-yellow-100">Institutional Partnership Program</span>
+          <span class="text-sm font-semibold text-yellow-100">{{ 'collaborate.badge' | translate }}</span>
         </div>
         <h1 class="text-3xl md:text-5xl font-serif font-bold mb-4">
-          Collaborate with Shreem Natyalaya
+          {{ 'collaborate.title' | translate }}
         </h1>
         <p class="text-xl md:text-2xl text-ocean-100 font-light mb-2">
-          Bringing Classical Arts to Your Institution
+          {{ 'collaborate.subtitle' | translate }}
         </p>
         <p class="text-base md:text-lg text-ocean-200 max-w-3xl mx-auto leading-relaxed">
-          We partner with schools, play schools, and colleges to provide classical dance, music, and slokam programs for your students.
+          {{ 'collaborate.description' | translate }}
         </p>
       </div>
     </div>
@@ -50,101 +53,45 @@ import { RouterLink } from '@angular/router';
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10">
         <h2 class="text-2xl md:text-3xl font-serif font-bold text-ocean-900 mb-3">
-          Who Can Partner With Us?
+          {{ 'collaborate.partners.title' | translate }}
         </h2>
-        <p class="text-gray-600">Partnership opportunities for educational institutions, community spaces, and residential complexes</p>
+        <p class="text-gray-600">{{ 'collaborate.partners.subtitle' | translate }}</p>
       </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Schools -->
-      <div class="bg-white rounded-xl p-6 border-2 border-ocean-100 transition-all duration-300">
-        <div class="w-14 h-14 bg-ocean-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-          <svg class="w-7 h-7 text-ocean-700" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
-          </svg>
+      @for (partner of translationService.get('collaborate.partners.types'); track $index; let i = $index) {
+        <div class="bg-white rounded-xl p-6 border-2 transition-all duration-300"
+             [class.border-ocean-100]="i % 2 === 0"
+             [class.border-yellow-100]="i % 2 !== 0">
+          <div class="w-14 h-14 rounded-lg flex items-center justify-center mb-4 mx-auto"
+               [class.bg-ocean-100]="i % 2 === 0"
+               [class.bg-yellow-100]="i % 2 !== 0">
+            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20"
+                 [class.text-ocean-700]="i % 2 === 0"
+                 [class.text-yellow-700]="i % 2 !== 0">
+              @if (i === 0) {
+                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+              } @else if (i === 1) {
+                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+              } @else if (i === 2) {
+                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+              } @else if (i === 3) {
+                <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd" />
+              } @else if (i === 4) {
+                <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              } @else {
+                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+              }
+            </svg>
+          </div>
+          <h3 class="text-lg font-serif font-bold text-ocean-900 text-center mb-2">
+            {{ partner.title }}
+          </h3>
+          <p class="text-sm text-gray-600 text-center">
+            {{ partner.description }}
+          </p>
         </div>
-        <h3 class="text-lg font-serif font-bold text-ocean-900 text-center mb-2">
-          Schools & Colleges
-        </h3>
-        <p class="text-sm text-gray-600 text-center">
-          Primary, Secondary & Higher Education
-        </p>
-      </div>
-
-      <!-- Play Schools -->
-      <div class="bg-white rounded-xl p-6 border-2 border-yellow-100 transition-all duration-300">
-        <div class="w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-          <svg class="w-7 h-7 text-yellow-700" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-          </svg>
-        </div>
-        <h3 class="text-lg font-serif font-bold text-ocean-900 text-center mb-2">
-          Play Schools
-        </h3>
-        <p class="text-sm text-gray-600 text-center">
-          Preschools & Kindergartens
-        </p>
-      </div>
-
-      <!-- Apartments -->
-      <div class="bg-white rounded-xl p-6 border-2 border-ocean-100 transition-all duration-300">
-        <div class="w-14 h-14 bg-ocean-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-          <svg class="w-7 h-7 text-ocean-700" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
-          </svg>
-        </div>
-        <h3 class="text-lg font-serif font-bold text-ocean-900 text-center mb-2">
-          Apartments
-        </h3>
-        <p class="text-sm text-gray-600 text-center">
-          Residential Complexes & Gated Communities
-        </p>
-      </div>
-
-      <!-- Community Halls -->
-      <div class="bg-white rounded-xl p-6 border-2 border-yellow-100 transition-all duration-300">
-        <div class="w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-          <svg class="w-7 h-7 text-yellow-700" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd" />
-          </svg>
-        </div>
-        <h3 class="text-lg font-serif font-bold text-ocean-900 text-center mb-2">
-          Community Halls
-        </h3>
-        <p class="text-sm text-gray-600 text-center">
-          Event Spaces & Recreation Centers
-        </p>
-      </div>
-
-      <!-- Cultural Centers -->
-      <div class="bg-white rounded-xl p-6 border-2 border-ocean-100 transition-all duration-300">
-        <div class="w-14 h-14 bg-ocean-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-          <svg class="w-7 h-7 text-ocean-700" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-          </svg>
-        </div>
-        <h3 class="text-lg font-serif font-bold text-ocean-900 text-center mb-2">
-          Cultural Centers
-        </h3>
-        <p class="text-sm text-gray-600 text-center">
-          Temples, Community Centers & Cultural Hubs
-        </p>
-      </div>
-
-      <!-- Activity Centers -->
-      <div class="bg-white rounded-xl p-6 border-2 border-yellow-100 transition-all duration-300">
-        <div class="w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-          <svg class="w-7 h-7 text-yellow-700" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
-          </svg>
-        </div>
-        <h3 class="text-lg font-serif font-bold text-ocean-900 text-center mb-2">
-          Activity Centers
-        </h3>
-        <p class="text-sm text-gray-600 text-center">
-          Kids Activity Centers & Learning Hubs
-        </p>
-      </div>
+      }
     </div>
   </div>
 </section>
@@ -154,88 +101,55 @@ import { RouterLink } from '@angular/router';
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
       <h2 class="text-2xl md:text-3xl font-serif font-bold text-ocean-900 mb-3">
-        Partnership Benefits for Your Institution
+        {{ 'collaborate.benefits.title' | translate }}
       </h2>
       <p class="text-gray-600 max-w-2xl mx-auto">
-        High-level overview of what we offer — detailed programs shared upon partnership inquiry
+        {{ 'collaborate.benefits.subtitle' | translate }}
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Benefit 1 -->
-      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-        <div class="w-16 h-16 bg-gradient-to-br from-ocean-600 to-ocean-700 rounded-full flex items-center justify-center mb-6 mx-auto">
-          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-          </svg>
+      @for (benefit of translationService.get('collaborate.benefits.list'); track $index; let i = $index) {
+        <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+             [class.shadow-lg]="i === 0"
+             [class.p-8]="i === 0">
+          <div class="rounded-full flex items-center justify-center mx-auto mb-4"
+               [class.w-16]="i === 0"
+               [class.h-16]="i === 0"
+               [class.w-14]="i !== 0"
+               [class.h-14]="i !== 0"
+               [class.mb-6]="i === 0"
+               [class.bg-gradient-to-br]="true"
+               [class.from-ocean-600]="i % 2 === 0"
+               [class.to-ocean-700]="i % 2 === 0"
+               [class.from-yellow-600]="i % 2 !== 0"
+               [class.to-yellow-700]="i % 2 !== 0">
+            <svg class="text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 [class.w-8]="i === 0"
+                 [class.h-8]="i === 0"
+                 [class.w-7]="i !== 0"
+                 [class.h-7]="i !== 0">
+              @if (i === 0) {
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              } @else if (i === 1) {
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              } @else if (i === 2) {
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              } @else if (i === 3) {
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              } @else {
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              }
+            </svg>
+          </div>
+          <h3 class="text-lg font-serif font-bold text-ocean-900 mb-2 text-center">
+            {{ benefit.title }}
+          </h3>
+          <p class="text-sm text-gray-600 text-center">
+            {{ benefit.description }}
+          </p>
         </div>
-        <h3 class="text-lg font-serif font-bold text-ocean-900 mb-2 text-center">
-          Structured Programs
-        </h3>
-        <p class="text-sm text-gray-600 text-center">
-          Dance,Keyboard & Slokam and online class for Veena
-        </p>
-      </div>
-
-      <!-- Benefit 2 -->
-      <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
-        <div class="w-14 h-14 bg-gradient-to-br from-yellow-600 to-yellow-700 rounded-full flex items-center justify-center mb-4 mx-auto">
-          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-          </svg>
-        </div>
-        <h3 class="text-lg font-serif font-bold text-ocean-900 mb-2 text-center">
-          Expert Guidance
-        </h3>
-        <p class="text-sm text-gray-600 text-center">
-          Trained faculty with proven methods
-        </p>
-      </div>
-
-      <!-- Benefit 3 -->
-      <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
-        <div class="w-14 h-14 bg-gradient-to-br from-ocean-600 to-ocean-700 rounded-full flex items-center justify-center mb-4 mx-auto">
-          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        </div>
-        <h3 class="text-lg font-serif font-bold text-ocean-900 mb-2 text-center">
-          Customized Workshops
-        </h3>
-        <p class="text-sm text-gray-600 text-center">
-          Tailored to your schedule & needs
-        </p>
-      </div>
-
-      <!-- Benefit 4 -->
-      <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
-        <div class="w-14 h-14 bg-gradient-to-br from-yellow-600 to-yellow-700 rounded-full flex items-center justify-center mb-4 mx-auto">
-          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-          </svg>
-        </div>
-        <h3 class="text-lg font-serif font-bold text-ocean-900 mb-2 text-center">
-          Cultural Events
-        </h3>
-        <p class="text-sm text-gray-600 text-center">
-          Temple & performance opportunities
-        </p>
-      </div>
-
-      <!-- Benefit 5 -->
-      <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
-        <div class="w-14 h-14 bg-gradient-to-br from-ocean-600 to-ocean-700 rounded-full flex items-center justify-center mb-4 mx-auto">
-          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-          </svg>
-        </div>
-        <h3 class="text-lg font-serif font-bold text-ocean-900 mb-2 text-center">
-          Curriculum Support
-        </h3>
-        <p class="text-sm text-gray-600 text-center">
-          Enrichment & extracurricular arts
-        </p>
-      </div>
+      }
     </div>
   </div>
 </section>
@@ -245,9 +159,11 @@ import { RouterLink } from '@angular/router';
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
       <h2 class="text-2xl md:text-3xl font-serif font-bold text-ocean-900 mb-3">
-        Mutual Growth & Benefits
+        {{ 'collaborate.mutualBenefits.title' | translate }}
       </h2>
-      <p class="text-gray-600">A partnership that benefits both your institution and Shreem Natyalaya</p>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        {{ 'collaborate.mutualBenefits.subtitle' | translate }}
+      </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -260,46 +176,18 @@ import { RouterLink } from '@angular/router';
             </svg>
           </div>
           <h3 class="text-xl font-serif font-bold text-ocean-900">
-            Benefits for Your Institution
+            {{ 'collaborate.mutualBenefits.institution.title' | translate }}
           </h3>
         </div>
         <ul class="space-y-3">
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-ocean-700 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-sm text-gray-700">Enhanced curriculum with authentic classical arts education</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-ocean-700 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-sm text-gray-700">Increased enrollment appeal for parents seeking holistic education</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-ocean-700 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-sm text-gray-700">Cultural enrichment and community engagement opportunities</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-ocean-700 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-sm text-gray-700">No additional administrative burden — we handle curriculum and instruction</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-ocean-700 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-sm text-gray-700">Annual performance events that enhance your institution's cultural profile</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-ocean-700 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-sm text-gray-700">Differentiate your institution with unique arts programs</span>
-          </li>
+          @for (item of translationService.get('collaborate.mutualBenefits.institution.items'); track item) {
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-ocean-700 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-sm text-gray-700">{{ item }}</span>
+            </li>
+          }
         </ul>
       </div>
 
@@ -312,46 +200,18 @@ import { RouterLink } from '@angular/router';
             </svg>
           </div>
           <h3 class="text-xl font-serif font-bold text-ocean-900">
-            Benefits for Shreem Natyalaya
+            {{ 'collaborate.mutualBenefits.shreem.title' | translate }}
           </h3>
         </div>
         <ul class="space-y-3">
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-yellow-700 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-sm text-gray-700">Expanded reach to bring classical arts to more students</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-yellow-700 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-sm text-gray-700">Collaborative learning spaces without infrastructure investment</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-yellow-700 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-sm text-gray-700">Building a network of cultural education centers</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-yellow-700 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-sm text-gray-700">Opportunity to train and employ dedicated mentors from our student community</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-yellow-700 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-sm text-gray-700">Fulfilling our mission to preserve and promote classical Indian arts</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-5 h-5 text-yellow-700 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-sm text-gray-700">Sustainable growth through institutional partnerships</span>
-          </li>
+          @for (item of translationService.get('collaborate.mutualBenefits.shreem.items'); track item) {
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-yellow-700 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-sm text-gray-700">{{ item }}</span>
+            </li>
+          }
         </ul>
       </div>
     </div>
@@ -366,13 +226,13 @@ import { RouterLink } from '@angular/router';
         <svg class="w-5 h-5 text-yellow-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
           <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
         </svg>
-        <span class="text-sm font-semibold text-yellow-100">For Institutions Only</span>
+        <span class="text-sm font-semibold text-yellow-100">{{ 'collaborate.contactCTA.badge' | translate }}</span>
       </div>
       <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">
-        Interested in Collaborating?
+        {{ 'collaborate.contactCTA.title' | translate }}
       </h2>
       <p class="text-lg md:text-xl text-ocean-100 mb-8 leading-relaxed">
-        Contact us today to explore partnership opportunities and learn more about our programs
+        {{ 'collaborate.contactCTA.subtitle' | translate }}
       </p>
     </div>
 
@@ -385,12 +245,12 @@ import { RouterLink } from '@angular/router';
             <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
             <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
           </svg>
-          <h3 class="text-lg font-semibold">Email Us</h3>
+          <h3 class="text-lg font-semibold">{{ 'collaborate.contactCTA.email.title' | translate }}</h3>
         </div>
         <p class="text-ocean-100 text-sm">
-          Send your partnership inquiry to discuss collaboration details
+          {{ 'collaborate.contactCTA.email.description' | translate }}
           <br>
-          <p class="text-yellow-300 font-semibold text-lg">sanjusree2626@gmail.com
+          <p class="text-yellow-300 font-semibold text-lg">{{ 'collaborate.contactCTA.email.address' | translate }}
         </p>
       </div>
 
@@ -400,13 +260,13 @@ import { RouterLink } from '@angular/router';
           <svg class="w-6 h-6 text-yellow-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
             <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
           </svg>
-          <h3 class="text-lg font-semibold">Call Us</h3>
+          <h3 class="text-lg font-semibold">{{ 'collaborate.contactCTA.phone.title' | translate }}</h3>
         </div>
         <p class="text-ocean-100 text-sm mb-2">
-          Speak directly with our team
+          {{ 'collaborate.contactCTA.phone.description' | translate }}
         </p>
         <p class="text-yellow-300 font-semibold text-lg">
-          9940489578
+          {{ 'collaborate.contactCTA.phone.number' | translate }}
         </p>
       </div>
     </div>
@@ -417,10 +277,10 @@ import { RouterLink } from '@angular/router';
         routerLink="/contact" 
         class="inline-block bg-gradient-to-r from-yellow-500 to-yellow-600 text-ocean-900 px-10 py-4 rounded-lg font-semibold text-lg hover:from-yellow-400 hover:to-yellow-500 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
       >
-        Contact Us for Partnership Details
+        {{ 'collaborate.contactCTA.button' | translate }}
       </a>
       <p class="text-ocean-200 text-sm mt-4">
-        We'll share comprehensive program details and answer all your questions
+        {{ 'collaborate.contactCTA.note' | translate }}
       </p>
     </div>
   </div>
@@ -431,7 +291,8 @@ export class CollaborateComponent implements OnInit {
 
   constructor(
     private title: Title,
-    private meta: Meta
+    private meta: Meta,
+    protected translationService: TranslationService
   ) {}
 
   ngOnInit(): void {

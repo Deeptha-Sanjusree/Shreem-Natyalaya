@@ -1,21 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
+import { TranslatePipe } from '../pipes/translate.pipe';
+import { TranslationService } from '../services/translation.service';
 
 @Component({
   selector: 'app-branches',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   template:`
   <!-- Hero Section -->
   <section class="relative bg-gradient-to-br from-ocean-900 via-ocean-800 to-ocean-900 text-white py-16 md:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-center">
-          Our Branches
+          {{ 'branches.title' | translate }}
         </h1>
         <p class="text-base md:text-lg text-ocean-100 max-w-xl mx-auto">
-          Find the nearest branch and join our classes today
+          {{ 'branches.subtitle' | translate }}
         </p>
       </div>
     </div>
@@ -223,68 +225,42 @@ import { Meta, Title } from '@angular/platform-browser';
             <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
             </svg>
-            <span class="text-white text-sm font-semibold">Coverage Area</span>
+            <span class="text-white text-sm font-semibold">{{ 'branches.serviceAreas.badge' | translate }}</span>
           </div>
           <h3 class="text-2xl md:text-3xl font-bold text-white mb-3">
-            Our Service Areas
+            {{ 'branches.serviceAreas.title' | translate }}
           </h3>
           <p class="text-ocean-100 mb-8 text-base max-w-2xl mx-auto">
-            Currently serving students in Chengalpet - Aathur, Urapakkam - Kattur, and Guduvancheri. Planning to expand our classes to more areas soon!
+            {{ 'branches.serviceAreas.description' | translate }}
           </p>
           
           <!-- Current Locations -->
           <div class="mb-6">
-            <h4 class="text-white text-xs font-bold uppercase tracking-wide mb-3">Current Locations</h4>
+            <h4 class="text-white text-xs font-bold uppercase tracking-wide mb-3">{{ 'branches.serviceAreas.currentTitle' | translate }}</h4>
             <div class="flex flex-wrap justify-center gap-2">
-              <span class="bg-green-500 px-4 py-2 rounded-lg text-sm font-semibold text-white flex items-center gap-2">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                Chengalpet - Aathur
-              </span>
-              <span class="bg-green-500 px-4 py-2 rounded-lg text-sm font-semibold text-white flex items-center gap-2">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                Urapakkam - Kattur
-              </span>
-              <span class="bg-green-500 px-4 py-2 rounded-lg text-sm font-semibold text-white flex items-center gap-2">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-                Guduvancheri
-              </span>
+              @for (location of translationService.get('branches.serviceAreas.current'); track location) {
+                <span class="bg-green-500 px-4 py-2 rounded-lg text-sm font-semibold text-white flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  {{ location }}
+                </span>
+              }
             </div>
           </div>
 
           <!-- Planned Expansion -->
           <div>
-            <h4 class="text-white text-xs font-bold uppercase tracking-wide mb-3">Expanding Soon To</h4>
+            <h4 class="text-white text-xs font-bold uppercase tracking-wide mb-3">{{ 'branches.serviceAreas.expandingTitle' | translate }}</h4>
             <div class="flex flex-wrap justify-center gap-2">
-              <span class="bg-yellow-500 px-4 py-2 rounded-lg text-sm font-semibold text-white flex items-center gap-2">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
-                </svg>
-                Vandalur
-              </span>
-              <span class="bg-yellow-500 px-4 py-2 rounded-lg text-sm font-semibold text-white flex items-center gap-2">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
-                </svg>
-                Kattankulathur
-              </span>
-              <span class="bg-yellow-500 px-4 py-2 rounded-lg text-sm font-semibold text-white flex items-center gap-2">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
-                </svg>
-                Maraimalai Nagar
-              </span>
-              <span class="bg-yellow-500 px-4 py-2 rounded-lg text-sm font-semibold text-white flex items-center gap-2">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
-                </svg>
-                SP Kovil
-              </span>
+              @for (location of translationService.get('branches.serviceAreas.expanding'); track location) {
+                <span class="bg-yellow-500 px-4 py-2 rounded-lg text-sm font-semibold text-white flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                  </svg>
+                  {{ location }}
+                </span>
+              }
             </div>
           </div>
         </div>
@@ -302,12 +278,12 @@ import { Meta, Title } from '@angular/platform-browser';
           </div>
           <div class="flex-1">
             <h4 class="text-lg font-bold text-yellow-900 mb-2 flex items-center gap-2">
-              Important Information
+              {{ 'branches.importantInfo.title' | translate }}
             </h4>
               <ul class="text-yellow-800 leading-relaxed">
-                <li>* Each class session is <strong>1 hour long</strong>, conducted <strong>twice per week.</strong></li> 
-                <li>* Timings are strictly followed and cannot be adjusted based on student availability.</li>
-                <li>* Bharathanatyam students should wear their uniforms</li>
+                @for (point of translationService.get('branches.importantInfo.points'); track point) {
+                  <li [innerHTML]="'* ' + point"></li>
+                }
               </ul>
           </div>
         </div>
@@ -320,61 +296,34 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class BranchesComponent implements OnInit {
 
-  branches = [
-    {
-      name: 'Shreem Natyalaya - Aathur',
-      location: 'Aathur, Chengalpet',
-      address: '2/199, Bhuvaneswari nagar, Aathur, Chengalpet - 603101',
-      timings: [
-        { day: 'Saturday', time: '5:30 PM - 6:30 PM', course: 'Bharatanatyam' },
-        { day: 'Saturday', time: '6:30 PM - 7:30 PM', course: 'Slokam' },
-        { day: 'Saturday', time: '7:30 PM - 8:30 PM', course: 'Keyboard' },
-        { day: 'Sunday', time: '9:00 AM - 10:00 AM', course: 'Bharathanatyam'},
-        { day: 'Sunday', time: '10:00 AM - 11:00 AM', course: 'Slokam'},
-        { day: 'Sunday', time: '11:00 AM - 12:00 PM', course: 'Keyboard'}
-      ],
-      contact: '+91 9940489578'
-    },
-    {
-      name: 'Shreem Natyalaya - Kattur',
-      location: 'Kattur, Karanai Puthucheri',
-      address: 'Kids park International pre school, Kattur',
-      timings: [
-        { day: 'Wednesday & Thursday', time: '6:30 PM - 7:30 PM', course: 'Bharatanatyam' },
-      ],
-      contact: '+91 9940489578'
-    },
-    {
-      name: 'Shreem Natyalaya - Guduvancheri',
-      location: 'Guduvancheri, Chennai',
-      address: 'First cry intelloits play school, Guduvancheri, 603202',
-      timings: [
-        { day: 'Wednesday & Thursday', time: '5:00 PM - 6:00 PM', course: 'Bharathanatyam' },
-      ],
-      contact: '+91 9940489578'
-    },
-    // {
-    //   name: 'Shreem Natyalaya - Chrompet',
-    //   location: 'Chrompet, Chennai',
-    //   address: 'SV music school, Chrompet',
-    //   timings: [
-    //     { day: 'Monday & Tuesday', time: '6:00 PM - 7:00 PM', course: 'Bharatanatyam' },
-    //   ],
-    //   contact: '+91 9940489578'
-    // }
-  ];
+  branches: any[] = [];
 
   constructor(
     private title: Title,
-    private meta: Meta
+    private meta: Meta,
+    protected translationService: TranslationService
   ) {}
 
   ngOnInit(): void {
+    // Subscribe to translation changes
+    this.translationService.translationsLoaded$.subscribe((loaded) => {
+      if (loaded) {
+        this.loadBranches();
+      }
+    });
+    
     this.title.setTitle('Our Branches - Shreem Natyalaya');
     this.meta.updateTag({
       name: 'description',
       content: 'Find Shreem Natyalaya branches across Urapakkam, Guduvancheri, and nearby areas. View class timings and venue details.'
     });
+  }
+
+  private loadBranches(): void {
+    const branchesData = this.translationService.get('branches.list');
+    if (branchesData && Array.isArray(branchesData)) {
+      this.branches = branchesData;
+    }
   }
 
   // Normalize course names to consistent labels

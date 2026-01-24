@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+import { TranslationService } from '../services/translation.service';
+import { TranslatePipe } from '../pipes/translate.pipe';
 
 interface SyllabusLevel {
   level: string;
@@ -30,7 +32,7 @@ interface CourseDetail {
 @Component({
   selector: 'app-course-detail',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, TranslatePipe],
   styles: [`
     @keyframes bounce-subtle {
       0%, 100% { transform: translateY(0); }
@@ -75,7 +77,7 @@ interface CourseDetail {
            <path fill-rule="evenodd" d="M18 10A8 8 0 11.001 9.999 8 8 0 0118 10zm-8-4a1 1 0 00-.894.553l-3 6A1 1 0 007 14h6a1 1 0 00.894-1.447l-3-6A1 1 0 0010 6zm0 8a1.25 1.25 0 110-2.5A1.25 1.25 0 0110 14z" clip-rule="evenodd" />
          </svg>
          <p class="text-sm md:text-base leading-relaxed">
-           <span class="font-semibold">Note:</span> If the student is interested to learn Western we will hire a mentor for that.
+           <span class="font-semibold">{{'courseDetail.note' | translate}}</span>{{'courseDetail.noteDesc' | translate}}
          </p>
        </div>
      </div>
@@ -85,7 +87,7 @@ interface CourseDetail {
   <section class="py-16 md:py-20 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-12 text-center">
-        Eligibility & Class details
+        {{'courseDetail.eligibility' | translate }}
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="text-center p-6 bg-cream-50 rounded-xl">
@@ -102,7 +104,7 @@ interface CourseDetail {
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h3 class="text-lg font-semibold text-ocean-900 mb-2">Duration</h3>
+          <h3 class="text-lg font-semibold text-ocean-900 mb-2">{{'courseDetail.duration' | translate }}</h3>
           <p class="text-gray-700">{{ course.duration }}</p>
         </div>
 
@@ -120,7 +122,7 @@ interface CourseDetail {
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
           </div>
-          <h3 class="text-lg font-semibold text-ocean-900 mb-2">Age Group</h3>
+          <h3 class="text-lg font-semibold text-ocean-900 mb-2">{{'courseDetail.ageGroup' | translate }}</h3>
           <p class="text-gray-700">{{ course.ageGroup }}</p>
         </div>
 
@@ -138,7 +140,7 @@ interface CourseDetail {
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
           </div>
-          <h3 class="text-lg font-semibold text-ocean-900 mb-2">Class Schedule</h3>
+          <h3 class="text-lg font-semibold text-ocean-900 mb-2">{{'courseDetail.classFormat' | translate }}</h3>
           <p class="text-gray-700">{{ course.classFormat }}</p>
         </div>
       </div>
@@ -152,28 +154,28 @@ interface CourseDetail {
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-5xl font-serif font-bold text-ocean-900 mb-4">
             @if (course.id === 'bharatanatyam') {
-              Shreem Natyalaya's Bharathanatyam Syllabus
+              {{'courseDetail.syllabusBTitle' | translate}}
             } @else if (course.id === 'veena') {
-              Shreem Natyalaya's Veena Syllabus
+             {{'courseDetail.syllabusVTitle' | translate}}
             } @else if (course.id === 'slokam') {
-              🕉️ Slokam Classes Syllabus
+              🕉️ {{'courseDetail.syllabusSTitle' | translate}}
             } @else if (course.id === 'keyboard') {
-              🎹 Keyboard Classes Syllabus
+              🎹 {{'courseDetail.syllabusKTitle' | translate}}
             } @else {
               {{ course.name }} Syllabus
             }
           </h2>
           <p class="text-lg text-gray-600 max-w-3xl mx-auto">
             @if (course.id === 'bharatanatyam') {
-              A comprehensive, structured learning path from foundation to Arangetram
+              {{'courseDetail.syllabusBSubTitle' | translate}}
             } @else if (course.id === 'veena') {
-              Classical • Devotional • Indian Film Music — A complete musical journey
+             {{'courseDetail.syllabusVSubTitle' | translate}}
             } @else if (course.id === 'slokam') {
-              Gayathri Mantras • Sanskrit & Tamil Sacred Works — Taught with pronunciation, rhythm, and complete meaning
+              {{'courseDetail.syllabusSSubTitle' | translate}}
             } @else if (course.id === 'keyboard') {
-              Right-Hand Melody • Devotional • Indian Film Music — A practical, ear-based approach
+              {{'courseDetail.syllabusKSubTitle' | translate}}
             } @else {
-              A comprehensive, structured learning path
+              {{'courseDetail.learningPath' | translate}}
             }
           </p>
           <div class="w-24 h-1 bg-gradient-to-r from-ocean-600 to-yellow-500 mx-auto mt-6"></div>
@@ -276,123 +278,95 @@ interface CourseDetail {
         >
           <h3 class="text-2xl font-serif font-bold mb-4">
             @if (course.id === 'bharatanatyam') {
-              🩰 Evaluation & Certification
+              🩰 {{'courseDetail.evaluation' | translate }}
             } @else if (course.id === 'veena') {
-              🎼 Evaluation & Certification
+              🎼{{'courseDetail.evaluation' | translate }}
             } @else if (course.id === 'slokam') {
-              🎓 Evaluation & Certification
+              🎓{{'courseDetail.evaluation' | translate }}
             } @else if (course.id === 'keyboard') {
-              🎹 Evaluation & Certification
+              🎹 {{'courseDetail.evaluation' | translate }}
             } @else {
-              📜 Evaluation & Certification
+              📜 {{'courseDetail.evaluation' | translate }}
             }
           </h3>
           @if (course.id === 'veena') {
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
               <div class="bg-white bg-opacity-10 rounded-lg p-4">
-                <p class="font-semibold">Classical Performance</p>
-                <p class="text-sm text-white/80 mt-1">Carnatic repertoire</p>
+                <p class="font-semibold">{{ 'courseDetail.classicalPerformance' | translate }}</p>
+                <p class="text-sm text-white/80 mt-1">{{'courseDetail.carnaticRepertoire' | translate }}</p>
               </div>
               <div class="bg-white bg-opacity-10 rounded-lg p-4">
-                <p class="font-semibold">Devotional/Film Song</p>
-                <p class="text-sm text-white/80 mt-1">Light music assessment</p>
+                <p class="font-semibold">{{ 'courseDetail.devotionalFilmSong' | translate }}</p>
+                <p class="text-sm text-white/80 mt-1">{{'courseDetail.evaluation' | translate }}</p>
               </div>
               <div class="bg-white bg-opacity-10 rounded-lg p-4">
-                <p class="font-semibold">Theory Exam</p>
-                <p class="text-sm text-white/80 mt-1">Written/oral test</p>
+                <p class="font-semibold">{{ 'courseDetail.theoryExam' | translate }}</p>
+                <p class="text-sm text-white/80 mt-1">{{ 'courseDetail.theoryExamDesc' | translate }}</p>
               </div>
               <div class="bg-white bg-opacity-10 rounded-lg p-4">
-                <p class="font-semibold">Certification</p>
-                <p class="text-sm text-white/80 mt-1">From Shreem Natyalaya</p>
+                <p class="font-semibold">{{ 'courseDetail.certification' | translate }}</p>
+                <p class="text-sm text-white/80 mt-1">{{ 'courseDetail.fromShreemNatyalaya' | translate }}</p>
               </div>
             </div>
           } @else if (course.id === 'slokam') {
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
               <div class="bg-white bg-opacity-10 rounded-lg p-4">
-                <p class="font-semibold">Pronunciation Accuracy</p>
-                <p class="text-sm text-white/80 mt-1">Sanskrit & Tamil clarity</p>
+                <p class="font-semibold">{{ 'courseDetail.pronunciationAccuracy' | translate }}</p>
+                <p class="text-sm text-white/80 mt-1">{{ 'courseDetail.sanskritTamilClarity' | translate }}</p>
               </div>
               <div class="bg-white bg-opacity-10 rounded-lg p-4">
-                <p class="font-semibold">Rhythm & Meaning</p>
-                <p class="text-sm text-white/80 mt-1">Complete explanation</p>
+                <p class="font-semibold">{{ 'courseDetail.rhythmMeaning' | translate }}</p>
+                <p class="text-sm text-white/80 mt-1">{{ 'courseDetail.completeExplanation' | translate }}</p>
               </div>
               <div class="bg-white bg-opacity-10 rounded-lg p-4">
-                <p class="font-semibold">Stage/Temple Performance</p>
-                <p class="text-sm text-white/80 mt-1">Public recitation</p>
+                <p class="font-semibold">{{ 'courseDetail.stagePerformance1' | translate }}</p>
+                <p class="text-sm text-white/80 mt-1">{{ 'courseDetail.publicRecitation' | translate }}</p>
               </div>
               <div class="bg-white bg-opacity-10 rounded-lg p-4">
-                <p class="font-semibold">Certification</p>
-                <p class="text-sm text-white/80 mt-1">From Shreem Natyalaya</p>
+                <p class="font-semibold">{{ 'courseDetail.certification' | translate }}</p>
+                <p class="text-sm text-white/80 mt-1">{{ 'courseDetail.fromShreemNatyalaya' | translate }}</p>
               </div>
             </div>
           } @else if (course.id === 'keyboard') {
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
               <div class="bg-white bg-opacity-10 rounded-lg p-4">
-                <p class="font-semibold">Melody Clarity</p>
-                <p class="text-sm text-white/80 mt-1">Right-hand accuracy</p>
+                <p class="font-semibold">{{ 'courseDetail.melodyClarity' | translate }}</p>
+                <p class="text-sm text-white/80 mt-1">{{ 'courseDetail.right' | translate }}</p>
               </div>
               <div class="bg-white bg-opacity-10 rounded-lg p-4">
-                <p class="font-semibold">Rhythm Accuracy</p>
-                <p class="text-sm text-white/80 mt-1">Tempo & timing</p>
+                <p class="font-semibold">{{ 'courseDetail.accuracy' | translate }}</p>
+                <p class="text-sm text-white/80 mt-1">T{{ 'courseDetail.tempo' | translate }}</p>
               </div>
               <div class="bg-white bg-opacity-10 rounded-lg p-4">
-                <p class="font-semibold">Song Continuity</p>
-                <p class="text-sm text-white/80 mt-1">Stage performance</p>
+                <p class="font-semibold">{{ 'courseDetail.song' | translate }}</p>
+                <p class="text-sm text-white/80 mt-1">{{ 'courseDetail.stage' | translate }}</p>
               </div>
               <div class="bg-white bg-opacity-10 rounded-lg p-4">
-                <p class="font-semibold">Certification</p>
+                <p class="font-semibold">{{ 'courseDetail.certification' | translate }}</p>
                 <p class="text-sm text-white/80 mt-1">From Shreem Natyalaya</p>
               </div>
             </div>
           } @else {
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
               <div class="bg-white bg-opacity-10 rounded-lg p-4">
-                <p class="font-semibold">Practical Assessment</p>
-                <p class="text-sm text-white/80 mt-1">Performance evaluation</p>
+                <p class="font-semibold">{{'courseDetail.practicalAssessment' | translate }}</p>
+                <p class="text-sm text-white/80 mt-1">{{'courseDetail.practicalAssessmentDesc' | translate }}</p>
               </div>
               <div class="bg-white bg-opacity-10 rounded-lg p-4">
-                <p class="font-semibold">Theory Test</p>
-                <p class="text-sm text-white/80 mt-1">Oral/written examination</p>
+                <p class="font-semibold">{{'courseDetail.theoryTest' | translate }}</p>
+                <p class="text-sm text-white/80 mt-1">{{'courseDetail.theoryTestDesc' | translate }}</p>
               </div>
               <div class="bg-white bg-opacity-10 rounded-lg p-4">
-                <p class="font-semibold">Annual Presentation</p>
-                <p class="text-sm text-white/80 mt-1">Stage performance</p>
+                <p class="font-semibold">{{'courseDetail.annualPresentation' | translate }}</p>
+                <p class="text-sm text-white/80 mt-1">{{'courseDetail.stagePerformance' | translate }}</p>
               </div>
               <div class="bg-white bg-opacity-10 rounded-lg p-4">
-                <p class="font-semibold">Certification</p>
-                <p class="text-sm text-white/80 mt-1">From Shreem Natyalaya</p>
+                <p class="font-semibold">{{'courseDetail.certification' | translate }}</p>
+                <p class="text-sm text-white/80 mt-1">{{'courseDetail.fromShreemNatyalaya' | translate }}</p>
               </div>
             </div>
           }
         </div>
-
-        <!-- Guru Lineage Section (Only for Slokam) -->
-        @if (course.id === 'slokam') {
-          <div class="mt-12 bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-8 md:p-12 border-2 border-yellow-200 shadow-xl">
-            <div class="text-center">
-              <h3 class="text-2xl md:text-3xl font-serif font-bold text-ocean-900 mb-6">
-                🎓 Guru Lineage
-              </h3>
-              <div class="max-w-3xl mx-auto">
-                <div class="bg-white rounded-xl p-6 shadow-lg">
-                  <p class="text-lg text-gray-700 mb-4 font-medium">
-                    Tamil Sacred Works Training under:
-                  </p>
-                  <div class="flex items-center justify-center space-x-3 mb-2">
-                    <span class="text-3xl">🌸</span>
-                    <h4 class="text-xl md:text-2xl font-serif font-bold text-ocean-900">
-                      Kalaimamani Smt. Desa. Mangayarkarasi
-                    </h4>
-                    <span class="text-3xl">🌸</span>
-                  </div>
-                  <p class="text-sm text-gray-600 italic mt-4">
-                    Renowned expert in Tamil devotional literature and traditional chanting
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        }
 
       </div>
     </section>
@@ -404,10 +378,10 @@ interface CourseDetail {
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-5xl font-serif font-bold text-ocean-900 mb-4">
-            Student Benefits & Opportunities
+            {{'courseDetail.studentBenefitsOpportunities' | translate }}
           </h2>
           <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-            Beyond learning, we offer real-world opportunities and career pathways
+           {{'courseDetail.becomeMentorSubTitle' | translate}}
           </p>
           <div class="w-24 h-1 bg-gradient-to-r from-ocean-600 to-yellow-500 mx-auto mt-6"></div>
         </div>
@@ -464,12 +438,11 @@ interface CourseDetail {
               </svg>
             </div>
             <h3 class="text-2xl md:text-3xl font-serif font-bold mb-4">
-              🌟 Become a Mentor at Shreem Natyalaya
+              🌟 {{'courseDetail.becomeMentor' | translate}}
             </h3>
             <p class="text-lg text-white/90 max-w-3xl mx-auto mb-6">
-              Students with <span class="font-bold">5+ years of continuous training</span> are eligible for 
-              <span class="font-bold">full-time or part-time teaching positions</span> at our new branches. 
-              Turn your passion into a profession!
+              {{'courseDetail.becomeMentorDesc' | translate }} <span class="font-bold">{{'courseDetail.becomeMentorDescBold' | translate}}</span>{{'courseDetail.becomeMentorDesc1' | translate }}
+              <span class="font-bold">{{'courseDetail.becomeMentorDesc1Bold' | translate}}</span> {{'courseDetail.becomeMentorDesc2' | translate}}
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div class="bg-white bg-opacity-20 rounded-lg px-6 py-3">
@@ -488,59 +461,6 @@ interface CourseDetail {
       </div>
     </section>
   }
-
-  <!-- Benefits -->
-  <section class="py-16 md:py-20 bg-cream-50">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-12 text-center">
-        Personal Development Benefits
-      </h2>
-      <div class="space-y-4">
-        @for (benefit of course.benefits; track benefit) {
-          <div class="flex items-start bg-white rounded-lg p-6 shadow-md">
-            <svg 
-              [class]="'w-6 h-6 mr-4 mt-1 flex-shrink-0 ' + (course.color === 'ocean' ? 'text-ocean-700' : 'text-yellow-700')" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-            <span class="text-lg text-gray-700">{{ benefit }}</span>
-          </div>
-        }
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section 
-    [class]="'py-16 md:py-20 text-white ' + (course.color === 'ocean' ? 'bg-ocean-900' : 'bg-yellow-800')"
-  >
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">
-        Ready to Begin Your {{ course.name }} Journey?
-      </h2>
-      <p class="text-lg text-white text-opacity-90 mb-8">
-        Join us and experience authentic classical arts training rooted in tradition
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a 
-          routerLink="/contact" 
-          [class]="'inline-block px-8 py-4 font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 ' + 
-          (course.color === 'ocean' ? 'bg-yellow-600 hover:bg-yellow-700' : 'bg-ocean-700 hover:bg-ocean-800') + ' text-white'"
-        >
-          Enroll Now
-        </a>
-        <a 
-          routerLink="/courses" 
-          class="inline-block px-8 py-4 bg-white bg-opacity-20 hover:bg-opacity-30 text-white font-semibold rounded-lg transition-all duration-300"
-        >
-          View All Courses
-        </a>
-      </div>
-    </div>
-  </section>
 } @else {
   <div class="min-h-screen flex items-center justify-center">
     <div class="text-center">
@@ -1060,12 +980,45 @@ export class CourseDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private title: Title,
-    private meta: Meta
+    private meta: Meta,
+    protected translationService: TranslationService
   ) {}
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.courseId = params['id'];
+      this.loadCourseData();
+    });
+
+    // Subscribe to translation changes
+    this.translationService.translationsLoaded$.subscribe((loaded) => {
+      if (loaded && this.courseId) {
+        this.loadCourseData();
+      }
+    });
+  }
+
+  private loadCourseData(): void {
+    // Load course data from translation JSON
+    const courseKey = `home.${this.courseId}`;
+    const courseData = this.translationService.get(courseKey);
+    
+    if (courseData) {
+      this.course = courseData as CourseDetail;
+      this.course.id = this.courseId;
+      
+      // Set default color if not specified
+      if (!this.course.color) {
+        this.course.color = (this.courseId === 'bharatanatyam' || this.courseId === 'slokam') ? 'ocean' : 'yellow';
+      }
+      
+      this.title.setTitle(`${this.course.name} - Shreem Natyalaya`);
+      this.meta.updateTag({ 
+        name: 'description', 
+        content: this.course.description 
+      });
+    } else {
+      // Fallback to hardcoded data if not found in translations
       this.course = this.coursesData[this.courseId] || null;
       
       if (this.course) {
@@ -1075,7 +1028,7 @@ export class CourseDetailComponent implements OnInit {
           content: this.course.description 
         });
       }
-    });
+    }
   }
 //   getCourseBg(courseId: string): string {
 //   switch (courseId) {

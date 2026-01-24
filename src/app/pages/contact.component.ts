@@ -2,20 +2,21 @@ import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Meta, Title } from '@angular/platform-browser';
+import { TranslatePipe } from '../pipes/translate.pipe';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, TranslatePipe],
   template: `<!-- Page Header -->
 <section class="bg-gradient-to-br from-ocean-50 via-cream-50 to-yellow-50 py-16 md:py-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center">
       <h1 class="text-4xl md:text-5xl font-serif font-bold text-ocean-900 mb-4">
-        For Enquiries
+        {{ 'contact.title' | translate }}
       </h1>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-        We'd love to hear from you. Reach out for admissions and inquiries.
+        {{ 'contact.subtitle' | translate }}
       </p>
     </div>
   </div>
@@ -29,11 +30,10 @@ import { Meta, Title } from '@angular/platform-browser';
       <!-- Contact Information -->
       <div>
         <h2 class="text-3xl font-serif font-bold text-ocean-900 mb-6">
-          Get in Touch
+          {{ 'contact.subtitle' | translate }}
         </h2>
         <p class="text-lg text-gray-700 leading-relaxed mb-8">
-          Whether you're interested in enrolling, have questions about our courses, 
-          or simply want to learn more about Shreem Natyalaya, we're here to help.
+          {{ 'contact.description' | translate }}
         </p>
 
         <!-- Contact Details -->

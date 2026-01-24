@@ -223,16 +223,447 @@
         "veenaGuru3": "\"Kalaimamani\" Karaikudi Siva Subramanyam",
         "veenaGuru3Prof": "Veena Maestro, Founder of Brihaddwani Institute"
     },
+    "bharatanatyam": {
+      "name": "Bharatanatyam",
+      "tagline": "Classical Dance Excellence",
+      "description": "Bharatanatyam is one of India’s oldest and most revered classical dance forms. Our comprehensive training program covers fundamental adavus, intricate footwork, expressive abhinaya, and the spiritual depth that makes this art form timeless.",
+      "duration": "5–7 years for complete training",
+      "ageGroup": "Ages 6 and above",
+      "classFormat": "Weekly classes (2 sessions per week). During event preparations, sessions will be increased.",
+      "whatYouLearn": [
+        "Fundamental adavus and aramandi positions",
+        "Rhythmic patterns and tala systems",
+        "Expressive abhinaya and storytelling through movement",
+        "Traditional repertoire including Alarippu, Jatiswaram, and Varnam",
+        "Stage presence and performance techniques",
+        "Understanding of Carnatic music and its relationship to dance"
+      ],
+      "syllabus": [
+        {
+          "level": "Level 1",
+          "title": "Beginner (Foundation)",
+          "duration": "6 months – 1 year",
+          "color": "green",
+          "theory": [
+            "Introduction to Bharatanatyam",
+            "Importance of Adavus",
+            "Basic posture (Araimandi, Muzhumandi)",
+            "Names of Hasta Mudras (Asamyuta & Samyuta – introduction)"
+          ],
+          "practical": [
+            "Basic stretching and body conditioning",
+            "Adavus: Tatta Adavu, Natta Adavu, Visharu Adavu",
+            "Eye, neck and head movements",
+            "Simple Alarippu (practice version)",
+            "Basic Tala concepts (Adi, Rupakam)"
+          ]
+        },
+        {
+          "level": "Level 2",
+          "title": "Elementary",
+          "duration": "1 – 2 years",
+          "color": "yellow",
+          "theory": [
+            "Detailed study of Hasta Mudras",
+            "Introduction to Navarasa",
+            "Costume and ornament awareness",
+            "Temple traditions in Bharatanatyam"
+          ],
+          "practical": [
+            "Adavus: Teermanam, Kudittu Mettu, Sarikal",
+            "Alarippu (complete)",
+            "Shabdam (simple)",
+            "Basic Abhinaya exercises",
+            "Kuthita and Mettu movements"
+          ]
+        },
+        {
+          "level": "Level 3",
+          "title": "Intermediate",
+          "duration": "2 – 3 years",
+          "color": "orange",
+          "theory": [
+            "Detailed Navarasa with examples",
+            "Introduction to Abhinaya",
+            "Storytelling through dance",
+            "Role of Guru in classical arts"
+          ],
+          "practical": [
+            "Advanced Adavu combinations",
+            "Jatiswaram",
+            "Varnam (short version)",
+            "Abhinaya-based Padams (introduction)",
+            "Expression practice with Slokas"
+          ]
+        },
+        {
+          "level": "Level 4",
+          "title": "Advanced",
+          "duration": "3 – 4 years",
+          "color": "blue",
+          "theory": [
+            "Natya Shastra basics",
+            "Types of Abhinaya (Angika, Vachika, Aharya, Satvika)",
+            "Musical structure in Bharatanatyam",
+            "Stage discipline and performance ethics"
+          ],
+          "practical": [
+            "Varnam (full)",
+            "Padam",
+            "Javali",
+            "Tillana",
+            "Advanced Abhinaya and improvisation",
+            "Solo performance practice"
+          ]
+        },
+        {
+          "level": "Level 5",
+          "title": "Arangetram Preparation",
+          "duration": "5+ years",
+          "color": "red",
+          "theory": [
+            "Complete Margam structure",
+            "Meaning and interpretation of items",
+            "Guru–Shishya Parampara",
+            "Cultural responsibility of a classical dancer"
+          ],
+          "practical": [
+            "Full Margam repertoire",
+            "Salangai Pooja",
+            "Stage rehearsals",
+            "Confidence and expression mastery"
+          ]
+        }
+      ],
+      "studentBenefits": [
+        "Participation in temple festivals and cultural programs",
+        "Grade examinations with certification",
+        "Traditional Salangai Pooja ceremony",
+        "Arangetram (debut solo performance)",
+        "Teaching opportunities at institute branches",
+        "Annual stage performances",
+        "Evaluation and certification from Shreem Natyalaya"
+      ]
+    },
+    "veena": {
+      "id": "veena",
+      "name": "Veena",
+      "tagline": "The Divine String Instrument",
+      "description": "The Veena is revered as one of the most ancient and sophisticated string instruments in Indian classical music. Our comprehensive program covers Classical Carnatic music, Devotional compositions, and Indian Film Music, offering a complete musical journey.",
+      "whatYouLearn": [
+        "Proper sitting posture and hand positioning",
+        "Basic swaras and finger techniques",
+        "Raga alapana and improvisation",
+        "Traditional compositions (kriti, varnam, tillana)",
+        "Devotional and film song adaptations",
+        "Performance techniques and stage presence"
+      ],
+      "duration": "5+ years for complete training",
+      "ageGroup": "Ages 7 and above",
+      "classFormat": "Weekly classes (2 sessions per week)",
+      "benefits": [
+        "Develops musicality and finger dexterity",
+        "Enhances understanding of Carnatic music",
+        "Improves concentration and memory",
+        "Opportunities for performance and recital",
+        "Potential career as a music mentor"
+      ],
+      "color": "ocean",
+      "syllabus": [
+        {
+          "level": "Level 1",
+          "title": "Beginner",
+          "duration": "6 months - 1 year",
+          "color": "green",
+          "theory": [
+            "Introduction to Veena",
+            "Parts of the instrument",
+            "Basic posture and fingering"
+          ],
+          "practical": [
+            "Basic exercises on swaras",
+            "Simple alankaras",
+            "Simple devotional songs"
+          ]
+        },
+        {
+          "level": "Level 2",
+          "title": "Elementary",
+          "duration": "1 - 2 years",
+          "color": "yellow",
+          "theory": [
+            "Introduction to ragas",
+            "Notation reading (swaras & beats)",
+            "Carnatic tala basics"
+          ],
+          "practical": [
+            "Playing short kritis",
+            "Alapana exercises in simple ragas",
+            "Devotional compositions practice"
+          ]
+        },
+        {
+          "level": "Level 3",
+          "title": "Intermediate",
+          "duration": "2 - 3 years",
+          "color": "orange",
+          "theory": [
+            "Raga elaboration techniques",
+            "Advanced tala patterns",
+            "Music notation for compositions"
+          ],
+          "practical": [
+            "Medium level kritis and varnams",
+            "Raga alapana practice",
+            "Introduction to gamakas"
+          ]
+        },
+        {
+          "level": "Level 4",
+          "title": "Advanced",
+          "duration": "3 - 4 years",
+          "color": "blue",
+          "theory": [
+            "Advanced Carnatic theory",
+            "Improvisation and musical expression",
+            "Performance techniques"
+          ],
+          "practical": [
+            "Full-length kritis and varnams",
+            "Advanced raga alapana",
+            "Stage performance training"
+          ]
+        }
+      ],
+      "studentBenefits": [
+        "Perform in cultural and devotional events",
+        "Carnatic music exams with certification",
+        "Mentorship and career opportunities as a Veena teacher",
+        "Stage performance exposure",
+        "Comprehensive evaluation and certification from Shreem Natyalaya"
+      ]
+    },
+    "slokam": {
+      "id": "slokam",
+      "name": "Slokam",
+      "tagline": "Sanskrit & Tamil Sacred Chanting",
+      "description": "Our Slokam classes teach sacred works in Sanskrit and Tamil, emphasizing correct pronunciation, rhythm, and meaning. Students will learn devotional hymns, mantras, and slokas with full understanding.",
+      "whatYouLearn": [
+        "Proper pronunciation of Sanskrit & Tamil hymns",
+        "Rhythmic chanting techniques",
+        "Meaning and interpretation of slokas",
+        "Devotional expressions and intonation",
+        "Stage and temple performance etiquette"
+      ],
+      "duration": "3+ years for complete training",
+      "ageGroup": "Ages 6 and above",
+      "classFormat": "Weekly classes (2 sessions per week)",
+      "benefits": [
+        "Improves memory and speech clarity",
+        "Deepens understanding of sacred texts",
+        "Enhances concentration and focus",
+        "Opportunity to perform in temples and cultural events",
+        "Potential career as a Slokam mentor"
+      ],
+      "color": "yellow",
+      "syllabus": [
+        {
+          "level": "Level 1",
+          "title": "Beginner",
+          "duration": "6 months - 1 year",
+          "color": "green",
+          "theory": [
+            "Introduction to Slokam",
+            "Basics of Sanskrit and Tamil pronunciation",
+            "Understanding meter and rhythm"
+          ],
+          "practical": [
+            "Simple Gayatri Mantra chanting",
+            "Basic Tamil hymns",
+            "Daily practice routines"
+          ]
+        },
+        {
+          "level": "Level 2",
+          "title": "Elementary",
+          "duration": "1 - 2 years",
+          "color": "yellow",
+          "theory": [
+            "Advanced pronunciation rules",
+            "Tala and rhythm in chanting",
+            "Meaning and translation of slokas"
+          ],
+          "practical": [
+            "Longer Sanskrit slokas",
+            "Devotional Tamil works",
+            "Pronunciation and recitation practice"
+          ]
+        },
+        {
+          "level": "Level 3",
+          "title": "Intermediate",
+          "duration": "2 - 3 years",
+          "color": "orange",
+          "theory": [
+            "Complex metrical patterns",
+            "Intonation and emphasis",
+            "Interpretation of sacred texts"
+          ],
+          "practical": [
+            "Temple chanting practice",
+            "Stage performance preparation",
+            "Recitation with proper rhythm and meaning"
+          ]
+        },
+        {
+          "level": "Level 4",
+          "title": "Advanced",
+          "duration": "3+ years",
+          "color": "blue",
+          "theory": [
+            "Advanced sacred literature",
+            "Pronunciation mastery",
+            "Guru lineage and tradition"
+          ],
+          "practical": [
+            "Performance in temples and events",
+            "Advanced slokas with proper chanting",
+            "Teaching and mentorship skills"
+          ]
+        }
+      ],
+      "studentBenefits": [
+        "Temple and stage performance opportunities",
+        "Mastery of pronunciation and rhythm",
+        "Evaluation and certification from Shreem Natyalaya",
+        "Mentorship opportunities for advanced students"
+      ]
+    },
+    "keyboard": {
+      "id": "keyboard",
+      "name": "Keyboard",
+      "tagline": "Carnatic & Light Music on Keyboard",
+      "description": "Learn Carnatic and light music melodies on the keyboard with emphasis on ear-based training, finger technique, and practical music application.",
+      "whatYouLearn": [
+        "Basic fingering and posture",
+        "Carnatic melody patterns",
+        "Light devotional and film songs",
+        "Improvisation and accompaniment",
+        "Performance and stage skills"
+      ],
+      "duration": "3-5 years",
+      "ageGroup": "Ages 6 and above",
+      "classFormat": "Weekly classes (2 sessions per week)",
+      "benefits": [
+        "Builds musical foundation on keyboard",
+        "Enhances ear training and improvisation skills",
+        "Opportunities to perform in events",
+        "Pathway to become a music mentor"
+      ],
+      "color": "yellow",
+      "syllabus": [
+        {
+          "level": "Level 1",
+          "title": "Beginner",
+          "duration": "6 months - 1 year",
+          "color": "green",
+          "theory": [
+            "Keyboard basics",
+            "Finger positioning and posture",
+            "Simple notes and scales"
+          ],
+          "practical": [
+            "Basic exercises and warm-ups",
+            "Simple Carnatic swaras",
+            "Short devotional songs"
+          ]
+        },
+        {
+          "level": "Level 2",
+          "title": "Elementary",
+          "duration": "1 - 2 years",
+          "color": "yellow",
+          "theory": [
+            "Reading notation",
+            "Simple rhythm patterns",
+            "Introduction to melodies"
+          ],
+          "practical": [
+            "Play simple varnams and kritis",
+            "Basic film and devotional songs",
+            "Introduction to chords"
+          ]
+        },
+        {
+          "level": "Level 3",
+          "title": "Intermediate",
+          "duration": "2 - 3 years",
+          "color": "orange",
+          "theory": [
+            "Intermediate rhythm and tempo",
+            "Chord progressions",
+            "Melodic embellishments"
+          ],
+          "practical": [
+            "Medium level songs",
+            "Accompaniment practice",
+            "Ear training exercises"
+          ]
+        },
+        {
+          "level": "Level 4",
+          "title": "Advanced",
+          "duration": "3 - 4 years",
+          "color": "blue",
+          "theory": [
+            "Advanced melody and harmony",
+            "Complex rhythm patterns",
+            "Performance techniques"
+          ],
+          "practical": [
+            "Full compositions",
+            "Performance rehearsals",
+            "Improvisation and accompaniment"
+          ]
+        }
+      ],
+      "studentBenefits": [
+        "Stage performance opportunities",
+        "Evaluation & certification from Shreem Natyalaya",
+        "Mentorship for advanced students",
+        "Ability to play devotional, film, and Carnatic music"
+      ]
+    },
     "ourCourses": {
-        "pageTitle": "Our Courses",
-        "pageSubTitle": "Explore the classical arts we teach with dedication and authenticity. Click on any course to learn more.",
-        "onlineTitle": "Online Classes",
-        "onlineDesc": "Live interactive sessions with expert instructors from anywhere",
-        "offlineTitle": "Offline Classes",
-        "offlineDesc": "Conducted at partnered institutions and collaborative learning spaces"
-
-    
-    
+      "pageTitle": "Our Courses",
+      "pageDescription": "Explore the classical arts we teach with dedication and authenticity.",
+      "learnMore": "Learn More",
+      "online": {
+        "title": "Online Classes",
+        "desc": "Live interactive sessions with expert instructors from anywhere"
+      },
+      "offline": {
+        "title": "Offline Classes",
+        "desc": "Conducted at partnered institutions and collaborative learning spaces"
+      },
+      "list": {
+        "bharatanatyam": {
+          "title": "Bharatanatyam",
+          "description": "Classical dance form emphasizing grace, rhythm, and expression."
+        },
+        "veena": {
+          "title": "Veena",
+          "description": "Ancient string instrument known for its soulful melodies."
+        },
+        "slokam": {
+          "title": "Slokam",
+          "description": "Sacred verses focusing on pronunciation, rhythm, and meaning."
+        },
+        "keyboard": {
+          "title": "Keyboard",
+          "description": "Structured training to build melody and harmony skills."
+        }
+      }
     },
     "courses": {
       "title": "Our Classical Arts Programs",
@@ -324,7 +755,7 @@
     "eligibility": "Eligibility & Class details",
     "duration": "Duration",
     "ageGroup": "Age Group",
-    "classFormat": "Class Format",
+    "classFormat": "Class Schedule",
     "whatYouLearn": "What You'll Learn",
     "benefits": "Benefits",
     "syllabus": "Course Syllabus",
@@ -333,7 +764,56 @@
     "evaluation": "Evaluation & Certification",
     "studentBenefits": "Student Benefits",
     "keyboardNote": "Note: If the student is interested to learn Western we will hire a mentor for that.",
-    "enrollNow": "Enroll Now"
+    "enrollNow": "Enroll Now",
+    "syllabusBTitle": "Shreem Natyalaya's Bharathanatyam Syllabus",
+    "syllabusVTitle": "Shreem Natyalaya's Veena Syllabus",
+    "syllabusSTitle": "Shreem Natyalaya's Slokam Syllabus",
+    "syllabusKTitle": "Shreem Natyalaya's Keyboard Syllabus",
+    "syllabusBSubTitle": "A comprehensive, structured learning path from foundation to Arangetram",
+    "syllabusVSubTitle": "Classical • Devotional • Indian Film Music — A complete musical journey",
+    "syllabusSSubTitle": "Gayathri Mantras • Sanskrit & Tamil Sacred Works — Taught with pronunciation, rhythm, and complete meaning",
+    "syllabusKSubTitle": "Right-Hand Melody • Devotional • Indian Film Music — A practical, ear-based approach",
+    "learningPath": "A comprehensive, structured learning path",
+    "practicalAssessment": "Practical Assessment",
+    "practicalAssessmentDesc": "Performance evaluation",
+    "theoryTest": "Theory Test",
+    "theoryTestDesc": "Oral/written examination",
+    "annualPresentation": "Annual Presentation",
+    "stagePerformance":"Stage performance",
+    "certification": "Certification",
+    "fromShreemNatyalaya": "From Shreem Natyalaya",
+    "studentBenefitsOpportunities": "Student Benefits & Opportunities",
+    "becomeMentor":"Become a Mentor at Shreem Natyalaya",
+    "becomeMentorSubTitle": "Beyond learning, we offer real-world opportunities and career pathways",
+    "becomeMentorDesc": "Students with",
+    "becomeMentorDescBold": "5+ years of continuous training",
+    "becomeMentorDesc1": " are eligible for ",
+    "becomeMentorDesc1Bold": "full-time or part-time teaching positions",
+    "becomeMentorDesc2": "at our new branches. Turn your passion into a profession!",
+    "classicalPerformance": "Classical Performance",
+    "carnaticRepertoire": "Carnatic repertoire",
+    "devotionalFilmSong":"Devotional/Film Song",
+    "karaokeAssessment":"Karaoke training",
+    "theoryExam":"Theory Exam",
+    "theoryExamDesc":"Written/oral test",
+    "pronunciationAccuracy": "Pronunciation Accuracy",
+    "sanskritTamilClarity": "Sanskrit & Tamil clarity",
+    "rhythmMeaning": "Rhythm & Meaning",
+    "completeExplanation": "Complete explanation",
+    "stagePerformance1": "Stage/Temple Performance",
+    "publicRecitation": "Public recitation",
+    "note": "Note:",
+    "noteDesc": "If the student is interested to learn Western we will hire a mentor for that.",
+    "melodyClarity": "Melody Clarity",
+    "right": "Right-hand accuracy",
+    "accuracy" :"Rhythm Accuracy",
+    "tempo": "Tempo & timing",
+    "song": "Song Continuity",
+    "stage": "Stage performance"
+
+
+
+
   },
   "guruParampara": {
     "title": "Guru Parampara",
@@ -353,6 +833,181 @@
     "philosophy": {
       "title": "Teaching Philosophy",
       "description": "At Shreem Natyalaya, we believe in the traditional Guru-Shishya Parampara, where knowledge is passed down with dedication, discipline, and devotion. Our approach combines rigorous training with individual attention, ensuring each student develops both technical excellence and artistic expression."
+    }
+  },
+  "upcomingEvents": {
+    "title": "Upcoming Events",
+    "subtitle": "Stay updated with our latest events and activities"
+  },
+  "branches": {
+    "title": "Our Branches",
+    "subtitle": "Find the nearest branch and join our classes today",
+    "list": [
+      {
+        "name": "Shreem Natyalaya - Aathur",
+        "location": "Aathur, Chengalpet",
+        "address": "2/199, Bhuvaneswari nagar, Aathur, Chengalpet - 603101",
+        "timings": [
+          { "day": "Saturday", "time": "5:30 PM - 6:30 PM", "course": "Bharatanatyam" },
+          { "day": "Saturday", "time": "6:30 PM - 7:30 PM", "course": "Slokam" },
+          { "day": "Saturday", "time": "7:30 PM - 8:30 PM", "course": "Keyboard" },
+          { "day": "Sunday", "time": "9:00 AM - 10:00 AM", "course": "Bharathanatyam" },
+          { "day": "Sunday", "time": "10:00 AM - 11:00 AM", "course": "Slokam" },
+          { "day": "Sunday", "time": "11:00 AM - 12:00 PM", "course": "Keyboard" }
+        ],
+        "contact": "+91 9940489578"
+      },
+      {
+        "name": "Shreem Natyalaya - Kattur",
+        "location": "Kattur, Karanai Puthucheri",
+        "address": "Kids park International pre school, Kattur",
+        "timings": [
+          { "day": "Wednesday & Thursday", "time": "6:30 PM - 7:30 PM", "course": "Bharatanatyam" }
+        ],
+        "contact": "+91 9940489578"
+      },
+      {
+        "name": "Shreem Natyalaya - Guduvancheri",
+        "location": "Guduvancheri, Chennai",
+        "address": "First cry intelloits play school, Guduvancheri, 603202",
+        "timings": [
+          { "day": "Wednesday & Thursday", "time": "5:00 PM - 6:00 PM", "course": "Bharathanatyam" }
+        ],
+        "contact": "+91 9940489578"
+      }
+    ],
+    "serviceAreas": {
+      "badge": "Coverage Area",
+      "title": "Our Service Areas",
+      "description": "Currently serving students in Chengalpet - Aathur, Urapakkam - Kattur, and Guduvancheri. Planning to expand our classes to more areas soon!",
+      "currentTitle": "Current Locations",
+      "current": [
+        "Chengalpet - Aathur",
+        "Urapakkam - Kattur",
+        "Guduvancheri"
+      ],
+      "expandingTitle": "Expanding Soon To",
+      "expanding": [
+        "Vandalur",
+        "Kattankulathur",
+        "Maraimalai Nagar",
+        "SP Kovil"
+      ]
+    },
+    "importantInfo": {
+      "title": "Important Information",
+      "points": [
+        "Each class session is <strong>1 hour long</strong>, conducted <strong>twice per week.</strong>",
+        "Timings are strictly followed and cannot be adjusted based on student availability.",
+        "Bharathanatyam students should wear their uniforms"
+      ]
+    }
+  },
+  "collaborate": {
+    "exclusiveNotice": "For Institutions Only:",
+    "exclusiveText": "This page is exclusively for schools, play schools, and colleges interested in partnership opportunities.",
+    "badge": "Institutional Partnership Program",
+    "title": "Collaborate with Shreem Natyalaya",
+    "subtitle": "Bringing Classical Arts to Your Institution",
+    "description": "We partner with schools, play schools, and colleges to provide classical dance, music, and slokam programs for your students.",
+    "partners": {
+      "title": "Who Can Partner With Us?",
+      "subtitle": "Partnership opportunities for educational institutions, community spaces, and residential complexes",
+      "types": [
+        {
+          "title": "Schools & Colleges",
+          "description": "Primary, Secondary & Higher Education"
+        },
+        {
+          "title": "Play Schools",
+          "description": "Preschools & Kindergartens"
+        },
+        {
+          "title": "Apartments",
+          "description": "Residential Complexes & Gated Communities"
+        },
+        {
+          "title": "Community Halls",
+          "description": "Event Spaces & Recreation Centers"
+        },
+        {
+          "title": "Cultural Centers",
+          "description": "Temples, Community Centers & Cultural Hubs"
+        },
+        {
+          "title": "Activity Centers",
+          "description": "Kids Activity Centers & Learning Hubs"
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Partnership Benefits for Your Institution",
+      "subtitle": "High-level overview of what we offer — detailed programs shared upon partnership inquiry",
+      "list": [
+        {
+          "title": "Structured Programs",
+          "description": "Dance,Keyboard & Slokam and online class for Veena"
+        },
+        {
+          "title": "Expert Guidance",
+          "description": "Trained faculty with proven methods"
+        },
+        {
+          "title": "Customized Workshops",
+          "description": "Tailored to your schedule & needs"
+        },
+        {
+          "title": "Cultural Events",
+          "description": "Temple & performance opportunities"
+        },
+        {
+          "title": "Curriculum Support",
+          "description": "Enrichment & extracurricular arts"
+        }
+      ]
+    },
+    "mutualBenefits": {
+      "title": "Mutual Growth & Benefits",
+      "subtitle": "A partnership that enriches both institutions and students",
+      "institution": {
+        "title": "Benefits for Your Institution",
+        "items": [
+          "Enhanced curriculum with authentic classical arts education",
+          "Increased enrollment appeal for parents seeking holistic education",
+          "Cultural enrichment and community engagement opportunities",
+          "No additional administrative burden — we handle curriculum and instruction",
+          "Annual performance events that enhance your institution's cultural profile",
+          "Differentiate your institution with unique arts programs"
+        ]
+      },
+      "shreem": {
+        "title": "Benefits for Shreem Natyalaya",
+        "items": [
+          "Expanded reach to bring classical arts to more students",
+          "Collaborative learning spaces without infrastructure investment",
+          "Building a network of cultural education centers",
+          "Opportunity to train and employ dedicated mentors from our student community",
+          "Fulfilling our mission to preserve and promote classical Indian arts",
+          "Sustainable growth through institutional partnerships"
+        ]
+      }
+    },
+    "contactCTA": {
+      "badge": "For Institutions Only",
+      "title": "Interested in Collaborating?",
+      "subtitle": "Contact us today to explore partnership opportunities and learn more about our programs",
+      "email": {
+        "title": "Email Us",
+        "description": "Send your partnership inquiry to discuss collaboration details",
+        "address": "sanjusree2626@gmail.com"
+      },
+      "phone": {
+        "title": "Call Us",
+        "description": "Speak directly with our team",
+        "number": "9940489578"
+      },
+      "button": "Contact Us for Partnership Details",
+      "note": "We'll share comprehensive program details and answer all your questions"
     }
   },
   "gallery": {
