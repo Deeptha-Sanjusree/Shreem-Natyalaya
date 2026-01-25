@@ -272,11 +272,8 @@ import { TranslatePipe } from '../pipes/translate.pipe';
         <!-- Keyboard Guru -->
         <div class="max-w-md mx-auto">
           <div class="bg-gradient-to-br from-cream-50 to-yellow-50 rounded-xl p-6 border-2 border-yellow-200">
-            <div class="aspect-square bg-gray-200 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-              <svg class="w-20 h-20 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-              </svg>
-              <!-- Photo placeholder - Add image here -->
+            <div class="bg-white rounded-lg mb-4 overflow-hidden">
+              <img src="/assets/images/keyboardGuru.png" alt="Kalaimamani Desa Mangayarkarasi" class="w-full h-auto object-contain">
             </div>
             <h3 class="text-xl font-serif font-bold text-ocean-900 mb-2 text-center">
               {{'home.guruParampara.keyboardGuru1' | translate }}
