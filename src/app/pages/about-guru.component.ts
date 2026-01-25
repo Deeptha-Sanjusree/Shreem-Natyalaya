@@ -475,25 +475,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
       <div class="w-24 h-1 bg-gradient-to-r from-ocean-600 to-yellow-500 mx-auto mt-4"></div>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- Training Background -->
-      <div class="bg-gradient-to-br from-ocean-50 to-cream-50 rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300">
-        <h3 class="text-xl font-serif font-bold text-ocean-900 mb-4">{{'home.aboutGuru.trainingBackground' | translate}}</h3>
-        <ul class="space-y-3 text-gray-700">
-          <li class="flex items-start">
-            <span class="text-ocean-600 mr-2">•</span>
-            <span>{{'home.aboutGuru.journeyPoint1' | translate }} <strong>{{'home.aboutGuru.journeyPoint1Bold1' | translate}}</strong> {{'home.aboutGuru.journeyPoint1Rest' | translate}}<strong>{{'home.aboutGuru.journeyPoint1Bold3' | translate}}</strong>{{'home.aboutGuru.journeyPoint1Bold4' | translate }}</span>
-          </li>
-          <li class="flex items-start">
-            <span class="text-ocean-600 mr-2">•</span>
-            <span>{{'home.aboutGuru.journeyPoint2' | translate }}<strong>{{'home.aboutGuru.journeyPoint2Bold1' | translate }}</strong>{{'home.aboutGuru.journeyPoint2Bold2' | translate}}<strong>{{'home.aboutGuru.journeyPoint2Bold3' | translate }}</strong>{{'home.aboutGuru.journeyPoint1Bold4' | translate}}</span>
-          </li>
-          <li class="flex items-start">
-            <span class="text-ocean-600 mr-2">•</span>
-            <span>{{'home.aboutGuru.journeyPoint3' | translate }}</span>
-          </li>
-        </ul>
-      </div>
+    <div class="grid md:grid-cols-2 gap-8">
 
       <!-- Approach as Founder -->
       <div class="bg-gradient-to-br from-yellow-50 to-cream-50 rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300">
