@@ -35,7 +35,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
         </div>
 
         <div class="max-w-4xl mx-auto mb-12">
-          <div class="bg-cream-50 rounded-lg p-6 mb-6">
+          <div class="bg-ocean-50 rounded-lg p-6 mb-6">
             <h3 class="text-xl font-semibold text-ocean-900 mb-4">{{'home.guruParampara.trainingJourneyTitle' | translate }}</h3>
             <ul class="space-y-3 text-gray-700">
               <li class="flex items-start">
@@ -60,10 +60,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
               </li>
             </ul>
           </div>
-          <div class="bg-ocean-50 rounded-lg p-6">
-            <h3 class="text-xl font-semibold text-ocean-900 mb-3">{{'home.guruParampara.guruLineage' | translate }}</h3>
-            <p class="text-gray-700">{{'home.guruParampara.guruLineageDesc' | translate }}<strong>{{'home.guruParampara.guruLineageDescBold' | translate }}</strong>{{'home.guruParampara.guruLineageDesc1' | translate }}</p>
-          </div>
+
         </div>
 
         <!-- Bharatanatyam Gurus -->
@@ -102,8 +99,13 @@ import { TranslatePipe } from '../pipes/translate.pipe';
         </div>
       </div>
 
+       <div class="bg-yellow-50 rounded-lg p-6">
+            <h3 class="text-xl font-semibold text-ocean-900 mb-3">{{'home.guruParampara.guruLineage' | translate }}</h3>
+            <p class="text-gray-700">{{'home.guruParampara.guruLineageDesc' | translate }}<strong>{{'home.guruParampara.guruLineageDescBold' | translate }}</strong>{{'home.guruParampara.guruLineageDesc1' | translate }}</p>
+          </div>
+
       <!-- Veena Training -->
-      <div class="mb-20">
+      <div class="p-12">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-3">
             {{'home.guruParampara.veenaTrainingTitle' | translate }}
@@ -112,7 +114,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
         </div>
 
         <div class="max-w-4xl mx-auto mb-12">
-          <div class="bg-cream-50 rounded-lg p-6">
+          <div class="bg-ocean-50 rounded-lg p-6">
             <h3 class="text-xl font-semibold text-ocean-900 mb-4">{{'home.guruParampara.trainingJourneyTitle' | translate }}</h3>
             <ul class="space-y-3 text-gray-700">
               <li class="flex items-start">
@@ -164,7 +166,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
               <!-- Photo placeholder - Add image here -->
             </div>
             <h3 class="text-xl font-serif font-bold text-ocean-900 mb-2 text-center">
-              {{'home.guruParampara.veenaGuru' | translate }}
+              {{'home.guruParampara.veenaGuru2' | translate }}
             </h3>
             <p class="text-sm text-gray-600 text-center">
               {{'home.guruParampara.veenaGru2Prof' | translate }}
@@ -199,7 +201,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
         </div>
 
         <div class="max-w-4xl mx-auto mb-12">
-          <div class="bg-cream-50 rounded-lg p-6">
+          <div class="bg-ocean-50 rounded-lg p-6">
             <h3 class="text-xl font-semibold text-ocean-900 mb-4">{{'home.guruParampara.trainingJourneyTitle' | translate }}</h3>
             <ul class="space-y-3 text-gray-700">
               <li class="flex items-start">
@@ -224,10 +226,10 @@ import { TranslatePipe } from '../pipes/translate.pipe';
 
         <!-- Sloka Guru -->
         <div class="max-w-md mx-auto">
-          <div class="bg-gradient-to-br from-cream-50 to-ocean-50 rounded-xl p-6 border-2 border-ocean-200">
+          <div class="bg-gradient-to-br from-cream-50 to-yellow-50 rounded-xl p-6 border-2 border-yellow-200">
             <div class="">
               <div class="aspect-square bg-gray-200 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-              <img src="/assets/images/mangaiyarkarasi.jpeg" alt="Kalaimamani Madurai R. Muralidharan" class="w-full h-full object-cover">
+              <img src="/assets/images/mangaiyarkarasi.jpeg" alt="Kalaimamani Desa Mangayarkarasi" class="w-full h-full object-cover">
             </div>
               <!-- Photo placeholder - Add image here -->
             </div>
@@ -248,7 +250,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
         </div>
 
         <div class="max-w-4xl mx-auto mb-12">
-          <div class="bg-cream-50 rounded-lg p-6">
+          <div class="bg-ocean-50 rounded-lg p-6">
             <h3 class="text-xl font-semibold text-ocean-900 mb-4">{{'home.guruParampara.trainingJourneyTitle' | translate }}</h3>
             <ul class="space-y-3 text-gray-700">
               <li class="flex items-start">

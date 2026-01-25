@@ -11,7 +11,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
   template:`
   <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center h-20 gap-10">
+    <div class="flex items-center h-20">
       <!-- Logo -->
       <a routerLink="/" class="flex items-center space-x-3 shrink-0" (click)="navigateAndScroll()">
         <div class="text-2xl font-serif font-bold text-ocean-800 whitespace-nowrap">
@@ -20,7 +20,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
       </a>
 
       <!-- Desktop Navigation -->
-      <div class="hidden md:flex items-center space-x-8 whitespace-nowrap flex-nowrap">
+      <div class="hidden md:flex items-center flex-1 justify-end space-x-3 lg:space-x-4 xl:space-x-6 whitespace-nowrap flex-nowrap">
         <a 
           routerLink="/" 
           routerLinkActive="text-ocean-700 font-semibold"
@@ -89,7 +89,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
       </div>
 
       <!-- Language Switcher -->
-      <div class="hidden md:flex items-center ml-auto relative">
+      <div class="hidden md:flex items-center relative">
         <button
           (click)="toggleLangMenu()"
           class="flex items-center space-x-2 px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100 transition-colors duration-200"
@@ -130,22 +130,64 @@ import { TranslatePipe } from '../pipes/translate.pipe';
         }
       </div>
 
-      <!-- Mobile menu button -->
-      <button 
-        (click)="toggleMenu()"
-        class="md:hidden ml-auto inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-ocean-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-ocean-500"
-        aria-label="Toggle menu"
-      >
-        @if (!isMenuOpen()) {
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        } @else {
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        }
-      </button>
+      <!-- Mobile Menu & Language buttons -->
+      <div class="md:hidden flex items-center gap-2">
+        <!-- Mobile menu button -->
+        <button 
+          (click)="toggleMenu()"
+          class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-ocean-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-ocean-500"
+          aria-label="Toggle menu"
+        >
+          @if (!isMenuOpen()) {
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          } @else {
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          }
+        </button>
+
+        <!-- Mobile Language Switcher -->
+        <div class="relative">
+          <button
+            (click)="toggleLangMenu()"
+            class="flex items-center space-x-1 px-2 py-2 rounded-md text-gray-700 hover:bg-gray-100 transition-colors duration-200"
+            aria-label="Change language"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+            </svg>
+            <span class="font-medium text-sm">{{ currentLang() === 'en' ? 'EN' : 'த' }}</span>
+          </button>
+          
+          @if (isLangMenuOpen()) {
+            <div class="absolute right-0 top-full mt-2 w-36 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
+              <div class="py-1">
+                <button
+                  (click)="switchLanguage('en')"
+                  class="w-full text-left px-4 py-2 text-sm hover:bg-gray-100 transition-colors duration-200"
+                  [class.bg-ocean-50]="currentLang() === 'en'"
+                  [class.text-ocean-700]="currentLang() === 'en'"
+                  [class.font-semibold]="currentLang() === 'en'"
+                >
+                  English
+                </button>
+                <button
+                  (click)="switchLanguage('ta')"
+                  class="w-full text-left px-4 py-2 text-sm hover:bg-gray-100 transition-colors duration-200"
+                  [class.bg-ocean-50]="currentLang() === 'ta'"
+                  [class.text-ocean-700]="currentLang() === 'ta'"
+                  [class.font-semibold]="currentLang() === 'ta'"
+                >
+                  தமிழ் (Tamil)
+                </button>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
     </div>
   </div>
 
@@ -218,31 +260,6 @@ import { TranslatePipe } from '../pipes/translate.pipe';
         >
           Contact
         </a>
-        
-        <!-- Language Switcher (Mobile) -->
-        <div class="border-t border-gray-200 pt-2 mt-2">
-          <div class="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
-            Language / மொழி
-          </div>
-          <button
-            (click)="switchLanguage('en')"
-            class="w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
-            [class.bg-ocean-50]="currentLang() === 'en'"
-            [class.text-ocean-700]="currentLang() === 'en'"
-            [class.text-gray-700]="currentLang() !== 'en'"
-          >
-            English
-          </button>
-          <button
-            (click)="switchLanguage('ta')"
-            class="w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
-            [class.bg-ocean-50]="currentLang() === 'ta'"
-            [class.text-ocean-700]="currentLang() === 'ta'"
-            [class.text-gray-700]="currentLang() !== 'ta'"
-          >
-            தமிழ் (Tamil)
-          </button>
-        </div>
       </div>
     </div>
   }

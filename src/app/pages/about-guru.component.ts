@@ -40,11 +40,6 @@ import { TranslatePipe } from '../pipes/translate.pipe';
             />
           </div>
           
-          <!-- Name badge -->
-          <div class="absolute -bottom-6 -right-6 bg-ocean-700 text-white p-6 rounded-xl shadow-2xl">
-            <p class="text-sm font-semibold mb-1">{{'home.aboutGuru.founderTitle' | translate }}</p>
-            <p class="text-xl font-bold">{{'home.aboutGuru.founderName' | translate }}</p>
-          </div>
         </div>
       </div>
 
@@ -114,9 +109,9 @@ import { TranslatePipe } from '../pipes/translate.pipe';
         <div class="bg-cream-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
           <div class="aspect-[4/3] bg-gradient-to-br from-ocean-100 to-yellow-100 overflow-hidden">
             <img 
-              src="/assets/images/salangaipooja.jpg" 
+              src="/assets/images/salangaiPooja.png" 
               alt="Salangai Pooja Ceremony" 
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              class="object-cover hover:scale-105 transition-transform duration-500"
             />
           </div>
           <div class="p-6">

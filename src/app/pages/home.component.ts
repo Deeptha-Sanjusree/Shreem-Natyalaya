@@ -21,6 +21,15 @@ interface FAQ {
   selector: 'app-home',
   standalone: true,
   imports: [RouterLink, CommonModule, TranslatePipe],
+  styles: [`
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    .animate-blink {
+      animation: blink 1s ease-in-out 3;
+    }
+  `],
   //templateUrl: './home.component.html',
   template:`<!-- Full Viewport Hero Section with Auto Background Carousel -->
   <section class="relative h-screen flex items-center justify-center overflow-hidden">
@@ -28,7 +37,7 @@ interface FAQ {
     <div class="absolute inset-0 z-0">
     @for (image of heroImages; track image; let i = $index) {
       <div 
-        class="absolute inset-0 bg-cover bg-center md:bg-[center_20%] transition-opacity duration-3000 ease-in-out"
+        class="absolute inset-0 bg-cover bg-center md:bg-[center_20%] transition-opacity  ease-in-out"
         [class.opacity-100]="currentSlide() === i"
         [class.opacity-0]="currentSlide() !== i"
         [style.background-image]="'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(' + image + ')'"
@@ -39,7 +48,8 @@ interface FAQ {
 
   <!-- Hero Content -->
   <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <div class="animate-fade-in-up">
+    @if (showHeroText()) {
+    <div class="animate-fade-in-up animate-blink">
       <h1 class="text-5xl md:text-6xl lg:text-7xl text-white/50 font-serif font-bold text-white mb-6 drop-shadow-2xl">
         {{ 'home.hero.title' | translate }}
       </h1>
@@ -56,6 +66,7 @@ interface FAQ {
         {{ 'home.hero.cta' | translate }}
       </a>
     </div>
+    }
   </div>
 
   <!-- Scroll Indicator -->
@@ -69,6 +80,7 @@ interface FAQ {
 <!-- Introduction Section -->
 <section class="py-16 md:py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="bg-gradient-to-br from-cream-50 to-ocean-50 border-2 border-ocean-200 rounded-xl p-8 md:p-12 lg:p-16">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-6">
         {{'home.about.title' | translate }}
@@ -80,6 +92,7 @@ interface FAQ {
       <p class="text-lg text-gray-700 leading-relaxed">
         {{'home.about.description3' | translate }}
       </p>
+    </div>
     </div>
   </div>
 </section>
@@ -471,7 +484,9 @@ interface FAQ {
 export class HomeComponent implements OnInit, OnDestroy {
   currentSlide = signal(0);
   currentTestimonialIndex = signal(0);
+  showHeroText = signal(true);
   private carouselInterval: any;
+  private heroTextTimeout: any;
   
   stats = [
     { label: 'Active Students', value: '30+', icon: 'users' },
@@ -539,6 +554,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.carouselInterval = setInterval(() => {
       this.currentSlide.update(slide => (slide + 1) % this.heroImages.length);
     }, 3000);
+    
+    // Hide hero text after 5 seconds with blink effect
+    this.heroTextTimeout = setTimeout(() => {
+      this.showHeroText.set(false);
+    }, 5000);
   }
 
   private loadFAQData(): void {
@@ -555,6 +575,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     if (this.carouselInterval) {
       clearInterval(this.carouselInterval);
+    }
+    if (this.heroTextTimeout) {
+      clearTimeout(this.heroTextTimeout);
     }
   }
 

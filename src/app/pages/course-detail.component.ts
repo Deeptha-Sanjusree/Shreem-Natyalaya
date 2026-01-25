@@ -388,7 +388,7 @@ interface CourseDetail {
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
           @for (benefit of course.studentBenefits; track benefit; let i = $index) {
-            <div class="bg-gradient-to-br from-cream-50 to-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-ocean-100 hover:border-ocean-300">
+            <div class="bg-gradient-to-br from-cream-50 to-white rounded-xl p-6 shadow-lg transition-all duration-300 border-2 border-ocean-100">
               <div class="flex items-start">
                 <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-ocean-600 to-ocean-700 rounded-full flex items-center justify-center mr-4">
                   @if (i === 0) {
