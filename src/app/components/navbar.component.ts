@@ -13,6 +13,11 @@ import { TranslatePipe } from '../pipes/translate.pipe';
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center h-20">
       <!-- Logo -->
+       <img
+          src="/assets/images/logo.jpg"
+          alt="Shreem Natyalaya Logo"
+          class="h-10 w-10 object-contain"
+        />
       <a routerLink="/" class="flex items-center space-x-3 shrink-0" (click)="navigateAndScroll()">
         <div class="text-2xl font-serif font-bold text-ocean-800 whitespace-nowrap">
           {{ 'nav.instituteName' | translate }}
@@ -202,7 +207,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
           (click)="navigateAndScroll()"
           class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-ocean-700 hover:bg-gray-50 transition-colors duration-200"
         >
-          Home
+          {{'nav.home' | translate}}
         </a>
         <a 
           routerLink="/about-guru" 
@@ -210,7 +215,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
           (click)="navigateAndScroll()"
           class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-ocean-700 hover:bg-gray-50 transition-colors duration-200"
         >
-          About Guru
+          {{'nav.aboutGuru' | translate}}
         </a>
         <a 
           routerLink="/guru-parampara" 
@@ -218,7 +223,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
           (click)="navigateAndScroll()"
           class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-ocean-700 hover:bg-gray-50 transition-colors duration-200"
         >
-          Guru Parampara
+          {{'nav.guruParampara' | translate}}
         </a>
         <a 
           routerLink="/courses" 
@@ -226,7 +231,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
           (click)="navigateAndScroll()"
           class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-ocean-700 hover:bg-gray-50 transition-colors duration-200"
         >
-          Courses
+          {{'nav.courses' | translate}}
         </a>
         <a 
           routerLink="/upcoming-events" 
@@ -234,7 +239,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
           (click)="navigateAndScroll()"
           class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-ocean-700 hover:bg-gray-50 transition-colors duration-200"
         >
-          Upcoming Events
+          {{'nav.upcomingEvents' | translate}}
         </a>
         <a 
           routerLink="/branches" 
@@ -242,7 +247,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
           (click)="navigateAndScroll()"
           class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-ocean-700 hover:bg-gray-50 transition-colors duration-200"
         >
-          Our Branches
+          {{'nav.branches' | translate}}
         </a>
         <a 
           routerLink="/collaborate" 
@@ -250,7 +255,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
           (click)="navigateAndScroll()"
           class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-ocean-700 hover:bg-gray-50 transition-colors duration-200"
         >
-          Collaborate with us
+          {{'nav.collaborate' | translate}}
         </a>
         <a 
           routerLink="/contact" 
@@ -258,7 +263,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
           (click)="navigateAndScroll()"
           class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-ocean-700 hover:bg-gray-50 transition-colors duration-200"
         >
-          Contact
+          {{'nav.contact' | translate}}
         </a>
       </div>
     </div>
