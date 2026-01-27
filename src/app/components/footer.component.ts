@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { TranslatePipe } from '../pipes/translate.pipe';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, TranslatePipe],
   //templateUrl: './footer.component.html',
   template: `
   <footer class="bg-ocean-900 text-cream-50 mt-auto">
@@ -12,54 +13,54 @@ import { RouterLink } from '@angular/router';
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- About Section -->
       <div>
-        <h3 class="text-xl font-serif font-semibold mb-4 text-yellow-400">Shreem Natyalaya</h3>
+        <h3 class="text-xl font-serif font-semibold mb-4 text-yellow-400">{{'nav.instituteName' | translate }}</h3>
         <p class="text-cream-100 text-sm leading-relaxed">
-          Where tradition meets disciplined artistry. Nurturing classical arts with authenticity and dedication.
+          {{ 'footer.tagline' | translate }}
         </p>
       </div>
 
       <!-- Quick Links -->
       <div>
-        <h3 class="text-xl font-serif font-semibold mb-4 text-yellow-400">Quick Links</h3>
+        <h3 class="text-xl font-serif font-semibold mb-4 text-yellow-400">{{'footer.quickLinks' | translate }}</h3>
         <ul class="space-y-2">
           <li>
             <a routerLink="/" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm" (click)="scrollToTop()">
-              Home
+              {{'nav.home' | translate }}
             </a>
           </li>
           <li>
             <a routerLink="/about-guru" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm" (click)="scrollToTop()">
-              About Guru
+              {{'nav.aboutGuru' | translate }}
             </a>
           </li>
           <li>
             <a routerLink="/guru-parampara" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm" (click)="scrollToTop()">
-              Guru Parampara
+              {{'nav.guruParampara' | translate }}
             </a>
           </li>
           <li>
             <a routerLink="/courses" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm" (click)="scrollToTop()">
-              Courses
+              {{'nav.courses' | translate }}
             </a>
           </li>
           <li>
             <a routerLink="/upcoming-events" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm" (click)="scrollToTop()">
-              Upcoming Events
+              {{'nav.upcomingEvents' | translate }}
             </a>
           </li>
           <li>
             <a routerLink="/branches" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm" (click)="scrollToTop()">
-              Our Branches
+              {{'nav.branches' | translate }}
             </a>
           </li>
           <li>
             <a routerLink="/collaborate" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm" (click)="scrollToTop()">
-              Collaborate with us
+              {{'nav.collaborate' | translate }}
             </a>
           </li>
           <li>
             <a routerLink="/contact" class="text-cream-100 hover:text-yellow-400 transition-colors duration-200 text-sm" (click)="scrollToTop()">
-              Contact
+              {{'nav.contact' | translate }}
             </a>
           </li>
         </ul>
@@ -67,16 +68,16 @@ import { RouterLink } from '@angular/router';
 
       <!-- Contact Info -->
       <div>
-        <h3 class="text-xl font-serif font-semibold mb-4 text-yellow-400">Get in Touch</h3>
+        <h3 class="text-xl font-serif font-semibold mb-4 text-yellow-400">{{'footer.getInTouch' | translate }}</h3>
         <p class="text-cream-100 text-sm leading-relaxed mb-2">
-          For admissions and inquiries, please visit our contact page.
+          {{'footer.admissionsText' | translate }}
         </p>
         <a 
           routerLink="/contact" 
           class="inline-block mt-2 px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white rounded transition-colors duration-200 text-sm font-medium"
           (click)="scrollToTop()"
         >
-          Contact Us
+          {{'footer.contactUs' | translate }}
         </a>
       </div>
     </div>
@@ -84,10 +85,10 @@ import { RouterLink } from '@angular/router';
     <!-- Copyright -->
     <div class="mt-8 pt-8 border-t border-ocean-800 text-center">
       <p class="text-cream-200 text-sm">
-        &copy; {{ currentYear }} Shreem Natyalaya. All rights reserved.
+        &copy; {{ currentYear }} {{'footer.title' | translate }} {{'footer.rights' | translate }}
       </p>
       <p class="text-cream-200 text-sm">
-        (Design and developed by Deeptha Sanjusree M)
+        {{'footer.designedBy' | translate }}
       </p>
     </div>
   </div>

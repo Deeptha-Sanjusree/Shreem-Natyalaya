@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '../pipes/translate.pipe';
 import { TranslationService } from '../services/translation.service';
 import { CommonModule } from '@angular/common';
@@ -8,7 +7,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-collaborate',
   standalone: true,
-  imports: [RouterLink, TranslatePipe, CommonModule],
+  imports: [TranslatePipe, CommonModule],
   template: `
   <!-- Exclusive Notice Banner -->
   <div class="bg-yellow-50 border-l-4 border-yellow-500 py-3">
@@ -219,7 +218,7 @@ import { CommonModule } from '@angular/common';
 </section>
 
 <!-- Contact CTA Section -->
-<section class="py-16 md:py-20 bg-gradient-to-br from-ocean-900 via-ocean-800 to-ocean-900 text-white">
+<section class="py-16 md:py-20 bg-gradient-to-br from-ocean-900 via-ocean-800 to-ocean-900 text-white p-4">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-10">
       <div class="inline-flex items-center bg-yellow-500/20 rounded-full px-4 py-2 mb-6">
@@ -272,7 +271,7 @@ import { CommonModule } from '@angular/common';
     </div>
 
     <!-- CTA Button -->
-    <div class="text-center mt-10">
+    <!-- <div class="text-center mt-10">
       <a 
         routerLink="/contact" 
         class="inline-block bg-gradient-to-r from-yellow-500 to-yellow-600 text-ocean-900 px-10 py-4 rounded-lg font-semibold text-lg hover:from-yellow-400 hover:to-yellow-500 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
@@ -282,7 +281,7 @@ import { CommonModule } from '@angular/common';
       <p class="text-ocean-200 text-sm mt-4">
         {{ 'collaborate.contactCTA.note' | translate }}
       </p>
-    </div>
+    </div> -->
   </div>
 </section>
 `
