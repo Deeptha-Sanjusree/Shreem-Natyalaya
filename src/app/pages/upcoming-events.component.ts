@@ -36,13 +36,13 @@ interface Event {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <!-- Posters Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
       
       <!-- Poster 1 -->
       <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-shadow duration-300">
         <div class="aspect-[3/4] bg-gradient-to-br from-ocean-50 to-cream-50 p-4 flex items-center justify-center">
           <img 
-            src="/assets/images/upcomingprogram.png" 
+            src="/assets/images/upcomingEvent2.jpg" 
             alt="Upcoming Program - 1"
             class="w-full h-full object-contain"
           />
@@ -50,11 +50,11 @@ interface Event {
       </div>
 
       <!-- Poster 2 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-shadow duration-300">
+         <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-shadow duration-300">
         <div class="aspect-[3/4] bg-gradient-to-br from-ocean-50 to-cream-50 p-4 flex items-center justify-center">
           <img 
-            src="/assets/images/" 
-            alt="Upcoming Program - 2"
+            src="/assets/images/upcomingprogram.png" 
+            alt="Upcoming Program - 1"
             class="w-full h-full object-contain"
           />
         </div>
