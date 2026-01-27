@@ -391,7 +391,7 @@ interface FAQ {
       
       <!-- Image 5 -->
       <div class="aspect-square bg-gradient-to-br from-yellow-100 to-ocean-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-        <img src="/assets/images/stagegroupie2.jpg" alt="Gallery Image 5" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+        <img src="/assets/images/withmangaiamma.jpg" alt="Gallery Image 5" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
       </div>
       
       <!-- Image 6 -->
