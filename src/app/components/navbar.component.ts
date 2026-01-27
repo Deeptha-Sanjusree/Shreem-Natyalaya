@@ -11,90 +11,91 @@ import { TranslatePipe } from '../pipes/translate.pipe';
   template:`
   <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center h-20">
-      <!-- Logo -->
-       <img
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo and Brand Name -->
+      <a routerLink="/" class="flex items-center gap-3 shrink-0" (click)="navigateAndScroll()">
+        <img
           src="/assets/images/logo.jpg"
           alt="Shreem Natyalaya Logo"
-          class="h-10 w-10 object-contain"
+          class="h-12 w-12 object-contr "
         />
-      <a routerLink="/" class="flex items-center space-x-3 shrink-0" (click)="navigateAndScroll()">
-        <div class="text-2xl font-serif font-bold text-ocean-800 whitespace-nowrap">
+        <div class="text-md md:text-md font-serif font-bold text-ocean-800 whitespace-nowrap">
           {{ 'nav.instituteName' | translate }}
         </div>
       </a>
 
-      <!-- Desktop Navigation -->
-      <div class="hidden md:flex items-center flex-1 justify-end space-x-3 lg:space-x-4 xl:space-x-6 whitespace-nowrap flex-nowrap">
-        <a 
-          routerLink="/" 
-          routerLinkActive="text-ocean-700 font-semibold"
-          [routerLinkActiveOptions]="{exact: true}"
-          class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
-          (click)="scrollToTop()"
-        >
-          {{ 'nav.home' | translate }}
-        </a>
-        <a 
-          routerLink="/about-guru" 
-          routerLinkActive="text-ocean-700 font-semibold"
-          class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
-          (click)="scrollToTop()"
-        >
-          {{ 'nav.aboutGuru' | translate }}
-        </a>
-        <a 
-          routerLink="/guru-parampara" 
-          routerLinkActive="text-ocean-700 font-semibold"
-          class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
-          (click)="scrollToTop()"
-        >
-          {{ 'nav.guruParampara' | translate }}
-        </a>
-        <a 
-          routerLink="/courses" 
-          routerLinkActive="text-ocean-700 font-semibold"
-          class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
-          (click)="scrollToTop()"
-        >
-          {{ 'nav.courses' | translate }}
-        </a>
-        <a 
-          routerLink="/upcoming-events" 
-          routerLinkActive="text-ocean-700 font-semibold"
-          class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
-          (click)="scrollToTop()"
-        >
-          {{ 'nav.upcomingEvents' | translate }}
-        </a>
-        <a 
-          routerLink="/branches" 
-          routerLinkActive="text-ocean-700 font-semibold"
-          class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
-          (click)="scrollToTop()"
-        >
-          {{ 'nav.branches' | translate }}
-        </a>
-        <a 
-          routerLink="/collaborate" 
-          routerLinkActive="text-ocean-700 font-semibold"
-          class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
-          (click)="scrollToTop()"
-        >
-          {{ 'nav.collaborate' | translate }}
-        </a>
-        <a 
-          routerLink="/contact" 
-          routerLinkActive="text-ocean-700 font-semibold"
-          class="text-gray-700 hover:text-ocean-700 transition-colors duration-200 font-medium whitespace-nowrap"
-          (click)="scrollToTop()"
-        >
-          {{ 'nav.contact' | translate }}
-        </a>
-      </div>
+      <!-- Desktop Navigation & Language Switcher -->
+      <div class="hidden md:flex items-center flex-1 justify-end ml-8 lg:ml-12">
+        <div class="flex items-center space-x-3 lg:space-x-5 xl:space-x-6">
+          <a 
+            routerLink="/" 
+            routerLinkActive="text-ocean-700 font-semibold"
+            [routerLinkActiveOptions]="{exact: true}"
+            class="px-2 py-2 text-gray-700 hover:text-ocean-700 hover:bg-gray-50 rounded-md transition-colors duration-200 font-medium whitespace-nowrap"
+            (click)="scrollToTop()"
+          >
+            {{ 'nav.home' | translate }}
+          </a>
+          <a 
+            routerLink="/about-guru" 
+            routerLinkActive="text-ocean-700 font-semibold"
+            class="px-2 py-2 text-gray-700 hover:text-ocean-700 hover:bg-gray-50 rounded-md transition-colors duration-200 font-medium whitespace-nowrap"
+            (click)="scrollToTop()"
+          >
+            {{ 'nav.aboutGuru' | translate }}
+          </a>
+          <a 
+            routerLink="/guru-parampara" 
+            routerLinkActive="text-ocean-700 font-semibold"
+            class="px-2 py-2 text-gray-700 hover:text-ocean-700 hover:bg-gray-50 rounded-md transition-colors duration-200 font-medium whitespace-nowrap"
+            (click)="scrollToTop()"
+          >
+            {{ 'nav.guruParampara' | translate }}
+          </a>
+          <a 
+            routerLink="/courses" 
+            routerLinkActive="text-ocean-700 font-semibold"
+            class="px-2 py-2 text-gray-700 hover:text-ocean-700 hover:bg-gray-50 rounded-md transition-colors duration-200 font-medium whitespace-nowrap"
+            (click)="scrollToTop()"
+          >
+            {{ 'nav.courses' | translate }}
+          </a>
+          <a 
+            routerLink="/upcoming-events" 
+            routerLinkActive="text-ocean-700 font-semibold"
+            class="px-2 py-2 text-gray-700 hover:text-ocean-700 hover:bg-gray-50 rounded-md transition-colors duration-200 font-medium whitespace-nowrap"
+            (click)="scrollToTop()"
+          >
+            {{ 'nav.upcomingEvents' | translate }}
+          </a>
+          <a 
+            routerLink="/branches" 
+            routerLinkActive="text-ocean-700 font-semibold"
+            class="px-2 py-2 text-gray-700 hover:text-ocean-700 hover:bg-gray-50 rounded-md transition-colors duration-200 font-medium whitespace-nowrap"
+            (click)="scrollToTop()"
+          >
+            {{ 'nav.branches' | translate }}
+          </a>
+          <a 
+            routerLink="/collaborate" 
+            routerLinkActive="text-ocean-700 font-semibold"
+            class="px-2 py-2 text-gray-700 hover:text-ocean-700 hover:bg-gray-50 rounded-md transition-colors duration-200 font-medium whitespace-nowrap"
+            (click)="scrollToTop()"
+          >
+            {{ 'nav.collaborate' | translate }}
+          </a>
+          <a 
+            routerLink="/contact" 
+            routerLinkActive="text-ocean-700 font-semibold"
+            class="px-2 py-2 text-gray-700 hover:text-ocean-700 hover:bg-gray-50 rounded-md transition-colors duration-200 font-medium whitespace-nowrap"
+            (click)="scrollToTop()"
+          >
+            {{ 'nav.contact' | translate }}
+          </a>
+        </div>
 
-      <!-- Language Switcher -->
-      <div class="hidden md:flex items-center relative">
+        <!-- Language Switcher -->
+        <div class="flex items-center relative ml-4 lg:ml-6">
         <button
           (click)="toggleLangMenu()"
           class="flex items-center space-x-2 px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100 transition-colors duration-200"
@@ -133,6 +134,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
             </div>
           </div>
         }
+        </div>
       </div>
 
       <!-- Mobile Menu & Language buttons -->

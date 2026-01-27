@@ -111,7 +111,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
             <img 
               src="/assets/images/salangaiPooja.png" 
               alt="Salangai Pooja Ceremony" 
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 opacity-90"
             />
           </div>
           <div class="p-6">

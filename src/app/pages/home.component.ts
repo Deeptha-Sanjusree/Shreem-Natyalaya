@@ -32,12 +32,12 @@ interface FAQ {
   `],
   //templateUrl: './home.component.html',
   template:`<!-- Full Viewport Hero Section with Auto Background Carousel -->
-  <section class="relative h-screen flex items-center justify-center overflow-hidden">
+  <section class="relative h-[60vh] md:h-screen flex items-center justify-center overflow-hidden">
     <!-- Background Carousel Images -->
     <div class="absolute inset-0 z-0">
     @for (image of heroImages; track image; let i = $index) {
       <div 
-        class="absolute inset-0 bg-cover bg-center md:bg-[center_20%] transition-opacity  ease-in-out"
+        class="absolute inset-0 bg-cover bg-center md:bg-[center_20%] transition-opacity ease-in-out"
         [class.opacity-100]="currentSlide() === i"
         [class.opacity-0]="currentSlide() !== i"
         [style.background-image]="'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(' + image + ')'"
@@ -49,7 +49,7 @@ interface FAQ {
   <!-- Hero Content -->
   <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     @if (showHeroText()) {
-    <div class="animate-fade-in-up animate-blink">
+    <div class="hidden md:block animate-fade-in-up animate-blink">
       <h1 class="text-5xl md:text-6xl lg:text-7xl text-white/50 font-serif font-bold text-white mb-6 drop-shadow-2xl">
         {{ 'home.hero.title' | translate }}
       </h1>
@@ -82,7 +82,7 @@ interface FAQ {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
   <div class="bg-gradient-to-br from-cream-50 to-ocean-50 border-2 border-ocean-200 rounded-xl p-8 md:p-12 lg:p-16">
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-serif font-bold text-ocean-900 mb-6">
+      <h2 class="text-xl md:text-xl font-serif font-bold text-ocean-900 mb-6">
         {{'home.about.title' | translate }}
       </h2>
       <p class="text-lg text-gray-700 leading-relaxed mb-6">   
