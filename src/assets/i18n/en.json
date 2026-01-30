@@ -867,9 +867,9 @@
     "subtitle": "Find the nearest branch and join our classes today",
     "list": [
       {
-        "name": "Shreem Natyalaya - Aathur",
-        "location": "Aathur, Chengalpet",
-        "address": "2/199, Bhuvaneswari nagar, Aathur, Chengalpet - 603101",
+        "name": "Shreem Natyalaya - Villiambakkam",
+        "location": "Villiambakkam, Chengalpet",
+        "address": "2/199, Gayathri nagar, Villiambakkam, Chengalpet - 603101",
         "timings": [
           { "day": "Saturday", "time": "5:30 PM - 6:30 PM", "course": "Bharatanatyam" },
           { "day": "Saturday", "time": "6:30 PM - 7:30 PM", "course": "Slokam" },
@@ -890,7 +890,7 @@
         "contact": "+91 9940489578"
       },
       {
-        "name": "Shreem Natyalaya - Guduvancheri",
+        "name": "Shreem Natyalaya - Guduvancheri (Opening soon)",
         "location": "Guduvancheri, Chennai",
         "address": "First cry intelloits play school, Guduvancheri, 603202",
         "timings": [
