@@ -1,5 +1,16 @@
 {
   "projects": {
-    "default": "shreem-natyalaya"
-  }
+    "default": "shreem-natyalaya",
+    "shreem-natyalaya": "shreem-natyalaya"
+  },
+  "targets": {
+    "shreem-natyalaya": {
+      "hosting": {
+        "default": [
+          "shreem-natyalaya"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

@@ -867,9 +867,9 @@
     "subtitle": "Find the nearest branch and join our classes today",
     "list": [
       {
-        "name": "Shreem Natyalaya - Villiambakkam",
-        "location": "Villiambakkam, Chengalpet",
-        "address": "2/199, Gayathri nagar, Villiambakkam, Chengalpet - 603101",
+        "name": "Shreem Natyalaya",
+        "location": "Patrravakkam",
+        "address": "5/34, Anna nagar",
         "timings": [
           { "day": "Saturday", "time": "5:30 PM - 6:30 PM", "course": "Bharatanatyam" },
           { "day": "Saturday", "time": "6:30 PM - 7:30 PM", "course": "Slokam" },
@@ -885,7 +885,7 @@
         "location": "Kaattur, Karanai Puthucheri",
         "address": "Kids park International pre school, Kattur",
         "timings": [
-          { "day": "Wednesday & Thursday", "time": "6:30 PM - 7:30 PM", "course": "Bharatanatyam" }
+          { "day": "Wednesday & Thursday", "time": "5:30 PM - 6:30 PM", "course": "Bharatanatyam" }
         ],
         "contact": "+91 9940489578"
       },
@@ -894,7 +894,7 @@
         "location": "Guduvancheri, Chennai",
         "address": "First cry intelloits play school, Guduvancheri, 603202",
         "timings": [
-          { "day": "Wednesday & Thursday", "time": "5:30 PM - 6:30 PM", "course": "Bharathanatyam" }
+          { "day": "Wednesday & Thursday", "time": "7:00 PM - 8:00 PM", "course": "Bharathanatyam" }
         ],
         "contact": "+91 9940489578"
       }

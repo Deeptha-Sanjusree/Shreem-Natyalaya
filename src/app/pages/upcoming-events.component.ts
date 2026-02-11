@@ -39,7 +39,7 @@ interface Event {
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
       
       <!-- Poster 1 -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-shadow duration-300">
+      <!-- <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-shadow duration-300">
         <div class="aspect-[3/4] bg-gradient-to-br from-ocean-50 to-cream-50 p-4 flex items-center justify-center">
           <img 
             src="/assets/images/upcomingEvent2.jpg" 
@@ -47,29 +47,29 @@ interface Event {
             class="w-full h-full object-contain"
           />
         </div>
-      </div>
+      </div> -->
 
       <!-- Poster 2 -->
-         <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-shadow duration-300">
-        <div class="aspect-[3/4] bg-gradient-to-br from-ocean-50 to-cream-50 p-4 flex items-center justify-center">
+         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+        <div class="aspect-[3/4] bg-gradient-to-br from-ocean-50 to-yellow-50">
           <img 
-            src="/assets/images/upcomingprogram.png" 
+            src="/assets/images/upcomingEvent.png" 
             alt="Upcoming Program - 1"
-            class="w-full h-full object-contain"
+            class="w-full h-full object-cover"
           />
         </div>
       </div>
 
       <!-- Poster 3 -->
-      <!-- <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
         <div class="aspect-[3/4] bg-gradient-to-br from-ocean-50 to-yellow-50">
           <img 
-            src="/assets/images/event-poster3.jpg" 
+            src="/assets/images/upcomingEvent2.png" 
             alt="Event Poster 3"
             class="w-full h-full object-cover"
           />
         </div>
-      </div> -->
+      </div>
 
       <!-- Poster 4 -->
       <!-- <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
