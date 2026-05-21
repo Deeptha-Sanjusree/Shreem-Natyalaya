@@ -237,7 +237,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
         <h4 class="text-center font-semibold text-ocean-900 mb-2">{{'home.aboutGuru.district2Title' | translate}}</h4>
         <ul class="text-center text-xs text-gray-600 space-y-1">
           <li>{{'home.aboutGuru.district2Item1' | translate }}</li>
-          <li>{{'home.aboutGuru.district2Item1' | translate }}</li>
+          <li>{{'home.aboutGuru.district2Item2' | translate }}</li>
           <li>{{'home.aboutGuru.district2Item3' | translate }}</li>
         </ul>
       </div>
@@ -292,16 +292,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
               </div>
             </li>
 
-            <li class="flex items-start">
-              <div class="flex-shrink-0 w-10 h-10 bg-yellow-600 rounded-full flex items-center justify-center mr-4">
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                </svg>
-              </div>
-              <div class="flex-1">
-                <h4 class="font-semibold text-ocean-900 text-lg mb-1">Bachelor in music (Distance Education)</h4>
-              </div>
-            </li>
+            
             <li>
               
             </ul>

@@ -102,7 +102,6 @@
     "academic1Desc": "Computer Science Engineering",
     "academic2Title": "Diploma in music",
     "academic2Desc": "Classical Music Training",
-    "academic3Title": "Bachelor in music (Distance Education)",
     "journeyTitle": "My Journey to Shreem Natyalaya",
     "journeySubtitle": "The milestones that led me to establish this academy",
     "myEarlyLearning": "My Early Learning Years",
@@ -866,35 +865,14 @@
     "title": "Our Branches",
     "subtitle": "Find the nearest branch and join our classes today",
     "list": [
-      {
-        "name": "Shreem Natyalaya",
-        "location": "Patrravakkam",
-        "address": "5/34, Anna nagar",
-        "timings": [
-          { "day": "Saturday", "time": "5:30 PM - 6:30 PM", "course": "Bharatanatyam" },
-          { "day": "Saturday", "time": "6:30 PM - 7:30 PM", "course": "Slokam" },
-          { "day": "Saturday", "time": "7:30 PM - 8:30 PM", "course": "Keyboard" },
-          { "day": "Sunday", "time": "9:00 AM - 10:00 AM", "course": "Bharathanatyam" },
-          { "day": "Sunday", "time": "10:00 AM - 11:00 AM", "course": "Slokam" },
-          { "day": "Sunday", "time": "11:00 AM - 12:00 PM", "course": "Keyboard" }
-        ],
-        "contact": "+91 9940489578"
-      },
+      
       {
         "name": "Shreem Natyalaya - Kaattur",
         "location": "Kaattur, Karanai Puthucheri",
         "address": "Kids park International pre school, Kattur",
         "timings": [
-          { "day": "Wednesday & Thursday", "time": "5:30 PM - 6:30 PM", "course": "Bharatanatyam" }
-        ],
-        "contact": "+91 9940489578"
-      },
-      {
-        "name": "Shreem Natyalaya - Guduvancheri (Opening soon)",
-        "location": "Guduvancheri, Chennai",
-        "address": "First cry intelloits play school, Guduvancheri, 603202",
-        "timings": [
-          { "day": "Wednesday & Thursday", "time": "7:00 PM - 8:00 PM", "course": "Bharathanatyam" }
+          { "day": "Wednesday & Thursday", "time": "6:00 PM - 7:00 PM", "course": "Keyboard" },
+          { "day": "Wednesday & Thursday", "time": "7:00 PM - 8:00 PM", "course": "Bharatanatyam" }
         ],
         "contact": "+91 9940489578"
       }
@@ -905,9 +883,7 @@
       "description": "Currently serving students in Chengalpet - Aathur, Urapakkam - Kattur, and Guduvancheri. Planning to expand our classes to more areas soon!",
       "currentTitle": "Current Locations",
       "current": [
-        "Chengalpet - Aathur",
-        "Urapakkam - Kattur",
-        "Guduvancheri"
+        "Urapakkam - Kattur"
       ],
       "expandingTitle": "Expanding Soon To",
       "expanding": [
